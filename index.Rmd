@@ -18,8 +18,10 @@ description: "A handbook for the MSc in International Health and Tropical Medici
 
 # Open Science and Reproducible Research Handbook {-}
 
+<!---
 <center>
 ![]("https://raw.githubusercontent.com/proochista/www/master/assets/images/icon.png")
 </center>
+--->
 
 
