@@ -1,5 +1,5 @@
 --- 
-title: "The University of Oxford International Health and Tropical Medicine R and Reproducible Research Handbook"
+title: "University of Oxford International Health and Tropical Medicine"
 author: "Proochista Ariana and Ernest Guevarra"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -13,11 +13,10 @@ fontsize: 12pt
 url: https\://oxford-ihtm.io/ihtm-handbook
 github-repo: OxfordIHTM/ihtm-handbook
 cover-image: 
-description: "A handbook for the MSc in International Health and Tropical Medicine Course on R and Reproducible Research"
+description: "A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research"
 ---
 
-# The University of Oxford International Health and Tropical Medicine Reproducible Research Handbook {-}
-
+# Open Science and Reproducible Research Handbook {-}
 
 <center>
 ![]("https://raw.githubusercontent.com/proochista/www/master/assets/images/icon.png")
