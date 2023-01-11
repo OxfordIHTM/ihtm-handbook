@@ -1,0 +1,16 @@
+Package: ihtm-handbook
+Title: The University of Oxford International Health and Tropical Medicine R and Reproducible Research Handbook
+Version: 0.0.0.9000
+Authors@R: c(
+    person(
+      "Ernest", "Guevarra", 
+       email = "ernest@guevarra.io", 
+       role = c("aut", "cre")
+    ),
+    person(
+      "Proochista", "Ariana", role = "aut"
+    )
+  )
+Depends: R (>= 4.2.0)
+Imports:
+    bookdown

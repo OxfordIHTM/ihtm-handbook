@@ -1,0 +1,23 @@
+bookdown::gitbook:
+  highlight: tango
+  css: style.css
+  fig_caption: yes
+  split_by: chapter
+  # includes:
+  #   in_header: google_analytics.html
+  config:
+    toc:
+      collapse: section
+      before: |
+        <li><a href="./">Oxford IHTM Handbook</a></li>
+      after: |
+        <li><a href="" target="blank">@ University of Oxford International Health and Tropical Medicine 2023</a></li>
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  fig_caption: yes
+bookdown::epub_book: default

@@ -1,0 +1,26 @@
+--- 
+title: "The University of Oxford International Health and Tropical Medicine R and Reproducible Research Handbook"
+author: "Proochista Ariana and Ernest Guevarra"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: ["book.bib"]
+biblio-style: "apalike"
+link-citations: TRUE
+links-as-notes: FALSE
+colorlinks: TRUE
+fontsize: 12pt
+url: https\://oxford-ihtm.io/ihtm-handbook
+github-repo: OxfordIHTM/ihtm-handbook
+cover-image: 
+description: "A handbook for the MSc in International Health and Tropical Medicine Course on R and Reproducible Research"
+---
+
+# The University of Oxford International Health and Tropical Medicine Reproducible Research Handbook {-}
+
+
+<center>
+![]("https://raw.githubusercontent.com/proochista/www/master/assets/images/icon.png")
+</center>
+
+
