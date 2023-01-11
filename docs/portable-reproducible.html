@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Creating portable and reproducible scientific workflows | The University of Oxford International Health and Tropical Medicine R and Reproducible Research Handbook</title>
+  <meta name="description" content="A handbook for the MSc in International Health and Tropical Medicine Course on R and Reproducible Research" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Creating portable and reproducible scientific workflows | The University of Oxford International Health and Tropical Medicine R and Reproducible Research Handbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="A handbook for the MSc in International Health and Tropical Medicine Course on R and Reproducible Research" />
+  <meta name="github-repo" content="OxfordIHTM/ihtm-handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Creating portable and reproducible scientific workflows | The University of Oxford International Health and Tropical Medicine R and Reproducible Research Handbook" />
+  
+  <meta name="twitter:description" content="A handbook for the MSc in International Health and Tropical Medicine Course on R and Reproducible Research" />
+  
+
+<meta name="author" content="Proochista Ariana and Ernest Guevarra" />
+
+
+<meta name="date" content="2023-01-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="commit-and-push.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Oxford IHTM Handbook</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>The University of Oxford International Health and Tropical Medicine Reproducible Research Handbook</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="install-r.html"><a href="install-r.html"><i class="fa fa-check"></i><b>2</b> Installing R and RStudio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install-r.html"><a href="install-r.html#install-r-for-windows-machines"><i class="fa fa-check"></i><b>2.1</b> Install R for Windows machines</a></li>
+<li class="chapter" data-level="2.2" data-path="install-r.html"><a href="install-r.html#install-rstudio"><i class="fa fa-check"></i><b>2.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="install-r.html"><a href="install-r.html#install-rtools"><i class="fa fa-check"></i><b>2.3</b> Install <code>Rtools</code></a></li>
+<li class="chapter" data-level="2.4" data-path="install-r.html"><a href="install-r.html#install-git-for-windows"><i class="fa fa-check"></i><b>2.4</b> Install Git for Windows</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="intro-r.html"><a href="intro-r.html"><i class="fa fa-check"></i><b>3</b> Introduction to R and RStudio</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="intro-r.html"><a href="intro-r.html#what-r"><i class="fa fa-check"></i><b>3.1</b> What is R?</a></li>
+<li class="chapter" data-level="3.2" data-path="intro-r.html"><a href="intro-r.html#why-r"><i class="fa fa-check"></i><b>3.2</b> Why use R?</a></li>
+<li class="chapter" data-level="3.3" data-path="intro-r.html"><a href="intro-r.html#what-rstudio"><i class="fa fa-check"></i><b>3.3</b> What is RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="write-functions.html"><a href="write-functions.html"><i class="fa fa-check"></i><b>4</b> Writing functions</a></li>
+<li class="chapter" data-level="5" data-path="clone-repository.html"><a href="clone-repository.html"><i class="fa fa-check"></i><b>5</b> Cloning a GitHub repository into your local computer using RStudio</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="clone-repository.html"><a href="clone-repository.html#copy-the-repository-url-of-the-repository-you-want-to-clone-from-github"><i class="fa fa-check"></i><b>5.1</b> Copy the repository URL of the repository you want to clone from GitHub</a></li>
+<li class="chapter" data-level="5.2" data-path="clone-repository.html"><a href="clone-repository.html#go-to-rstudio-and-create-new-project"><i class="fa fa-check"></i><b>5.2</b> Go to RStudio and create new project</a></li>
+<li class="chapter" data-level="5.3" data-path="clone-repository.html"><a href="clone-repository.html#choose-version-control"><i class="fa fa-check"></i><b>5.3</b> Choose Version Control</a></li>
+<li class="chapter" data-level="5.4" data-path="clone-repository.html"><a href="clone-repository.html#select-git"><i class="fa fa-check"></i><b>5.4</b> Select Git</a></li>
+<li class="chapter" data-level="5.5" data-path="clone-repository.html"><a href="clone-repository.html#setup-repository-settings"><i class="fa fa-check"></i><b>5.5</b> Setup repository settings</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="commit-and-push.html"><a href="commit-and-push.html"><i class="fa fa-check"></i><b>6</b> Committing your changes and pushing them to GitHub</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="commit-and-push.html"><a href="commit-and-push.html#click-on-commit-in-the-git-tab-on-rstudio"><i class="fa fa-check"></i><b>6.1</b> Click on <code>Commit</code> in the Git tab on RStudio</a></li>
+<li class="chapter" data-level="6.2" data-path="commit-and-push.html"><a href="commit-and-push.html#getting-changes-saved-and-push-to-github"><i class="fa fa-check"></i><b>6.2</b> Getting changes saved and push to GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="portable-reproducible.html"><a href="portable-reproducible.html"><i class="fa fa-check"></i><b>7</b> Creating portable and reproducible scientific workflows</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="portable-reproducible.html"><a href="portable-reproducible.html#step-1-create-a-new-rstudio-project"><i class="fa fa-check"></i><b>7.1</b> Step 1: Create a new RStudio project</a></li>
+<li class="chapter" data-level="7.2" data-path="portable-reproducible.html"><a href="portable-reproducible.html#step-2-create-an-r-file-called-packages.r"><i class="fa fa-check"></i><b>7.2</b> Step 2: Create an R file called <code>packages.R</code></a></li>
+<li class="chapter" data-level="7.3" data-path="portable-reproducible.html"><a href="portable-reproducible.html#step-3-create-placeholder-directories-for-different-components-of-workflow"><i class="fa fa-check"></i><b>7.3</b> Step 3: Create placeholder directories for different components of workflow</a></li>
+<li class="chapter" data-level="7.4" data-path="portable-reproducible.html"><a href="portable-reproducible.html#step-4-create-the-target-script-file-_targets.r"><i class="fa fa-check"></i><b>7.4</b> Step 4: Create the target script file (<code>_targets.R</code>)</a></li>
+<li class="chapter" data-level="7.5" data-path="portable-reproducible.html"><a href="portable-reproducible.html#step-5-edit-the-_targets.r-script-file"><i class="fa fa-check"></i><b>7.5</b> Step 5: Edit the <code>_targets.R</code> script file</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="" target="blank">@ University of Oxford International Health and Tropical Medicine 2023</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The University of Oxford International Health and Tropical Medicine R and Reproducible Research Handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="portable-reproducible" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Creating portable and reproducible scientific workflows<a href="portable-reproducible.html#portable-reproducible" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>At this point, you would have written your own R code and R scripts and saved these within an R file (<code>.R</code>).</p>
+<p>By now, you would have also appreciated how extensible R is through built-in packages and/or through functions that you have created yourself.</p>
+<p>So far, in the examples that we have worked on, the operations and the problems have been quite straightforward. But from your own experience dealing with your own data, real world data is far from straightforward and far from simple. Complexity is almost always a given.</p>
+<p>R’s scripting capability and R’s extensibility are its main characteristics that make R a good tool for creating robust scientific workflows particularly for complex data and research projects.</p>
+<p>A typical scientific workflow would have the following steps:</p>
+<p><img src="images/scientific-workflow.png" width="790" style="display: block; margin: auto;" /></p>
+<p>In general, an R script should reflect the different steps outlined above. Hence, an R script of a scientific workflow would tend to look like this:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="portable-reproducible.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load libraries</span></span>
+<span id="cb46-2"><a href="portable-reproducible.html#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="portable-reproducible.html#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="portable-reproducible.html#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Retrieve and read data</span></span>
+<span id="cb46-5"><a href="portable-reproducible.html#cb46-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-6"><a href="portable-reproducible.html#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-7"><a href="portable-reproducible.html#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Process data</span></span>
+<span id="cb46-8"><a href="portable-reproducible.html#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-9"><a href="portable-reproducible.html#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-10"><a href="portable-reproducible.html#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Analyse data</span></span>
+<span id="cb46-11"><a href="portable-reproducible.html#cb46-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-12"><a href="portable-reproducible.html#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="do">### Descriptive analysis</span></span>
+<span id="cb46-13"><a href="portable-reproducible.html#cb46-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-14"><a href="portable-reproducible.html#cb46-14" aria-hidden="true" tabindex="-1"></a><span class="do">### Statistical tests</span></span>
+<span id="cb46-15"><a href="portable-reproducible.html#cb46-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-16"><a href="portable-reproducible.html#cb46-16" aria-hidden="true" tabindex="-1"></a><span class="do">### Model specifications</span></span>
+<span id="cb46-17"><a href="portable-reproducible.html#cb46-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-18"><a href="portable-reproducible.html#cb46-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-19"><a href="portable-reproducible.html#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Outputs</span></span>
+<span id="cb46-20"><a href="portable-reproducible.html#cb46-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-21"><a href="portable-reproducible.html#cb46-21" aria-hidden="true" tabindex="-1"></a><span class="do">### Tabulation of results</span></span>
+<span id="cb46-22"><a href="portable-reproducible.html#cb46-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-23"><a href="portable-reproducible.html#cb46-23" aria-hidden="true" tabindex="-1"></a><span class="do">### Model outputs</span></span>
+<span id="cb46-24"><a href="portable-reproducible.html#cb46-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-25"><a href="portable-reproducible.html#cb46-25" aria-hidden="true" tabindex="-1"></a><span class="do">### Plots</span></span>
+<span id="cb46-26"><a href="portable-reproducible.html#cb46-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-27"><a href="portable-reproducible.html#cb46-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-28"><a href="portable-reproducible.html#cb46-28" aria-hidden="true" tabindex="-1"></a><span class="do">## Report</span></span>
+<span id="cb46-29"><a href="portable-reproducible.html#cb46-29" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<p>In this chapter, we will go through a step-by-step walkthrough of how to build a robust scientific workflow in R. A robust worklow is one that is <strong>portable</strong> i.e., not dependent on hardware and software and instead can be run on almost any machine with very minimal, if any, additional setup or configuration required, and one that is <strong>reproducible</strong> i.e., can be run over and over again without issues, providing the expected results with the same data or providing updated results with new and/or updated data.</p>
+<div id="step-1-create-a-new-rstudio-project" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Step 1: Create a new RStudio project<a href="portable-reproducible.html#step-1-create-a-new-rstudio-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Open RStudio</p></li>
+<li><p>Click on the <code>File</code> option in the RStudio menu. In the dropdown menu, select <code>New Project</code></p></li>
+<li><p>In the menu window, select <code>New directory</code> option.</p></li>
+<li><p>In the next menu window, select <code>New project</code> option.</p></li>
+<li><p>In the next menu window, enter the following details:</p>
+<ul>
+<li><p>Name of the project - important to make the project name as short as possible but descriptive of the project you are creating; don’t use spaces, instead use dash (or underscore) and avoid using capital letters;</p></li>
+<li><p>Select the directory in your computer in which you want to save the project in. Click on <code>Browse</code> to open your computers file manager and navigate to the directory you want to save your project in;</p></li>
+<li><p>Tick the selection box to make this project a git repository (whilst this is not necessary, this is highly recommended especially if you are collaborating with others);</p></li>
+<li><p>Tick the selection box to enable <code>renv</code> in this project (this is what mainly contribute to the portability of your project); and,</p></li>
+<li><p>Click on <code>Create project</code></p></li>
+</ul></li>
+</ul>
+</div>
+<div id="step-2-create-an-r-file-called-packages.r" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Step 2: Create an R file called <code>packages.R</code><a href="portable-reproducible.html#step-2-create-an-r-file-called-packages.r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Click on the <code>File</code> option in the RStudio menu. In the dropdown menu, select <code>New File</code> and then in the next dropdown menu, select <code>R script</code>.</p></li>
+<li><p>A new tab will open in your text editor pane of RStudio (upper left pane) with the name <em>Untitled1</em>. Save this file by clicking on the disk icon on the text editor menu or do a keyboard shortcut with <code>CTRL + s</code>. Give this empty R script the filename <code>packages.R</code>.</p></li>
+<li><p>You should now see a file in the main directory/root directory of your project named <code>packages.R</code></p></li>
+<li><p>Add code in the <code>packages.R</code> file specifying the packages you will be using in this project. There will be standard packages that we will always use with this type of workflow. So a template/generic <code>packages.R</code> file will contain the following:</p></li>
+</ul>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="portable-reproducible.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb47-2"><a href="portable-reproducible.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb47-3"><a href="portable-reproducible.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb47-4"><a href="portable-reproducible.html#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; General packages needed for a targets workflow</span></span>
+<span id="cb47-5"><a href="portable-reproducible.html#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb47-6"><a href="portable-reproducible.html#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb47-7"><a href="portable-reproducible.html#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb47-8"><a href="portable-reproducible.html#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="portable-reproducible.html#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
+<span id="cb47-10"><a href="portable-reproducible.html#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tarchetypes)</span>
+<span id="cb47-11"><a href="portable-reproducible.html#cb47-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb47-12"><a href="portable-reproducible.html#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
+<span id="cb47-13"><a href="portable-reproducible.html#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb47-14"><a href="portable-reproducible.html#cb47-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb47-15"><a href="portable-reproducible.html#cb47-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb47-16"><a href="portable-reproducible.html#cb47-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb47-17"><a href="portable-reproducible.html#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb47-18"><a href="portable-reproducible.html#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="portable-reproducible.html#cb47-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-20"><a href="portable-reproducible.html#cb47-20" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb47-21"><a href="portable-reproducible.html#cb47-21" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb47-22"><a href="portable-reproducible.html#cb47-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb47-23"><a href="portable-reproducible.html#cb47-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; Add other packages that will be used in the project below</span></span>
+<span id="cb47-24"><a href="portable-reproducible.html#cb47-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb47-25"><a href="portable-reproducible.html#cb47-25" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb47-26"><a href="portable-reproducible.html#cb47-26" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb47-27"><a href="portable-reproducible.html#cb47-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-28"><a href="portable-reproducible.html#cb47-28" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+</div>
+<div id="step-3-create-placeholder-directories-for-different-components-of-workflow" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Step 3: Create placeholder directories for different components of workflow<a href="portable-reproducible.html#step-3-create-placeholder-directories-for-different-components-of-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>In the lower right pane of RStudio (the file manager pane), find the menu button labelled <code>Folder</code>.</p></li>
+<li><p>Give this new folder the label of <code>R</code>. This filder will hold all bespoke functions that we will create to use for this project workflow;</p></li>
+<li><p>Repeat these steps to create new folders with the following labels:</p>
+<ul>
+<li><p><code>data</code> - This folder will hold any data that we retrieve as part of this workflow.</p></li>
+<li><p><code>outputs</code> - This folder will hold all our workflow outputs such as plots/figures, tables (in Excel or CSV files), HTML and/or Word and/or PDF outputs</p></li>
+<li><p><code>reports</code> - This folder will hold all our RMarkdown report (<code>.Rmd</code>) files</p></li>
+<li><p><code>docs</code> - This folder will hold any of our deployed outputs such as HTML report, dashboard, etc.</p></li>
+</ul></li>
+</ul>
+<p>These are placeholder directories which we will populate as we work through the workflow for this project.</p>
+</div>
+<div id="step-4-create-the-target-script-file-_targets.r" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Step 4: Create the target script file (<code>_targets.R</code>)<a href="portable-reproducible.html#step-4-create-the-target-script-file-_targets.r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The next task is to create a {targets} script file (<code>_targets.R</code>) which is the file that will define the workflow that we will be creating.</p>
+<p>Create the file by:</p>
+<ul>
+<li><p>Clicking on File –&gt; New File –&gt; R Script in RStudio.</p></li>
+<li><p>A new tab will show in your Source window on the top left quadrant of your RStudio screen. This tab will usually be called <code>Untitled1</code>.</p></li>
+<li><p>Save this file first and change its name to <code>_targets.R</code>. Make sure to save it in the current project directory.</p></li>
+<li><p>You know that you were successful in doing this once you see a file called <code>_targets.R</code> in the File system window in the lower right quadrant of your RStudio screen.</p></li>
+</ul>
+</div>
+<div id="step-5-edit-the-_targets.r-script-file" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Step 5: Edit the <code>_targets.R</code> script file<a href="portable-reproducible.html#step-5-edit-the-_targets.r-script-file" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now, the next step is to edit your script file by adding sets of R code that does the following:</p>
+<ul>
+<li>Loads the packages required</li>
+<li>Loads custom functions (if any)</li>
+<li>Defines individual targets using <code>tar_targets</code> function</li>
+<li>Ends with a list of targets objects</li>
+</ul>
+<p>A basic <code>{targets}</code> workflow will look like this:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="portable-reproducible.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load libraries --------------------------------------------------------------</span></span>
+<span id="cb48-2"><a href="portable-reproducible.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
+<span id="cb48-3"><a href="portable-reproducible.html#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="portable-reproducible.html#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-5"><a href="portable-reproducible.html#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="portable-reproducible.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Load custom functions -------------------------------------------------------</span></span>
+<span id="cb48-7"><a href="portable-reproducible.html#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (f <span class="cf">in</span> <span class="fu">list.files</span>(<span class="st">&quot;R&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)) <span class="fu">source</span> (f)</span>
+<span id="cb48-8"><a href="portable-reproducible.html#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (f <span class="cf">in</span> <span class="fu">list.files</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;R&quot;</span>), <span class="at">full.names =</span> <span class="cn">TRUE</span>)) <span class="fu">source</span> (f)</span>
+<span id="cb48-9"><a href="portable-reproducible.html#cb48-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-10"><a href="portable-reproducible.html#cb48-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-11"><a href="portable-reproducible.html#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Create targets and list targets objects -------------------------------------</span></span>
+<span id="cb48-12"><a href="portable-reproducible.html#cb48-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-13"><a href="portable-reproducible.html#cb48-13" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="commit-and-push.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ihtm-handbook.pdf", "ihtm-handbook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
