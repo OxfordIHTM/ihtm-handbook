@@ -1,9 +1,14 @@
 introduction
 install-r
+setup-for-windows-machines
 install-r-for-windows-machines
 install-rstudio
 install-rtools
 install-git-for-windows
+setup-for-macos-machines
+install-r-for-macos-machines
+install-rstudio-1
+install-git-for-macos
 intro-r
 what-r
 why-r
