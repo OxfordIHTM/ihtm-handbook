@@ -1,6 +1,8 @@
 # Installing R and RStudio {#install-r}
 
-## Install R for Windows machines
+## Setup for Windows machines
+
+### Install R for Windows machines
 
 Following is a simple guide to installing R and RStudio and other required software on Windows machines.
 
@@ -16,17 +18,17 @@ Then click on Download R-4.X.X for Windows. This will start the download process
 
 Once downloaded, go to the `.exe` file in your `Downloads` folder, double-click and follow all the install prompts, selecting recommended options all the time
 
-## Install RStudio
+### Install RStudio
 
 This step requires that step 1 has been done and was successful.
 
-Go to https://www.rstudio.com/products/rstudio/download/
+Go to https://posit.co/download/rstudio-desktop/
 
-Select the download specific for your Windows machines.
+Select the download specific for your Windows machine.
 
 Once downloaded, double-click on `.exe` file downloaded to your `Downloads` folder and then follow all install prompts, always selecting recommended options.
 
-## Install `Rtools`
+### Install `Rtools`
 
 For the things that you will be taught in the **Open and Reproducibile Science Lecture Series**, you we will need to expand the installation of R by installing the `Rtools` software from R.
 
@@ -34,7 +36,7 @@ The download link is https://cran.r-project.org/bin/windows/Rtools/rtools42/rtoo
 
 Once you have downloaded the `.exe` file, double-click on the `.exe` file and follow all install prompts. Choose all the recommended options.
 
-## Install Git for Windows
+### Install Git for Windows
 
 For the things that you will be taught in the **Open and Reproducibile Science Lecture Series**, you we will need to install **Git for Windows**.
 
@@ -44,3 +46,41 @@ Use this download link - https://github.com/git-for-windows/git/releases/latest 
 
 Once you have downloaded the `.exe` file, double-click it and then follow all install prompts. Choose all recommended options.
 
+## Setup for macOS machines
+
+### Install R for macOS machines
+
+Following is a simple guide to installing R and RStudio and other required software on macOS machines.
+
+Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.
+
+Go to https://cran.r-project.org
+
+Click on link that says Download R for macOS
+
+You will have two choices of R versions to install. Make sure to install the appropriate version for your macOS version (Apple Silicon vs Apple Intel version). Click on the download link for your macOS version. This will start the download process of the `.pkg` file specific for installing in macOS computers.
+
+Once downloaded, go to the `.pkg` file in your `Downloads` folder, double-click and follow all the install prompts, selecting recommended options all the time
+
+### Install RStudio
+
+This step requires that step 1 has been done and was successful.
+
+Go to https://posit.co/download/rstudio-desktop/
+
+Select the download specific for your macOS machine.
+
+Once downloaded, double-click on `.dmg` file downloaded to your `Downloads` folder and then follow all install prompts, always selecting recommended options.
+
+### Install git for macOS
+
+For the things that you will be taught in the **Open and Reproducibile Science Lecture Series**, you we will need to install **git for macOS**. Apple machines are already pre-installed with `git` but it is usually an Apple specific version of git and tends to be older and not configured in the way we need it. So we need to install another version of it that comes with Apple's `Xcode command line tools`.
+
+To install, go to the macOS terminal and type the following command:
+
+```
+xcode-select --install
+```
+
+<br/>
+<br/>

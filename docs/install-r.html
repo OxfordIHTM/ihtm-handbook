@@ -23,7 +23,7 @@
 <meta name="author" content="Proochista Ariana and Ernest Guevarra" />
 
 
-<meta name="date" content="2023-01-11" />
+<meta name="date" content="2023-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -139,10 +139,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="install-r.html"><a href="install-r.html"><i class="fa fa-check"></i><b>2</b> Installing R and RStudio</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="install-r.html"><a href="install-r.html#install-r-for-windows-machines"><i class="fa fa-check"></i><b>2.1</b> Install R for Windows machines</a></li>
-<li class="chapter" data-level="2.2" data-path="install-r.html"><a href="install-r.html#install-rstudio"><i class="fa fa-check"></i><b>2.2</b> Install RStudio</a></li>
-<li class="chapter" data-level="2.3" data-path="install-r.html"><a href="install-r.html#install-rtools"><i class="fa fa-check"></i><b>2.3</b> Install <code>Rtools</code></a></li>
-<li class="chapter" data-level="2.4" data-path="install-r.html"><a href="install-r.html#install-git-for-windows"><i class="fa fa-check"></i><b>2.4</b> Install Git for Windows</a></li>
+<li class="chapter" data-level="2.1" data-path="install-r.html"><a href="install-r.html#setup-for-windows-machines"><i class="fa fa-check"></i><b>2.1</b> Setup for Windows machines</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="install-r.html"><a href="install-r.html#install-r-for-windows-machines"><i class="fa fa-check"></i><b>2.1.1</b> Install R for Windows machines</a></li>
+<li class="chapter" data-level="2.1.2" data-path="install-r.html"><a href="install-r.html#install-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.1.3" data-path="install-r.html"><a href="install-r.html#install-rtools"><i class="fa fa-check"></i><b>2.1.3</b> Install <code>Rtools</code></a></li>
+<li class="chapter" data-level="2.1.4" data-path="install-r.html"><a href="install-r.html#install-git-for-windows"><i class="fa fa-check"></i><b>2.1.4</b> Install Git for Windows</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="install-r.html"><a href="install-r.html#setup-for-macos-machines"><i class="fa fa-check"></i><b>2.2</b> Setup for macOS machines</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="install-r.html"><a href="install-r.html#install-r-for-macos-machines"><i class="fa fa-check"></i><b>2.2.1</b> Install R for macOS machines</a></li>
+<li class="chapter" data-level="2.2.2" data-path="install-r.html"><a href="install-r.html#install-rstudio-1"><i class="fa fa-check"></i><b>2.2.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.2.3" data-path="install-r.html"><a href="install-r.html#install-git-for-macos"><i class="fa fa-check"></i><b>2.2.3</b> Install git for macOS</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="intro-r.html"><a href="intro-r.html"><i class="fa fa-check"></i><b>3</b> Introduction to R and RStudio</a>
 <ul>
@@ -194,8 +203,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="install-r" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Installing R and RStudio<a href="install-r.html#install-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="install-r-for-windows-machines" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Install R for Windows machines<a href="install-r.html#install-r-for-windows-machines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="setup-for-windows-machines" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Setup for Windows machines<a href="install-r.html#setup-for-windows-machines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="install-r-for-windows-machines" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Install R for Windows machines<a href="install-r.html#install-r-for-windows-machines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Following is a simple guide to installing R and RStudio and other required software on Windows machines.</p>
 <p>Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.</p>
 <p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></p>
@@ -204,26 +215,54 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Then click on Download R-4.X.X for Windows. This will start the download process.</p>
 <p>Once downloaded, go to the <code>.exe</code> file in your <code>Downloads</code> folder, double-click and follow all the install prompts, selecting recommended options all the time</p>
 </div>
-<div id="install-rstudio" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Install RStudio<a href="install-r.html#install-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="install-rstudio" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Install RStudio<a href="install-r.html#install-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This step requires that step 1 has been done and was successful.</p>
-<p>Go to <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a></p>
-<p>Select the download specific for your Windows machines.</p>
+<p>Go to <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p>
+<p>Select the download specific for your Windows machine.</p>
 <p>Once downloaded, double-click on <code>.exe</code> file downloaded to your <code>Downloads</code> folder and then follow all install prompts, always selecting recommended options.</p>
 </div>
-<div id="install-rtools" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Install <code>Rtools</code><a href="install-r.html#install-rtools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="install-rtools" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Install <code>Rtools</code><a href="install-r.html#install-rtools" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to expand the installation of R by installing the <code>Rtools</code> software from R.</p>
 <p>The download link is <a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html" class="uri">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a> if you have installed R version 4.2.0 (or higher).</p>
 <p>Once you have downloaded the <code>.exe</code> file, double-click on the <code>.exe</code> file and follow all install prompts. Choose all the recommended options.</p>
 </div>
-<div id="install-git-for-windows" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Install Git for Windows<a href="install-r.html#install-git-for-windows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="install-git-for-windows" class="section level3 hasAnchor" number="2.1.4">
+<h3><span class="header-section-number">2.1.4</span> Install Git for Windows<a href="install-r.html#install-git-for-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to install <strong>Git for Windows</strong>.</p>
 <p>If your machine is 64-bit machine (most likely the case if your computer is new and running Windows 10 or later) -</p>
 <p>Use this download link - <a href="https://github.com/git-for-windows/git/releases/latest" class="uri">https://github.com/git-for-windows/git/releases/latest</a> - to download the latest version of git. Make sure to choose the appropriate download for your machine (i.e., if you have a 64-bit machine then select the download for 64-bit machines; if you have a 32-bit machine then select the download for 32-bit machines)</p>
 <p>Once you have downloaded the <code>.exe</code> file, double-click it and then follow all install prompts. Choose all recommended options.</p>
+</div>
+</div>
+<div id="setup-for-macos-machines" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Setup for macOS machines<a href="install-r.html#setup-for-macos-machines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="install-r-for-macos-machines" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Install R for macOS machines<a href="install-r.html#install-r-for-macos-machines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Following is a simple guide to installing R and RStudio and other required software on macOS machines.</p>
+<p>Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.</p>
+<p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></p>
+<p>Click on link that says Download R for macOS</p>
+<p>You will have two choices of R versions to install. Make sure to install the appropriate version for your macOS version (Apple Silicon vs Apple Intel version). Click on the download link for your macOS version. This will start the download process of the <code>.pkg</code> file specific for installing in macOS computers.</p>
+<p>Once downloaded, go to the <code>.pkg</code> file in your <code>Downloads</code> folder, double-click and follow all the install prompts, selecting recommended options all the time</p>
+</div>
+<div id="install-rstudio-1" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Install RStudio<a href="install-r.html#install-rstudio-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This step requires that step 1 has been done and was successful.</p>
+<p>Go to <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p>
+<p>Select the download specific for your macOS machine.</p>
+<p>Once downloaded, double-click on <code>.dmg</code> file downloaded to your <code>Downloads</code> folder and then follow all install prompts, always selecting recommended options.</p>
+</div>
+<div id="install-git-for-macos" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Install git for macOS<a href="install-r.html#install-git-for-macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to install <strong>git for macOS</strong>. Apple machines are already pre-installed with <code>git</code> but it is usually an Apple specific version of git and tends to be older and not configured in the way we need it. So we need to install another version of it that comes with Apple’s <code>Xcode command line tools</code>.</p>
+<p>To install, go to the macOS terminal and type the following command:</p>
+<pre><code>xcode-select --install</code></pre>
+<p><br/>
+<br/></p>
 
+</div>
 </div>
 </div>
             </section>

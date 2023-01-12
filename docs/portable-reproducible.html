@@ -23,7 +23,7 @@
 <meta name="author" content="Proochista Ariana and Ernest Guevarra" />
 
 
-<meta name="date" content="2023-01-11" />
+<meta name="date" content="2023-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -139,10 +139,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="install-r.html"><a href="install-r.html"><i class="fa fa-check"></i><b>2</b> Installing R and RStudio</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="install-r.html"><a href="install-r.html#install-r-for-windows-machines"><i class="fa fa-check"></i><b>2.1</b> Install R for Windows machines</a></li>
-<li class="chapter" data-level="2.2" data-path="install-r.html"><a href="install-r.html#install-rstudio"><i class="fa fa-check"></i><b>2.2</b> Install RStudio</a></li>
-<li class="chapter" data-level="2.3" data-path="install-r.html"><a href="install-r.html#install-rtools"><i class="fa fa-check"></i><b>2.3</b> Install <code>Rtools</code></a></li>
-<li class="chapter" data-level="2.4" data-path="install-r.html"><a href="install-r.html#install-git-for-windows"><i class="fa fa-check"></i><b>2.4</b> Install Git for Windows</a></li>
+<li class="chapter" data-level="2.1" data-path="install-r.html"><a href="install-r.html#setup-for-windows-machines"><i class="fa fa-check"></i><b>2.1</b> Setup for Windows machines</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="install-r.html"><a href="install-r.html#install-r-for-windows-machines"><i class="fa fa-check"></i><b>2.1.1</b> Install R for Windows machines</a></li>
+<li class="chapter" data-level="2.1.2" data-path="install-r.html"><a href="install-r.html#install-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.1.3" data-path="install-r.html"><a href="install-r.html#install-rtools"><i class="fa fa-check"></i><b>2.1.3</b> Install <code>Rtools</code></a></li>
+<li class="chapter" data-level="2.1.4" data-path="install-r.html"><a href="install-r.html#install-git-for-windows"><i class="fa fa-check"></i><b>2.1.4</b> Install Git for Windows</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="install-r.html"><a href="install-r.html#setup-for-macos-machines"><i class="fa fa-check"></i><b>2.2</b> Setup for macOS machines</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="install-r.html"><a href="install-r.html#install-r-for-macos-machines"><i class="fa fa-check"></i><b>2.2.1</b> Install R for macOS machines</a></li>
+<li class="chapter" data-level="2.2.2" data-path="install-r.html"><a href="install-r.html#install-rstudio-1"><i class="fa fa-check"></i><b>2.2.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.2.3" data-path="install-r.html"><a href="install-r.html#install-git-for-macos"><i class="fa fa-check"></i><b>2.2.3</b> Install git for macOS</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="intro-r.html"><a href="intro-r.html"><i class="fa fa-check"></i><b>3</b> Introduction to R and RStudio</a>
 <ul>
@@ -201,35 +210,35 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>A typical scientific workflow would have the following steps:</p>
 <p><img src="images/scientific-workflow.png" width="790" style="display: block; margin: auto;" /></p>
 <p>In general, an R script should reflect the different steps outlined above. Hence, an R script of a scientific workflow would tend to look like this:</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="portable-reproducible.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load libraries</span></span>
-<span id="cb46-2"><a href="portable-reproducible.html#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="portable-reproducible.html#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-4"><a href="portable-reproducible.html#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Retrieve and read data</span></span>
-<span id="cb46-5"><a href="portable-reproducible.html#cb46-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-6"><a href="portable-reproducible.html#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-7"><a href="portable-reproducible.html#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Process data</span></span>
-<span id="cb46-8"><a href="portable-reproducible.html#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-9"><a href="portable-reproducible.html#cb46-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-10"><a href="portable-reproducible.html#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Analyse data</span></span>
-<span id="cb46-11"><a href="portable-reproducible.html#cb46-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-12"><a href="portable-reproducible.html#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="do">### Descriptive analysis</span></span>
-<span id="cb46-13"><a href="portable-reproducible.html#cb46-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-14"><a href="portable-reproducible.html#cb46-14" aria-hidden="true" tabindex="-1"></a><span class="do">### Statistical tests</span></span>
-<span id="cb46-15"><a href="portable-reproducible.html#cb46-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-16"><a href="portable-reproducible.html#cb46-16" aria-hidden="true" tabindex="-1"></a><span class="do">### Model specifications</span></span>
-<span id="cb46-17"><a href="portable-reproducible.html#cb46-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-18"><a href="portable-reproducible.html#cb46-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-19"><a href="portable-reproducible.html#cb46-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Outputs</span></span>
-<span id="cb46-20"><a href="portable-reproducible.html#cb46-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-21"><a href="portable-reproducible.html#cb46-21" aria-hidden="true" tabindex="-1"></a><span class="do">### Tabulation of results</span></span>
-<span id="cb46-22"><a href="portable-reproducible.html#cb46-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-23"><a href="portable-reproducible.html#cb46-23" aria-hidden="true" tabindex="-1"></a><span class="do">### Model outputs</span></span>
-<span id="cb46-24"><a href="portable-reproducible.html#cb46-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-25"><a href="portable-reproducible.html#cb46-25" aria-hidden="true" tabindex="-1"></a><span class="do">### Plots</span></span>
-<span id="cb46-26"><a href="portable-reproducible.html#cb46-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-27"><a href="portable-reproducible.html#cb46-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-28"><a href="portable-reproducible.html#cb46-28" aria-hidden="true" tabindex="-1"></a><span class="do">## Report</span></span>
-<span id="cb46-29"><a href="portable-reproducible.html#cb46-29" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="portable-reproducible.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load libraries</span></span>
+<span id="cb47-2"><a href="portable-reproducible.html#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="portable-reproducible.html#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="portable-reproducible.html#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Retrieve and read data</span></span>
+<span id="cb47-5"><a href="portable-reproducible.html#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-6"><a href="portable-reproducible.html#cb47-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-7"><a href="portable-reproducible.html#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Process data</span></span>
+<span id="cb47-8"><a href="portable-reproducible.html#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="portable-reproducible.html#cb47-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-10"><a href="portable-reproducible.html#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Analyse data</span></span>
+<span id="cb47-11"><a href="portable-reproducible.html#cb47-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-12"><a href="portable-reproducible.html#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="do">### Descriptive analysis</span></span>
+<span id="cb47-13"><a href="portable-reproducible.html#cb47-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-14"><a href="portable-reproducible.html#cb47-14" aria-hidden="true" tabindex="-1"></a><span class="do">### Statistical tests</span></span>
+<span id="cb47-15"><a href="portable-reproducible.html#cb47-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-16"><a href="portable-reproducible.html#cb47-16" aria-hidden="true" tabindex="-1"></a><span class="do">### Model specifications</span></span>
+<span id="cb47-17"><a href="portable-reproducible.html#cb47-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-18"><a href="portable-reproducible.html#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="portable-reproducible.html#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Outputs</span></span>
+<span id="cb47-20"><a href="portable-reproducible.html#cb47-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-21"><a href="portable-reproducible.html#cb47-21" aria-hidden="true" tabindex="-1"></a><span class="do">### Tabulation of results</span></span>
+<span id="cb47-22"><a href="portable-reproducible.html#cb47-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-23"><a href="portable-reproducible.html#cb47-23" aria-hidden="true" tabindex="-1"></a><span class="do">### Model outputs</span></span>
+<span id="cb47-24"><a href="portable-reproducible.html#cb47-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-25"><a href="portable-reproducible.html#cb47-25" aria-hidden="true" tabindex="-1"></a><span class="do">### Plots</span></span>
+<span id="cb47-26"><a href="portable-reproducible.html#cb47-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-27"><a href="portable-reproducible.html#cb47-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-28"><a href="portable-reproducible.html#cb47-28" aria-hidden="true" tabindex="-1"></a><span class="do">## Report</span></span>
+<span id="cb47-29"><a href="portable-reproducible.html#cb47-29" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
 <p>In this chapter, we will go through a step-by-step walkthrough of how to build a robust scientific workflow in R. A robust worklow is one that is <strong>portable</strong> i.e., not dependent on hardware and software and instead can be run on almost any machine with very minimal, if any, additional setup or configuration required, and one that is <strong>reproducible</strong> i.e., can be run over and over again without issues, providing the expected results with the same data or providing updated results with new and/or updated data.</p>
 <div id="step-1-create-a-new-rstudio-project" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Step 1: Create a new RStudio project<a href="portable-reproducible.html#step-1-create-a-new-rstudio-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -256,34 +265,34 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p>You should now see a file in the main directory/root directory of your project named <code>packages.R</code></p></li>
 <li><p>Add code in the <code>packages.R</code> file specifying the packages you will be using in this project. There will be standard packages that we will always use with this type of workflow. So a template/generic <code>packages.R</code> file will contain the following:</p></li>
 </ul>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="portable-reproducible.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb47-2"><a href="portable-reproducible.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb47-3"><a href="portable-reproducible.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
-<span id="cb47-4"><a href="portable-reproducible.html#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; General packages needed for a targets workflow</span></span>
-<span id="cb47-5"><a href="portable-reproducible.html#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
-<span id="cb47-6"><a href="portable-reproducible.html#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb47-7"><a href="portable-reproducible.html#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb47-8"><a href="portable-reproducible.html#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-9"><a href="portable-reproducible.html#cb47-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
-<span id="cb47-10"><a href="portable-reproducible.html#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tarchetypes)</span>
-<span id="cb47-11"><a href="portable-reproducible.html#cb47-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb47-12"><a href="portable-reproducible.html#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
-<span id="cb47-13"><a href="portable-reproducible.html#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb47-14"><a href="portable-reproducible.html#cb47-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb47-15"><a href="portable-reproducible.html#cb47-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb47-16"><a href="portable-reproducible.html#cb47-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
-<span id="cb47-17"><a href="portable-reproducible.html#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb47-18"><a href="portable-reproducible.html#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-19"><a href="portable-reproducible.html#cb47-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-20"><a href="portable-reproducible.html#cb47-20" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb47-21"><a href="portable-reproducible.html#cb47-21" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb47-22"><a href="portable-reproducible.html#cb47-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
-<span id="cb47-23"><a href="portable-reproducible.html#cb47-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; Add other packages that will be used in the project below</span></span>
-<span id="cb47-24"><a href="portable-reproducible.html#cb47-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
-<span id="cb47-25"><a href="portable-reproducible.html#cb47-25" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb47-26"><a href="portable-reproducible.html#cb47-26" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb47-27"><a href="portable-reproducible.html#cb47-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-28"><a href="portable-reproducible.html#cb47-28" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="portable-reproducible.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb48-2"><a href="portable-reproducible.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb48-3"><a href="portable-reproducible.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb48-4"><a href="portable-reproducible.html#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; General packages needed for a targets workflow</span></span>
+<span id="cb48-5"><a href="portable-reproducible.html#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb48-6"><a href="portable-reproducible.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb48-7"><a href="portable-reproducible.html#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb48-8"><a href="portable-reproducible.html#cb48-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-9"><a href="portable-reproducible.html#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
+<span id="cb48-10"><a href="portable-reproducible.html#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tarchetypes)</span>
+<span id="cb48-11"><a href="portable-reproducible.html#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb48-12"><a href="portable-reproducible.html#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
+<span id="cb48-13"><a href="portable-reproducible.html#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb48-14"><a href="portable-reproducible.html#cb48-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb48-15"><a href="portable-reproducible.html#cb48-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb48-16"><a href="portable-reproducible.html#cb48-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb48-17"><a href="portable-reproducible.html#cb48-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb48-18"><a href="portable-reproducible.html#cb48-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-19"><a href="portable-reproducible.html#cb48-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-20"><a href="portable-reproducible.html#cb48-20" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb48-21"><a href="portable-reproducible.html#cb48-21" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb48-22"><a href="portable-reproducible.html#cb48-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb48-23"><a href="portable-reproducible.html#cb48-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39; Add other packages that will be used in the project below</span></span>
+<span id="cb48-24"><a href="portable-reproducible.html#cb48-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb48-25"><a href="portable-reproducible.html#cb48-25" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb48-26"><a href="portable-reproducible.html#cb48-26" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
+<span id="cb48-27"><a href="portable-reproducible.html#cb48-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-28"><a href="portable-reproducible.html#cb48-28" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
 </div>
 <div id="step-3-create-placeholder-directories-for-different-components-of-workflow" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Step 3: Create placeholder directories for different components of workflow<a href="portable-reproducible.html#step-3-create-placeholder-directories-for-different-components-of-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -321,19 +330,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>Ends with a list of targets objects</li>
 </ul>
 <p>A basic <code>{targets}</code> workflow will look like this:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="portable-reproducible.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load libraries --------------------------------------------------------------</span></span>
-<span id="cb48-2"><a href="portable-reproducible.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
-<span id="cb48-3"><a href="portable-reproducible.html#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-4"><a href="portable-reproducible.html#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-5"><a href="portable-reproducible.html#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-6"><a href="portable-reproducible.html#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Load custom functions -------------------------------------------------------</span></span>
-<span id="cb48-7"><a href="portable-reproducible.html#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (f <span class="cf">in</span> <span class="fu">list.files</span>(<span class="st">&quot;R&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)) <span class="fu">source</span> (f)</span>
-<span id="cb48-8"><a href="portable-reproducible.html#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (f <span class="cf">in</span> <span class="fu">list.files</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;R&quot;</span>), <span class="at">full.names =</span> <span class="cn">TRUE</span>)) <span class="fu">source</span> (f)</span>
-<span id="cb48-9"><a href="portable-reproducible.html#cb48-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-10"><a href="portable-reproducible.html#cb48-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-11"><a href="portable-reproducible.html#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Create targets and list targets objects -------------------------------------</span></span>
-<span id="cb48-12"><a href="portable-reproducible.html#cb48-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-13"><a href="portable-reproducible.html#cb48-13" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="portable-reproducible.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load libraries --------------------------------------------------------------</span></span>
+<span id="cb49-2"><a href="portable-reproducible.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
+<span id="cb49-3"><a href="portable-reproducible.html#cb49-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-4"><a href="portable-reproducible.html#cb49-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-5"><a href="portable-reproducible.html#cb49-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-6"><a href="portable-reproducible.html#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Load custom functions -------------------------------------------------------</span></span>
+<span id="cb49-7"><a href="portable-reproducible.html#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (f <span class="cf">in</span> <span class="fu">list.files</span>(<span class="st">&quot;R&quot;</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)) <span class="fu">source</span> (f)</span>
+<span id="cb49-8"><a href="portable-reproducible.html#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (f <span class="cf">in</span> <span class="fu">list.files</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;R&quot;</span>), <span class="at">full.names =</span> <span class="cn">TRUE</span>)) <span class="fu">source</span> (f)</span>
+<span id="cb49-9"><a href="portable-reproducible.html#cb49-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-10"><a href="portable-reproducible.html#cb49-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-11"><a href="portable-reproducible.html#cb49-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Create targets and list targets objects -------------------------------------</span></span>
+<span id="cb49-12"><a href="portable-reproducible.html#cb49-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-13"><a href="portable-reproducible.html#cb49-13" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
 
 </div>
 </div>
