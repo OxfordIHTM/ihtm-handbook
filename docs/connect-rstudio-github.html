@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Installing R and RStudio | University of Oxford International Health and Tropical Medicine</title>
+  <title>5 Connecting RStudio with GitHub | University of Oxford International Health and Tropical Medicine</title>
   <meta name="description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Installing R and RStudio | University of Oxford International Health and Tropical Medicine" />
+  <meta property="og:title" content="5 Connecting RStudio with GitHub | University of Oxford International Health and Tropical Medicine" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="github-repo" content="OxfordIHTM/ihtm-handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Installing R and RStudio | University of Oxford International Health and Tropical Medicine" />
+  <meta name="twitter:title" content="5 Connecting RStudio with GitHub | University of Oxford International Health and Tropical Medicine" />
   
   <meta name="twitter:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html"/>
-<link rel="next" href="intro-r.html"/>
+<link rel="prev" href="intro-git.html"/>
+<link rel="next" href="write-functions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -210,77 +210,99 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="install-r" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Installing R and RStudio<a href="install-r.html#install-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="setup-for-windows-machines" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Setup for Windows machines<a href="install-r.html#setup-for-windows-machines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="install-r-for-windows-machines" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Install R for Windows machines<a href="install-r.html#install-r-for-windows-machines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Following is a simple guide to installing R and RStudio and other required software on Windows machines.</p>
-<p>Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.</p>
-<p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></p>
-<p>Click on link that says Download R for Windows</p>
-<p>Then click on the link that says install R for the first time</p>
-<p>Then click on Download R-4.X.X for Windows. This will start the download process.</p>
-<p>Once downloaded, go to the <code>.exe</code> file in your <code>Downloads</code> folder, double-click and follow all the install prompts, selecting recommended options all the time</p>
-</div>
-<div id="install-rstudio" class="section level3 hasAnchor" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Install RStudio<a href="install-r.html#install-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This step requires that step 1 has been done and was successful.</p>
-<p>Go to <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p>
-<p>Select the download specific for your Windows machine.</p>
-<p>Once downloaded, double-click on <code>.exe</code> file downloaded to your <code>Downloads</code> folder and then follow all install prompts, always selecting recommended options.</p>
-</div>
-<div id="install-rtools" class="section level3 hasAnchor" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> Install <code>Rtools</code><a href="install-r.html#install-rtools" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to expand the installation of R by installing the <code>Rtools</code> software from R.</p>
-<p>The download link is <a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html" class="uri">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a> if you have installed R version 4.2.0 (or higher).</p>
-<p>Once you have downloaded the <code>.exe</code> file, double-click on the <code>.exe</code> file and follow all install prompts. Choose all the recommended options.</p>
-</div>
-<div id="install-git-for-windows" class="section level3 hasAnchor" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> Install Git for Windows<a href="install-r.html#install-git-for-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to install <strong>Git for Windows</strong>.</p>
-<p>If your machine is 64-bit machine (most likely the case if your computer is new and running Windows 10 or later) -</p>
-<p>Use this download link - <a href="https://github.com/git-for-windows/git/releases/latest" class="uri">https://github.com/git-for-windows/git/releases/latest</a> - to download the latest version of git. Make sure to choose the appropriate download for your machine (i.e., if you have a 64-bit machine then select the download for 64-bit machines; if you have a 32-bit machine then select the download for 32-bit machines)</p>
-<p>Once you have downloaded the <code>.exe</code> file, double-click it and then follow all install prompts. Choose all recommended options.</p>
-</div>
-</div>
-<div id="setup-for-macos-machines" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Setup for macOS machines<a href="install-r.html#setup-for-macos-machines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="install-r-for-macos-machines" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Install R for macOS machines<a href="install-r.html#install-r-for-macos-machines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Following is a simple guide to installing R and RStudio and other required software on macOS machines.</p>
-<p>Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.</p>
-<p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></p>
-<p>Click on link that says Download R for macOS</p>
-<p>You will have two choices of R versions to install. Make sure to install the appropriate version for your macOS version (Apple Silicon vs Apple Intel version). Click on the download link for your macOS version. This will start the download process of the <code>.pkg</code> file specific for installing in macOS computers.</p>
-<p>Once downloaded, go to the <code>.pkg</code> file in your <code>Downloads</code> folder, double-click and follow all the install prompts, selecting recommended options all the time</p>
-</div>
-<div id="install-rstudio-1" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Install RStudio<a href="install-r.html#install-rstudio-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This step requires that step 1 has been done and was successful.</p>
-<p>Go to <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p>
-<p>Select the download specific for your macOS machine.</p>
-<p>Once downloaded, double-click on <code>.dmg</code> file downloaded to your <code>Downloads</code> folder and then follow all install prompts, always selecting recommended options.</p>
-</div>
-<div id="install-git-for-macos" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Install git for macOS<a href="install-r.html#install-git-for-macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to install <strong>git for macOS</strong>. Apple machines are already pre-installed with <code>git</code> but it is usually an Apple specific version of git and tends to be older and not configured in the way we need it. So we need to install another version of it that comes with Apple’s <code>Xcode command line tools</code>.</p>
-<p>To install, go to the macOS terminal and type the following command:</p>
-<pre><code>xcode-select --install</code></pre>
-<p><br/>
-<br/></p>
+<div id="connect-rstudio-github" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Connecting RStudio with GitHub<a href="connect-rstudio-github.html#connect-rstudio-github" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Once RStudio is installed and a GitHub account has been created and registered, the final step in the R, RStudio, git, and GitHub dance is to create git-related settings on your machine that will identify you as a unique/specific git user and then creating a GitHub <strong>personal access token (PAT)</strong> which will serve as the key or proof that you will use to identify yourself as the git user you claim to be whenever you try to syn/connect to your GitHub account via RStudio or any other tool on your local computer.</p>
+<p>Follow are the steps you will need to perform:</p>
+<ol style="list-style-type: decimal">
+<li>On your local machine, open RStudio and then select the <code>Terminal</code> tab in the console pane.</li>
+</ol>
+<p>The <code>Terminal</code> is the tool used to interface with your computer through commands written in a programming language called <code>bash</code>. Most of you would have never used the <code>Terminal</code> because the computers you use have different kinds of software built-in that provide a <strong>graphical user interface (GUI)</strong> that you can use to perform operations and tasks.</p>
+<p>RStudio comes with the <code>Terminal</code> tool built in and usually is already available from the console pane as a separate table along side the R console (see below). By default, whenever you open RStudio, this tab for the <code>Terminal</code> tool should already be available.</p>
+<p>If if is not present, you can easily open a new <code>Terminal</code> tab in the console pane by going to the RStudio menu ribbon and clicking on:</p>
+<pre><code>Tools --&gt; Terminal --&gt; New Terminal</code></pre>
+<p>or you can use the <code>ALT + SHIFT + R</code> keyboard shortcut.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Introduce yourself to git</li>
+</ol>
+<p>In this step, you are basically going to issue a set of commands to your computer to save and store specific settings for the <code>git</code> software that you have installed.</p>
+<p>Specifically, you are going to let git know who you are (your name) and what your email address is <strong>that is associated with your GitHub account</strong>.</p>
+<p>The commands will be issued on the <code>Terminal</code> that we mentioned in step 1. The commands are:</p>
+<pre><code>git config --global user.name &#39;Jane Doe&#39;
+git config --global user.email &#39;jane@example.com&#39;</code></pre>
+<p>Make sure to supply your full proper name (and not your username you created in GitHub).</p>
+<p>Make sure that the email you provide is the email address you used to register and create an account with GitHub.</p>
+<p>Unless there was an error in your syntax, you should not expect any output on the <code>Terminal</code> after you issue the commands. To check that your name and email address have been recorded and/or that the name and email address recorded is correct, you can issue the following command:</p>
+<pre><code>git config --global --list</code></pre>
+<p>Here is an example of what you will see after issue this command:</p>
+<pre><code>$ git config --global --list
 
-</div>
-</div>
+user.name=Jane Doe
+user.email=jane@example.com</code></pre>
+<p>Check this output to what you expect it to be specified as. If the information is correct, then you’ve completed this step. If you need to correct any of this information, then repeat this step making sure that the name and email address you provide is correct.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Create a GitHub personal access token (PAT)</li>
+</ol>
+<p>Now that you have introduced yourself to the <code>git</code> that is installed in your local machine/computer, you should now visit GitHub on a browser (<a href="https://github.com" class="uri">https://github.com</a>) and create a <strong>personal access token (PAT)</strong>.</p>
+<p>When you communicate/sync/interact with a remote git server, such as GitHub, you have to include credentials in the communication you are sending. These credentials prove that you are a specific GitHub user, who’s allowed to do whatever you’re asking to do.</p>
+<p><code>git</code> can communicate with a remote server using one of two protocols, HTTPS or SSH, and the different protocols use different credentials.</p>
+<p>Here we describe the credential setup for the HTTPS protocol, which is what we recommend if you have no burning reason to pick SSH. With HTTPS, we will use a <strong>personal access token (PAT)</strong>.</p>
+<p>Please note that the <strong>personal access token (PAT)</strong> is not the same as the password you provided when registering for your GitHub account. Also, in performing a connection to GitHub via HTTPS protocol, your password is not an acceptable credential for communicating with GitHub as a server.</p>
+<p>To create a GitHub <strong>personal access token (PAT)</strong>, you need to:</p>
+<p>3a. Go to Settings from your GitHub account menu</p>
+<p>Login to your GitHub account. On the upper right hand corner of the GitHub page you will see your account icon. Click on it to reveal a drop down menu as shown below. Select the <strong>Settings</strong> option.</p>
+<p><img src="images/github_pat2.png" /></p>
+<p>3b. From Settings navigate to Developer Settings</p>
+<p>In the <strong>Settings</strong> page, find the <strong>Developer Settings</strong> option on the left hand sidebar as shown below:</p>
+<p><img src="images/github_pat3.png" /></p>
+<p>3c. From Developer Settings navigate to Personal Access Token</p>
+<p>In the <strong>Developer Settings</strong> page, find the <strong>Personal Access Token</strong> option on the left hand sidebar as shown below:</p>
+<p><img src="images/github_pat4.png" /></p>
+<p>3d. Select Tokens (classic)</p>
+<p><img src="images/github_pat5.png" /></p>
+<p>3e. Click on Generate new token</p>
+<p><img src="images/github_pat7.png" /></p>
+<p>3f. Select Generate new token (classic)</p>
+<p><img src="images/github_pat8.png" /></p>
+<p>3g. Give your token a name</p>
+<p><img src="images/github_pat9.png" /></p>
+<p>The token name should be short but descriptive of the where or how you will use the token. Since we are using this to connect and allow communication between RStudio and GitHub, <strong>RStudio</strong> can be a good name that would remind you that this is what you are using to secure the connection/communication between your RStudio and your GitHub account.</p>
+<p>3f. Set an expiry date for the token</p>
+<p><img src="images/github_pat9.png" /></p>
+<p>By default, GitHub will set a <strong>30 day validity</strong> for any new token created. Clicking on the option menu will show the other possible time periods to choose from including <strong>No expiry date</strong>.</p>
+<p>It is best practice to assign an expiry date for security tokens such as the GitHub PAT. And a 30 day validity is standard practice. However, in reality, it is cumbersome to be creating new tokens frequently and for beginners, having to go through these steps again can be quite a chore. For the purposes of this lecture series, we would recommend setting the expiry for about 90 days to cover the whole period and then as a group, we’ll have a <strong>renew GitHub PAT party</strong> on our last session.</p>
+<p>3g. Set scopes</p>
+<p><img src="images/github_pat10.png" /></p>
+<p>Scopes are the types of permissions that you are attaching the token you are generating. This is again a security feature as takens should only be given specific and limited permissions based on what you intend the token to be used for. It is not good practice to give a token complete or unlimited permissions as you are exposing your account to high risk if and when your token gets compromised.</p>
+<p>For general R users, the following scopes are currently recommended:</p>
+<ul>
+<li>repo</li>
+<li>workflow</li>
+<li>gist</li>
+<li>user</li>
+</ul>
+<p>3h. Click on Generate token</p>
+<p><img src="images/github_pat11.png" /></p>
+<p>After clicking you will now see a long string of characters and numbers which is your GitHub PAT. It is important to remember that once you see the generated GitHub PAT, you should copy this right away and store it securely. Treat your GitHub PAT in the same way you would treat your password for online accounts. The best way to securely store the GitHub PAT is using a password manager (LastPass, 1Password, BitWarden). If you have a macOS computer, you can save your GitHub PAT into your computer’s keychain.</p>
+<p>Non-secure password/token storage practices that has been done by other students before are:</p>
+<ul>
+<li>Email their password/token to themselves</li>
+</ul>
+<p>If you are using free email services such as Gmail, then this is a hihly non-secure method. Others use their University of Oxford email address and argue that this is secure compared to using the free email services. Whilst it is true that a university email account is more secure, email communications and email storage is still one of the most vulnerable places to keep something that is meant to be kept secret.</p>
+<ul>
+<li><p>Paste the token into a Word document and save in personal computer with the filename GITHUB_PAT.docx</p></li>
+<li><p>Paste the token into a Word document and save in Dropbox or in Google Drive</p></li>
+</ul>
+<p>Please <strong>AVOID</strong> these methods.</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro-git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="write-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

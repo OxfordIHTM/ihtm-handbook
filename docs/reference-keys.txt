@@ -17,6 +17,7 @@ intro-git
 all-about-git
 all-about-github
 creating-a-github-account
+connect-rstudio-github
 write-functions
 clone-repository
 copy-the-repository-url-of-the-repository-you-want-to-clone-from-github

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Installing R and RStudio | University of Oxford International Health and Tropical Medicine</title>
+  <title>5 Connecting GitHub with RStudio | University of Oxford International Health and Tropical Medicine</title>
   <meta name="description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Installing R and RStudio | University of Oxford International Health and Tropical Medicine" />
+  <meta property="og:title" content="5 Connecting GitHub with RStudio | University of Oxford International Health and Tropical Medicine" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="github-repo" content="OxfordIHTM/ihtm-handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Installing R and RStudio | University of Oxford International Health and Tropical Medicine" />
+  <meta name="twitter:title" content="5 Connecting GitHub with RStudio | University of Oxford International Health and Tropical Medicine" />
   
   <meta name="twitter:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html"/>
-<link rel="next" href="intro-r.html"/>
+<link rel="prev" href="intro-git.html"/>
+<link rel="next" href="write-functions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -167,7 +167,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2.1" data-path="intro-git.html"><a href="intro-git.html#creating-a-github-account"><i class="fa fa-check"></i><b>4.2.1</b> Creating a GitHub account</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="connect-rstudio-github.html"><a href="connect-rstudio-github.html"><i class="fa fa-check"></i><b>5</b> Connecting RStudio with GitHub</a></li>
+<li class="chapter" data-level="5" data-path="connect-github-rstudio.html"><a href="connect-github-rstudio.html"><i class="fa fa-check"></i><b>5</b> Connecting GitHub with RStudio</a></li>
 <li class="chapter" data-level="6" data-path="write-functions.html"><a href="write-functions.html"><i class="fa fa-check"></i><b>6</b> Writing functions</a></li>
 <li class="chapter" data-level="7" data-path="clone-repository.html"><a href="clone-repository.html"><i class="fa fa-check"></i><b>7</b> Cloning a GitHub repository into your local computer using RStudio</a>
 <ul>
@@ -210,77 +210,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="install-r" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">2</span> Installing R and RStudio<a href="install-r.html#install-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="setup-for-windows-machines" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Setup for Windows machines<a href="install-r.html#setup-for-windows-machines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="install-r-for-windows-machines" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Install R for Windows machines<a href="install-r.html#install-r-for-windows-machines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Following is a simple guide to installing R and RStudio and other required software on Windows machines.</p>
-<p>Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.</p>
-<p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></p>
-<p>Click on link that says Download R for Windows</p>
-<p>Then click on the link that says install R for the first time</p>
-<p>Then click on Download R-4.X.X for Windows. This will start the download process.</p>
-<p>Once downloaded, go to the <code>.exe</code> file in your <code>Downloads</code> folder, double-click and follow all the install prompts, selecting recommended options all the time</p>
-</div>
-<div id="install-rstudio" class="section level3 hasAnchor" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Install RStudio<a href="install-r.html#install-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This step requires that step 1 has been done and was successful.</p>
-<p>Go to <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p>
-<p>Select the download specific for your Windows machine.</p>
-<p>Once downloaded, double-click on <code>.exe</code> file downloaded to your <code>Downloads</code> folder and then follow all install prompts, always selecting recommended options.</p>
-</div>
-<div id="install-rtools" class="section level3 hasAnchor" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> Install <code>Rtools</code><a href="install-r.html#install-rtools" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to expand the installation of R by installing the <code>Rtools</code> software from R.</p>
-<p>The download link is <a href="https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html" class="uri">https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html</a> if you have installed R version 4.2.0 (or higher).</p>
-<p>Once you have downloaded the <code>.exe</code> file, double-click on the <code>.exe</code> file and follow all install prompts. Choose all the recommended options.</p>
-</div>
-<div id="install-git-for-windows" class="section level3 hasAnchor" number="2.1.4">
-<h3><span class="header-section-number">2.1.4</span> Install Git for Windows<a href="install-r.html#install-git-for-windows" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to install <strong>Git for Windows</strong>.</p>
-<p>If your machine is 64-bit machine (most likely the case if your computer is new and running Windows 10 or later) -</p>
-<p>Use this download link - <a href="https://github.com/git-for-windows/git/releases/latest" class="uri">https://github.com/git-for-windows/git/releases/latest</a> - to download the latest version of git. Make sure to choose the appropriate download for your machine (i.e., if you have a 64-bit machine then select the download for 64-bit machines; if you have a 32-bit machine then select the download for 32-bit machines)</p>
-<p>Once you have downloaded the <code>.exe</code> file, double-click it and then follow all install prompts. Choose all recommended options.</p>
-</div>
-</div>
-<div id="setup-for-macos-machines" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Setup for macOS machines<a href="install-r.html#setup-for-macos-machines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="install-r-for-macos-machines" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Install R for macOS machines<a href="install-r.html#install-r-for-macos-machines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Following is a simple guide to installing R and RStudio and other required software on macOS machines.</p>
-<p>Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.</p>
-<p>Go to <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></p>
-<p>Click on link that says Download R for macOS</p>
-<p>You will have two choices of R versions to install. Make sure to install the appropriate version for your macOS version (Apple Silicon vs Apple Intel version). Click on the download link for your macOS version. This will start the download process of the <code>.pkg</code> file specific for installing in macOS computers.</p>
-<p>Once downloaded, go to the <code>.pkg</code> file in your <code>Downloads</code> folder, double-click and follow all the install prompts, selecting recommended options all the time</p>
-</div>
-<div id="install-rstudio-1" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Install RStudio<a href="install-r.html#install-rstudio-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This step requires that step 1 has been done and was successful.</p>
-<p>Go to <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></p>
-<p>Select the download specific for your macOS machine.</p>
-<p>Once downloaded, double-click on <code>.dmg</code> file downloaded to your <code>Downloads</code> folder and then follow all install prompts, always selecting recommended options.</p>
-</div>
-<div id="install-git-for-macos" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Install git for macOS<a href="install-r.html#install-git-for-macos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science Lecture Series</strong>, you we will need to install <strong>git for macOS</strong>. Apple machines are already pre-installed with <code>git</code> but it is usually an Apple specific version of git and tends to be older and not configured in the way we need it. So we need to install another version of it that comes with Apple’s <code>Xcode command line tools</code>.</p>
-<p>To install, go to the macOS terminal and type the following command:</p>
-<pre><code>xcode-select --install</code></pre>
-<p><br/>
-<br/></p>
+<div id="connect-github-rstudio" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Connecting GitHub with RStudio<a href="connect-github-rstudio.html#connect-github-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
-</div>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro-git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="write-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
