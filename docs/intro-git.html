@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Introduction to R and RStudio | University of Oxford International Health and Tropical Medicine</title>
+  <title>4 Introduction to git and GitHub | University of Oxford International Health and Tropical Medicine</title>
   <meta name="description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Introduction to R and RStudio | University of Oxford International Health and Tropical Medicine" />
+  <meta property="og:title" content="4 Introduction to git and GitHub | University of Oxford International Health and Tropical Medicine" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="github-repo" content="OxfordIHTM/ihtm-handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Introduction to R and RStudio | University of Oxford International Health and Tropical Medicine" />
+  <meta name="twitter:title" content="4 Introduction to git and GitHub | University of Oxford International Health and Tropical Medicine" />
   
   <meta name="twitter:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="install-r.html"/>
-<link rel="next" href="intro-git.html"/>
+<link rel="prev" href="intro-r.html"/>
+<link rel="next" href="write-functions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -209,46 +209,57 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro-r" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Introduction to R and RStudio<a href="intro-r.html#intro-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="what-r" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> What is R?<a href="intro-r.html#what-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><code>R</code> is a system for data manipulation, calculation, and graphics. It provides:</p>
+<div id="intro-git" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Introduction to git and GitHub<a href="intro-git.html#intro-git" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="all-about-git" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> All about git<a href="intro-git.html#all-about-git" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><code>git</code> is a version control system for software development. It allows developers to keep track of changes made to their code and collaborate with other developers on a project. <code>git</code> also allows for easy rollbacks and branch management. It is widely used in the software industry and is considered one of the best version control systems available.</p>
+<p><code>git</code> was developed by Linus Torvalds in 2005. He created <code>git</code> as a replacement for the proprietary version control system he was using at the time. The development of <code>git</code> was driven by the need for a distributed version control system, which allows multiple developers to work on a project simultaneously, without the need for a central server. Linus Torvalds is also known for creating the Linux operating system kernel.</p>
+<p>To use <code>git</code> in your machines, you will need to install it as described in the previous chapter (Chapter <a href="install-r.html#install-r">2</a>).</p>
+</div>
+<div id="all-about-github" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> All about GitHub<a href="intro-git.html#all-about-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://github.com">GitHub</a> is a web-based platform that provides hosting for software development and a community of developers to collaborate, share and learn from each other. It is built on top of <code>git</code>, which is the version control system used for managing and tracking changes to the code. Developers can use GitHub to store and manage their code, collaborate with other developers, and track and manage issues and bugs. It also provides tools for code review, project management, and documentation. It is widely used by developers and organizations to host and share code, as well as to build and maintain open-source software.</p>
+<p>GitHub is not a software you need to install. Rather it is a remote or cloud-based server that holds its users’ code versioned using the <code>git</code> version control system and to which a user’s local, git-versioned code syncs/communicates with.</p>
+<p>A good illustration of the <code>git</code> and <code>GitHub</code> relationship can be viewed below:</p>
+<p><img src="https://oxford-ihtm.io/open-reproducible-science/images/git_and_github01b.png" /></p>
+<p>To use GitHub, you will need create an account at <a href="https://github.com" class="uri">https://github.com</a>.</p>
+<div id="creating-a-github-account" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Creating a GitHub account<a href="intro-git.html#creating-a-github-account" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>Head to <a href="https://github.com" class="uri">https://github.com</a></p></li>
+<li><p>On the upper right hand corner of the page, click on <strong>Sign-up</strong> button</p></li>
+</ol>
+<p><img src="images/github_account1.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>You will be then prompted to provide an email address to register your account with.</li>
+</ol>
+<p><img src="images/github_account2.png" /></p>
+<p>With regard to the email address to use for creating a GitHub account, a best practice recommendation is to use an email address that you will have access to all the time. Email addresses such as those for school (if you are a student) or for your current work may not always be the best email address to use as these email addresses tend to be time-limited (i.e., you lose the email address once you graduate or once you leave your current work).</p>
+<ol start="4" style="list-style-type: decimal">
+<li>You will then be prompted for a password.</li>
+</ol>
+<p><img src="images/github_account2.png" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Then follow all other prompts after this including confirmation of your email and creating a GitHub username.</li>
+</ol>
+<p>With regard to creating/selecting a GitHub username, following are some best practice recommendations:</p>
 <ul>
-<li><p>Facilities for data handling and storage</p></li>
-<li><p>A large collection of tools for data analysis</p></li>
-<li><p>Graphical facilities for data analysis and display</p></li>
-<li><p>A simple but powerful programming language</p></li>
+<li><p>Incorporate your actual name! People like to know who they’re dealing with. Also makes your username easier for people to guess or remember.</p></li>
+<li><p>Pick a username you will be comfortable revealing to your future boss and/or to future collaborators.</p></li>
+<li><p>Shorter is better than longer.</p></li>
+<li><p>Be as unique as possible in as few characters as possible. In some settings GitHub auto-completes or suggests usernames.</p></li>
+<li><p>Make it timeless. Don’t highlight your current university, employer, or place of residence.</p></li>
+<li><p>Avoid the use of upper vs. lower case to separate words. We highly recommend all lowercase. GitHub treats usernames in a case insensitive way, but using all lowercase is kinder to people doing downstream regular expression work with usernames, in various languages. A better strategy for word separation is to use a hyphen <code>-</code>.</p></li>
+<li><p>You can change your username later, but better to get this right the first time.</p></li>
 </ul>
-<p><code>R</code> is often described as an environment for working with data. This is in contrast to a statistical <em>package</em> which is a collection of very specific tools. <code>R</code> is not strictly a statistics system but a system that provides many classical and modern statistical procedures as part of a broader data-analysis tool. This is an important difference between <code>R</code> and other statistical systems. In <code>R</code> a statistical analysis is usually performed as a series of steps with intermediate results being stored in objects. Systems such as <code>SPSS</code> and <code>SAS</code> provide copious output from (e.g.) a regression analysis whereas <code>R</code> will give minimal output and store the results of a fit for subsequent interrogation or use with other <code>R</code> functions. This means that <code>R</code> can be tailored to produce exactly the analysis and results that you want rather than produce an analysis designed to fit all situations.</p>
-<p><code>R</code> is a language based product. This means that you interact with <code>R</code> by typing commands such as:</p>
-<p> </p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro-r.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(SEX, LIFE)</span></code></pre></div>
-<p> </p>
-<p>rather than by using menus, dialog boxes, selection lists, and buttons. This may seem to be a drawback but it means that the system is considerably more flexible than one that relies on menus, buttons, and boxes. It also means that every stage of your data management and analysis can be recorded and edited and re-run at a later date. It also provides an audit trail for quality control purposes.</p>
-<p><code>R</code> is available under UNIX (including Linux), the Macintosh operating system OS X, and Microsoft Windows. The method used for starting <code>R</code> will vary from system to system. On UNIX systems you may need to issue the <code>R</code> command in a terminal session or click on an icon or menu option if your system has a windowing system. On Macintosh systems <code>R</code> will be available as an application but can also be run in a terminal session. On Microsoft Windows systems there will usually be an icon on the Start menu or the desktop.</p>
-</div>
-<div id="why-r" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Why use R?<a href="intro-r.html#why-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><code>R</code> is an open source system and is available under the <em>GNU general public license</em> (GPL) which means that it is available for free but that there are some restrictions on how you are allowed to distribute the system and how you may charge for bespoke data analysis solutions written using the <code>R</code> system. Details of the general public license are available from <a href="http://www.gnu.org/copyleft/gpl.html" class="uri">http://www.gnu.org/copyleft/gpl.html</a>.</p>
-<p><code>R</code> is available for download from <a href="http://www.r-project.org/" class="uri">http://www.r-project.org/</a>.</p>
-<p>This is also the best place to get extension packages and documentation. You may also subscribe to the <code>R</code> mailing lists from this site. <code>R</code> is supported through mailing lists. The level of support is at least as good as for commercial packages. It is typical to have queries answered in a matter of a few hours.</p>
-<p>Even though <code>R</code> is a free package it is more powerful than most commercial packages. Many of the modern procedures found in commercial packages were first developed and tested using <code>R</code> or <strong>S-Plus</strong> (the commercial equivalent of <code>R</code>).</p>
-</div>
-<div id="what-rstudio" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> What is RStudio<a href="intro-r.html#what-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>RStudio is an <strong>integrated development environment (IDE)</strong> for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.</p>
-<p>RStudio is available in open source and commercial editions and runs on the desktop (Windows, Mac, and Linux) or in a browser connected to RStudio Server or RStudio Workbench (Debian/Ubuntu, Red Hat/CentOS, and SUSE Linux).</p>
-<p>
-<a href="https://www.rstudio.com/products/rstudio/?wvideo=520zbd3tij"><img src="https://embed-fastly.wistia.com/deliveries/260e6e980f526abaedf8ef3378270c899da74f08.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=71a5d4e0" width="400" height="225" style="width: 400px; height: 225px;"></a>
-</p>
-<p>
-<a href="https://www.rstudio.com/products/rstudio/?wvideo=520zbd3tij">RStudio IDE Overview</a>
-</p>
-<!---
-## Why use RStudio {#why-rstudio}
---->
+<p><a href="https://help.github.com/articles/changing-your-github-username/" class="uri">https://help.github.com/articles/changing-your-github-username/</a></p>
+<p><a href="https://help.github.com/articles/what-happens-when-i-change-my-username/" class="uri">https://help.github.com/articles/what-happens-when-i-change-my-username/</a></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Once you have created a GitHub account, please do share your username to the lecture seriese presenter so he can add your username to the Oxford IHTM GitHub account and add you to the Oxford IHTM GitHub Classroom.</li>
+</ol>
 
+</div>
 </div>
 </div>
             </section>
@@ -256,8 +267,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="install-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro-git.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="write-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
