@@ -12,16 +12,15 @@ colorlinks: TRUE
 fontsize: 12pt
 url: https\://oxford-ihtm.io/ihtm-handbook
 github-repo: OxfordIHTM/ihtm-handbook
-cover-image: 
+cover-image: images/ihtm_small.png
 description: "A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research"
 ---
 
 # Open Science and Reproducible Research Handbook {-}
 
-<!---
 <center>
-![]("https://raw.githubusercontent.com/proochista/www/master/assets/images/icon.png")
+![](images/ihtm_small.png)
 </center>
---->
+
 
 
