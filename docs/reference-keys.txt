@@ -1,4 +1,6 @@
 introduction
+all-about-r
+open-and-reproducible-science
 install-r
 setup-for-windows-machines
 install-r-for-windows-machines
