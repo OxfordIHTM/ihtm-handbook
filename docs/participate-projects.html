@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Introduction to R and RStudio | University of Oxford International Health and Tropical Medicine</title>
+  <title>9 Participating in an existing R/RStudio project | University of Oxford International Health and Tropical Medicine</title>
   <meta name="description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Introduction to R and RStudio | University of Oxford International Health and Tropical Medicine" />
+  <meta property="og:title" content="9 Participating in an existing R/RStudio project | University of Oxford International Health and Tropical Medicine" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://oxford-ihtm.io/ihtm-handbook/images/ihtm_small.png" />
   <meta property="og:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="github-repo" content="OxfordIHTM/ihtm-handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Introduction to R and RStudio | University of Oxford International Health and Tropical Medicine" />
+  <meta name="twitter:title" content="9 Participating in an existing R/RStudio project | University of Oxford International Health and Tropical Medicine" />
   
   <meta name="twitter:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="twitter:image" content="https://oxford-ihtm.io/ihtm-handbook/images/ihtm_small.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="install-r.html"/>
-<link rel="next" href="intro-git.html"/>
+<link rel="prev" href="clone-repository.html"/>
+<link rel="next" href="commit-and-push.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -227,45 +227,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro-r" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Introduction to R and RStudio<a href="intro-r.html#intro-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="what-r" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> What is R?<a href="intro-r.html#what-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><code>R</code> is a system for data manipulation, calculation, and graphics. It provides:</p>
-<ul>
-<li><p>Facilities for data handling and storage</p></li>
-<li><p>A large collection of tools for data analysis</p></li>
-<li><p>Graphical facilities for data analysis and display</p></li>
-<li><p>A simple but powerful programming language</p></li>
-</ul>
-<p><code>R</code> is often described as an environment for working with data. This is in contrast to a statistical <em>package</em> which is a collection of very specific tools. <code>R</code> is not strictly a statistics system but a system that provides many classical and modern statistical procedures as part of a broader data-analysis tool. This is an important difference between <code>R</code> and other statistical systems. In <code>R</code> a statistical analysis is usually performed as a series of steps with intermediate results being stored in objects. Systems such as <code>SPSS</code> and <code>SAS</code> provide copious output from (e.g.) a regression analysis whereas <code>R</code> will give minimal output and store the results of a fit for subsequent interrogation or use with other <code>R</code> functions. This means that <code>R</code> can be tailored to produce exactly the analysis and results that you want rather than produce an analysis designed to fit all situations.</p>
-<p><code>R</code> is a language based product. This means that you interact with <code>R</code> by typing commands such as:</p>
-<p> </p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="intro-r.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(SEX, LIFE)</span></code></pre></div>
-<p> </p>
-<p>rather than by using menus, dialog boxes, selection lists, and buttons. This may seem to be a drawback but it means that the system is considerably more flexible than one that relies on menus, buttons, and boxes. It also means that every stage of your data management and analysis can be recorded and edited and re-run at a later date. It also provides an audit trail for quality control purposes.</p>
-<p><code>R</code> is available under UNIX (including Linux), the Macintosh operating system OS X, and Microsoft Windows. The method used for starting <code>R</code> will vary from system to system. On UNIX systems you may need to issue the <code>R</code> command in a terminal session or click on an icon or menu option if your system has a windowing system. On Macintosh systems <code>R</code> will be available as an application but can also be run in a terminal session. On Microsoft Windows systems there will usually be an icon on the Start menu or the desktop.</p>
-</div>
-<div id="why-r" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Why use R?<a href="intro-r.html#why-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><code>R</code> is an open source system and is available under the <em>GNU general public license</em> (GPL) which means that it is available for free but that there are some restrictions on how you are allowed to distribute the system and how you may charge for bespoke data analysis solutions written using the <code>R</code> system. Details of the general public license are available from <a href="http://www.gnu.org/copyleft/gpl.html" class="uri">http://www.gnu.org/copyleft/gpl.html</a>.</p>
-<p><code>R</code> is available for download from <a href="http://www.r-project.org/" class="uri">http://www.r-project.org/</a>.</p>
-<p>This is also the best place to get extension packages and documentation. You may also subscribe to the <code>R</code> mailing lists from this site. <code>R</code> is supported through mailing lists. The level of support is at least as good as for commercial packages. It is typical to have queries answered in a matter of a few hours.</p>
-<p>Even though <code>R</code> is a free package it is more powerful than most commercial packages. Many of the modern procedures found in commercial packages were first developed and tested using <code>R</code> or <strong>S-Plus</strong> (the commercial equivalent of <code>R</code>).</p>
-</div>
-<div id="what-rstudio" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> What is RStudio<a href="intro-r.html#what-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>RStudio is an <strong>integrated development environment (IDE)</strong> for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.</p>
-<p>RStudio is available in open source and commercial editions and runs on the desktop (Windows, Mac, and Linux) or in a browser connected to RStudio Server or RStudio Workbench (Debian/Ubuntu, Red Hat/CentOS, and SUSE Linux).</p>
-<p>
-<a href="https://www.rstudio.com/products/rstudio/?wvideo=520zbd3tij"><img src="https://embed-fastly.wistia.com/deliveries/260e6e980f526abaedf8ef3378270c899da74f08.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=71a5d4e0" width="400" height="225" style="width: 400px; height: 225px;"></a>
-</p>
-<p>
-<a href="https://www.rstudio.com/products/rstudio/?wvideo=520zbd3tij">RStudio IDE Overview</a>
-</p>
-<!---
-## Why use RStudio {#why-rstudio}
---->
+<div id="participate-projects" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">9</span> Participating in an existing R/RStudio project<a href="participate-projects.html#participate-projects" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Following are the general steps to take when participating in an existing R/RStudio project that has been initiated and led by someone else.</p>
+<p>There can be different scenarios</p>
+<div id="steps-when-existing-project-is-not-an-rstudio-project" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Steps when existing project is not an RStudio project<a href="participate-projects.html#steps-when-existing-project-is-not-an-rstudio-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -274,8 +241,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="install-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro-git.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="clone-repository.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="commit-and-push.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

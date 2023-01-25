@@ -3,23 +3,25 @@
 This tutorial is a summary of the the instructions described here - https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository.
 
 ## Copy the repository URL of the repository you want to clone from GitHub
-![](https://user-images.githubusercontent.com/5742010/152893606-447d3b63-b5a4-4191-8e2e-5457d2431354.png)
+![](images/clone_step1.png)
 
 7.1.1 Go to the GitHub page of the repository you own and click on the green button that is labeled code
 
 7.1.2 Click on the copy to clipboard icon to copy the repository URL.
 
 ## Go to RStudio and create new project
-![](https://user-images.githubusercontent.com/5742010/152893999-12eb6fb5-f37f-45e2-99bb-ab752c8d28b2.png)
+![](images/clone_step2.png)
 
 ## Choose Version Control
-![](https://user-images.githubusercontent.com/5742010/152894141-d70d33b1-23cc-433d-a06e-0f6eb90a5521.png)
+![](images/clone_step3.png)
 
 ## Select Git
-![](https://user-images.githubusercontent.com/5742010/152894209-da871ce4-830b-4e7f-9ca5-7610447bfef4.png)
+
+![](images/clone_step4.png)
 
 ## Setup repository settings
-![](https://user-images.githubusercontent.com/5742010/152894284-58d28f50-97db-44ec-8363-152f90286610.png)
+
+![](images/clone_step5.png)
 
 7.5.1 Paste the repository URL you copied earlier.
 
