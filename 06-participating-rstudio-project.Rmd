@@ -1,0 +1,7 @@
+# Participating in an existing R/RStudio project {#participate-projects}
+
+Following are the general steps to take when participating in an existing R/RStudio project that has been initiated and led by someone else.
+
+There can be different scenarios 
+
+## Steps when existing project is not an RStudio project

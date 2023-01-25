@@ -3,10 +3,12 @@
 Following are the steps to take in committing your changes in RStudio and pushing them to GitHub.
 
 ## Click on `Commit` in the Git tab on RStudio
-![](https://user-images.githubusercontent.com/5742010/152895564-b9fb8960-89da-4b86-8d42-c9687d60fad4.png)
+
+![](images/commit_push_pull1.png)
 
 ## Getting changes saved and push to GitHub
-![](https://user-images.githubusercontent.com/5742010/152895737-33181b80-c484-444a-bda8-19ee027970d0.png)
+
+![](images/commit_push_pull2.png)
 
 8.2.1 Tick the box beside the file that has changed to stage the changes.
 

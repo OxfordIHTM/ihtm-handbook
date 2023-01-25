@@ -20,6 +20,13 @@ all-about-git
 all-about-github
 creating-a-github-account
 connect-rstudio-github
+initiate-projects
+create-a-new-project-in-rstudio
+structureorganise-your-new-project-appropriately
+start-coding-and-create-an-r-script-for-your-projects-workflow
+commit-changes
+push-your-changes-to-your-remote-git
+section
 write-functions
 clone-repository
 copy-the-repository-url-of-the-repository-you-want-to-clone-from-github
@@ -27,6 +34,8 @@ go-to-rstudio-and-create-new-project
 choose-version-control
 select-git
 setup-repository-settings
+participate-projects
+steps-when-existing-project-is-not-an-rstudio-project
 commit-and-push
 click-on-commit-in-the-git-tab-on-rstudio
 getting-changes-saved-and-push-to-github

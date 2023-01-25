@@ -1,0 +1,23 @@
+# Initiating an R/RStudio project {#initiate-projects}
+
+Following are the steps to initiating your own R/RStudio project.
+
+## 1. Create a new project in RStudio
+
+## 2. Structure/organise your new project appropriately
+
+## 3. Start coding and create an R script for your project's workflow
+
+The next steps are specific for when you decide to use git for versioning your project.
+
+## 4. Commit changes
+
+## 5. Push your changes to your remote git
+
+## 6. 
+
+
+
+
+
+
