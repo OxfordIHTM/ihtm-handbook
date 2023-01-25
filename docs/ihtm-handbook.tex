@@ -190,7 +190,7 @@
 
 \title{University of Oxford International Health and Tropical Medicine}
 \author{Proochista Ariana and Ernest Guevarra}
-\date{2023-01-13}
+\date{2023-01-25}
 
 \begin{document}
 \maketitle
@@ -204,8 +204,36 @@
 \chapter*{Open Science and Reproducible Research Handbook}\label{open-science-and-reproducible-research-handbook}}
 \addcontentsline{toc}{chapter}{Open Science and Reproducible Research Handbook}
 
+\includegraphics{images/ihtm_small.png}
+
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
+
+\hypertarget{all-about-r}{%
+\section{All about R}\label{all-about-r}}
+
+\href{https://r-project.org}{R} is a language and environment for statistical computing and graphics. It is a \href{https://en.wikipedia.org/wiki/GNU}{GNU} project which is similar to the \href{https://en.wikipedia.org/wiki/S_(programming_language)}{S language and environment} which was developed at Bell Laboratories (formerly AT\&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
+
+\href{https://r-project.org}{R} provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, etc.) and graphical techniques, and is highly extensible. The S language is often the vehicle of choice for research in statistical methodology, and R provides an Open Source route to participation in that activity.
+
+One of \href{https://r-project.org}{R}'s strengths is the ease with which well-designed publication-quality plots can be produced, including mathematical symbols and formulae where needed. Great care has been taken over the defaults for the minor design choices in graphics, but the user retains full control.
+
+R is available as Free Software under the terms of the Free Software Foundation's GNU General Public License in source code form. It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.
+
+R is unique in that it is not general-purpose. It does not compromise by trying to do a lot of things. It does a few things very well, mainly statistical analysis and data visualization. While you can find data analysis and machine learning libraries for languages like \href{https://www.python.org/}{Python}, R has many statistical functionalities built into its core. No third-party libraries are needed for much of the core data analysis you can do with the language.
+
+But even with this specific use case, it is used in every industry you can think of because a modern business runs on data. Using past data, data scientists and data analysts can determine the health of a business and give business leaders actionable insights into the future of their company.
+
+Just because R is specifically used for statistical analysis and data visualization doesn't mean its use is limited. It's actually quite popular, ranking 12th in the \href{https://www.tiobe.com/tiobe-index/}{TIOBE index} of the most popular programming languages.
+
+Academics, scientists, and researchers use R to analyze the results of experiments. In addition, businesses of all sizes and in every industry use it to extract insights from the increasing amount of daily data they generate.
+
+\hypertarget{open-and-reproducible-science}{%
+\section{Open and reproducible science}\label{open-and-reproducible-science}}
+
+Open Science is the practice of science in such a way that others can collaborate and contribute, where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods. Reproducible research means that research data and code are made available so that others are able to reach the same results as are claimed in scientific outputs. Closely related is the concept of replicability, the act of repeating a scientific methodology to reach similar conclusions. These concepts are core elements of empirical research.
+
+This lecture series is designed to give Oxford IHTM students a foundational understanding and appreciation of the pillars of Open Science more broadly and within that the concepts, methods and tools for Reproducible Research more specifically. To further the students' learning, practical examples and exercises will be discussed and walked through using the R language for statistical computing as a way to practically demonstrate these concepts.
 
 \hypertarget{install-r}{%
 \chapter{Installing R and RStudio}\label{install-r}}
@@ -379,7 +407,7 @@ GitHub is not a software you need to install. Rather it is a remote or cloud-bas
 
 A good illustration of the \texttt{git} and \texttt{GitHub} relationship can be viewed below:
 
-\includegraphics{https://github.com/OxfordIHTM/open-reproducible-science/blob/main/images/git_and_github01b.png}
+\includegraphics{images/git_and_github01b.png}
 
 To use GitHub, you will need create an account at \url{https://github.com}.
 
@@ -457,8 +485,205 @@ With regard to creating/selecting a GitHub username, following are some best pra
   Once you have created a GitHub account, please do share your username to the lecture seriese presenter so he can add your username to the Oxford IHTM GitHub account and add you to the Oxford IHTM GitHub Classroom.
 \end{enumerate}
 
-\hypertarget{connect-github-rstudio}{%
-\chapter{Connecting GitHub with RStudio}\label{connect-github-rstudio}}
+\hypertarget{connect-rstudio-github}{%
+\chapter{Connecting RStudio with GitHub}\label{connect-rstudio-github}}
+
+Once RStudio is installed and a GitHub account has been created and registered, the final step in the R, RStudio, git, and GitHub dance is to create git-related settings on your machine that will identify you as a unique/specific git user and then creating a GitHub \textbf{personal access token (PAT)} which will serve as the key or proof that you will use to identify yourself as the git user you claim to be whenever you try to syn/connect to your GitHub account via RStudio or any other tool on your local computer.
+
+Follow are the steps you will need to perform:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  On your local machine, open RStudio and then select the \texttt{Terminal} tab in the console pane.
+\end{enumerate}
+
+The \texttt{Terminal} is the tool used to interface with your computer through commands written in a programming language called \texttt{bash}. Most of you would have never used the \texttt{Terminal} because the computers you use have different kinds of software built-in that provide a \textbf{graphical user interface (GUI)} that you can use to perform operations and tasks.
+
+RStudio comes with the \texttt{Terminal} tool built in and usually is already available from the console pane as a separate table along side the R console (see below). By default, whenever you open RStudio, this tab for the \texttt{Terminal} tool should already be available.
+
+If if is not present, you can easily open a new \texttt{Terminal} tab in the console pane by going to the RStudio menu ribbon and clicking on:
+
+\begin{verbatim}
+Tools --> Terminal --> New Terminal
+\end{verbatim}
+
+or you can use the \texttt{ALT\ +\ SHIFT\ +\ R} keyboard shortcut.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Introduce yourself to git
+\end{enumerate}
+
+In this step, you are basically going to issue a set of commands to your computer to save and store specific settings for the \texttt{git} software that you have installed.
+
+Specifically, you are going to let git know who you are (your name) and what your email address is \textbf{that is associated with your GitHub account}.
+
+The commands will be issued on the \texttt{Terminal} that we mentioned in step 1. The commands are:
+
+\begin{verbatim}
+git config --global user.name 'Jane Doe'
+git config --global user.email 'jane@example.com'
+\end{verbatim}
+
+Make sure to supply your full proper name (and not your username you created in GitHub).
+
+Make sure that the email you provide is the email address you used to register and create an account with GitHub.
+
+Unless there was an error in your syntax, you should not expect any output on the \texttt{Terminal} after you issue the commands. To check that your name and email address have been recorded and/or that the name and email address recorded is correct, you can issue the following command:
+
+\begin{verbatim}
+git config --global --list
+\end{verbatim}
+
+Here is an example of what you will see after issue this command:
+
+\begin{verbatim}
+$ git config --global --list
+
+user.name=Jane Doe
+user.email=jane@example.com
+\end{verbatim}
+
+Check this output to what you expect it to be specified as. If the information is correct, then you've completed this step. If you need to correct any of this information, then repeat this step making sure that the name and email address you provide is correct.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Create a GitHub personal access token (PAT)
+\end{enumerate}
+
+Now that you have introduced yourself to the \texttt{git} that is installed in your local machine/computer, you should now visit GitHub on a browser (\url{https://github.com}) and create a \textbf{personal access token (PAT)}.
+
+When you communicate/sync/interact with a remote git server, such as GitHub, you have to include credentials in the communication you are sending. These credentials prove that you are a specific GitHub user, who's allowed to do whatever you're asking to do.
+
+\texttt{git} can communicate with a remote server using one of two protocols, HTTPS or SSH, and the different protocols use different credentials.
+
+Here we describe the credential setup for the HTTPS protocol, which is what we recommend if you have no burning reason to pick SSH. With HTTPS, we will use a \textbf{personal access token (PAT)}.
+
+Please note that the \textbf{personal access token (PAT)} is not the same as the password you provided when registering for your GitHub account. Also, in performing a connection to GitHub via HTTPS protocol, your password is not an acceptable credential for communicating with GitHub as a server.
+
+To create a GitHub \textbf{personal access token (PAT)}, you need to:
+
+3a. Go to Settings from your GitHub account menu
+
+Login to your GitHub account. On the upper right hand corner of the GitHub page you will see your account icon. Click on it to reveal a drop down menu as shown below. Select the \textbf{Settings} option.
+
+\includegraphics{images/github_pat2.png}
+
+3b. From Settings navigate to Developer Settings
+
+In the \textbf{Settings} page, find the \textbf{Developer Settings} option on the left hand sidebar as shown below:
+
+\includegraphics{images/github_pat3.png}
+
+3c. From Developer Settings navigate to Personal Access Token
+
+In the \textbf{Developer Settings} page, find the \textbf{Personal Access Token} option on the left hand sidebar as shown below:
+
+\includegraphics{images/github_pat4.png}
+
+3d. Select Tokens (classic)
+
+\includegraphics{images/github_pat5.png}
+
+3e. Click on Generate new token
+
+\includegraphics{images/github_pat7.png}
+
+3f. Select Generate new token (classic)
+
+\includegraphics{images/github_pat8.png}
+
+3g. Give your token a name
+
+\includegraphics{images/github_pat9.png}
+
+The token name should be short but descriptive of the where or how you will use the token. Since we are using this to connect and allow communication between RStudio and GitHub, \textbf{RStudio} can be a good name that would remind you that this is what you are using to secure the connection/communication between your RStudio and your GitHub account.
+
+3f. Set an expiry date for the token
+
+\includegraphics{images/github_pat9.png}
+
+By default, GitHub will set a \textbf{30 day validity} for any new token created. Clicking on the option menu will show the other possible time periods to choose from including \textbf{No expiry date}.
+
+It is best practice to assign an expiry date for security tokens such as the GitHub PAT. And a 30 day validity is standard practice. However, in reality, it is cumbersome to be creating new tokens frequently and for beginners, having to go through these steps again can be quite a chore. For the purposes of this lecture series, we would recommend setting the expiry for about 90 days to cover the whole period and then as a group, we'll have a \textbf{renew GitHub PAT party} on our last session.
+
+3g. Set scopes
+
+\includegraphics{images/github_pat10.png}
+
+Scopes are the types of permissions that you are attaching the token you are generating. This is again a security feature as takens should only be given specific and limited permissions based on what you intend the token to be used for. It is not good practice to give a token complete or unlimited permissions as you are exposing your account to high risk if and when your token gets compromised.
+
+For general R users, the following scopes are currently recommended:
+
+\begin{itemize}
+\tightlist
+\item
+  repo
+\item
+  workflow
+\item
+  gist
+\item
+  user
+\end{itemize}
+
+3h. Click on Generate token
+
+\includegraphics{images/github_pat11.png}
+
+After clicking you will now see a long string of characters and numbers which is your GitHub PAT. It is important to remember that once you see the generated GitHub PAT, you should copy this right away and store it securely. Treat your GitHub PAT in the same way you would treat your password for online accounts. The best way to securely store the GitHub PAT is using a password manager (LastPass, 1Password, BitWarden). If you have a macOS computer, you can save your GitHub PAT into your computer's keychain.
+
+Non-secure password/token storage practices that has been done by other students before are:
+
+\begin{itemize}
+\tightlist
+\item
+  Email their password/token to themselves
+\end{itemize}
+
+If you are using free email services such as Gmail, then this is a hihly non-secure method. Others use their University of Oxford email address and argue that this is secure compared to using the free email services. Whilst it is true that a university email account is more secure, email communications and email storage is still one of the most vulnerable places to keep something that is meant to be kept secret.
+
+\begin{itemize}
+\item
+  Paste the token into a Word document and save in personal computer with the filename GITHUB\_PAT.docx
+\item
+  Paste the token into a Word document and save in Dropbox or in Google Drive
+\end{itemize}
+
+Please \textbf{AVOID} these methods.
+
+\hypertarget{initiate-projects}{%
+\chapter{Initiating an R/RStudio project}\label{initiate-projects}}
+
+Following are the steps to initiating your own R/RStudio project.
+
+\hypertarget{create-a-new-project-in-rstudio}{%
+\section{1. Create a new project in RStudio}\label{create-a-new-project-in-rstudio}}
+
+\hypertarget{structureorganise-your-new-project-appropriately}{%
+\section{2. Structure/organise your new project appropriately}\label{structureorganise-your-new-project-appropriately}}
+
+\hypertarget{start-coding-and-create-an-r-script-for-your-projects-workflow}{%
+\section{3. Start coding and create an R script for your project's workflow}\label{start-coding-and-create-an-r-script-for-your-projects-workflow}}
+
+The next steps are specific for when you decide to use git for versioning your project.
+
+\hypertarget{commit-changes}{%
+\section{4. Commit changes}\label{commit-changes}}
+
+\hypertarget{push-your-changes-to-your-remote-git}{%
+\section{5. Push your changes to your remote git}\label{push-your-changes-to-your-remote-git}}
+
+\hypertarget{section}{%
+\section{6.}\label{section}}
 
 \hypertarget{write-functions}{%
 \chapter{Writing functions}\label{write-functions}}
@@ -660,10 +885,9 @@ When I run these lines of code, I get the following results:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481
-## [14] 14.60166 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444
-## [27] 14.87800 16.41539 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153
-## [40] 18.94313
+##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481 14.60166
+## [15] 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444 14.87800 16.41539
+## [29] 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153 18.94313
 \end{verbatim}
 
 \begin{Shaded}
@@ -678,10 +902,9 @@ When I run these lines of code, I get the following results:
 \end{verbatim}
 
 \begin{verbatim}
-##  [1] 19.27438 16.57903 14.22865 11.65487 14.97150 15.14814 17.65012 13.10363 11.23083 19.76704 14.03492 19.43787 15.92035
-## [14] 14.74435 12.03967 14.34481 14.78490 13.57079 14.46527 12.21679 11.08343 13.92627 13.59168 19.58058 25.89564 21.92561
-## [27] 17.40726 26.08609 16.07485 15.58488 18.61440 22.96095 24.68185 13.94381 15.10926 17.16604 16.64656 21.43600 19.85735
-## [40] 15.12163 32.75384
+##  [1] 19.27438 16.57903 14.22865 11.65487 14.97150 15.14814 17.65012 13.10363 11.23083 19.76704 14.03492 19.43787 15.92035 14.74435
+## [15] 12.03967 14.34481 14.78490 13.57079 14.46527 12.21679 11.08343 13.92627 13.59168 19.58058 25.89564 21.92561 17.40726 26.08609
+## [29] 16.07485 15.58488 18.61440 22.96095 24.68185 13.94381 15.10926 17.16604 16.64656 21.43600 19.85735 15.12163 32.75384
 \end{verbatim}
 
 \begin{Shaded}
@@ -696,10 +919,10 @@ When I run these lines of code, I get the following results:
 \end{verbatim}
 
 \begin{verbatim}
-##  [1] 16.50290 17.60176 12.57755 14.76284 13.00016 13.25462 13.46983 13.56612 16.02447 15.58555 13.69260 14.42986 17.80624
-## [14] 17.02735 14.69670 10.41216 13.32058 11.04253 12.14611 12.17362 10.83529 11.36315 11.58914 12.41023 14.02307 16.93116
-## [27] 20.82920 18.99425 11.04923 14.54889 14.42308 16.13472 14.13479 18.68887 13.40271 14.20099 11.74611 18.73049 20.69522
-## [40] 14.09435 18.89645 19.91636 25.34934 20.83308
+##  [1] 16.50290 17.60176 12.57755 14.76284 13.00016 13.25462 13.46983 13.56612 16.02447 15.58555 13.69260 14.42986 17.80624 17.02735
+## [15] 14.69670 10.41216 13.32058 11.04253 12.14611 12.17362 10.83529 11.36315 11.58914 12.41023 14.02307 16.93116 20.82920 18.99425
+## [29] 11.04923 14.54889 14.42308 16.13472 14.13479 18.68887 13.40271 14.20099 11.74611 18.73049 20.69522 14.09435 18.89645 19.91636
+## [43] 25.34934 20.83308
 \end{verbatim}
 
 The calculation for the BMI of children in school 1516 seems to have completed without issues and a vector of BMI results have been produced. However, for school 1522 and school 1525, there is a warning saying:
@@ -738,10 +961,9 @@ which gives me:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481
-## [14] 14.60166 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444
-## [27] 14.87800 16.41539 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153
-## [40] 18.94313
+##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481 14.60166
+## [15] 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444 14.87800 16.41539
+## [29] 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153 18.94313
 \end{verbatim}
 
 \begin{Shaded}
@@ -752,10 +974,9 @@ which gives me:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 15.50132 15.71429 15.77161 13.77410 16.10277 14.94669 17.65012 14.15908 14.78277 16.73082 15.18017 18.91674 15.79459
-## [14] 15.92991 16.07852 15.83937 16.34076 16.48493 17.45479 15.12217 14.21653 16.30492 15.59978 16.49597 23.15334 18.63150
-## [27] 15.47594 20.65000 19.31656 15.96837 19.32626 17.88178 24.01416 15.04898 15.28626 15.38741 17.75817 20.34543 19.03550
-## [40] 14.64837 20.06095
+##  [1] 15.50132 15.71429 15.77161 13.77410 16.10277 14.94669 17.65012 14.15908 14.78277 16.73082 15.18017 18.91674 15.79459 15.92991
+## [15] 16.07852 15.83937 16.34076 16.48493 17.45479 15.12217 14.21653 16.30492 15.59978 16.49597 23.15334 18.63150 15.47594 20.65000
+## [29] 19.31656 15.96837 19.32626 17.88178 24.01416 15.04898 15.28626 15.38741 17.75817 20.34543 19.03550 14.64837 20.06095
 \end{verbatim}
 
 \begin{Shaded}
@@ -766,10 +987,10 @@ which gives me:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 13.95919 17.17076 15.32544 16.19692 14.66258 14.08284 14.75493 14.48560 16.02447 14.23329 15.13841 15.31463 16.89906
-## [14] 17.75441 18.06122 14.81166 15.02477 15.37188 15.99296 15.02477 13.36735 13.57143 14.28271 13.58081 14.88704 14.67278
-## [27] 17.94182 15.53816 14.74435 15.36266 16.92708 15.75485 15.13258 16.29409 14.70051 16.61797 14.73072 20.26936 19.29687
-## [40] 15.24444 13.69613 15.20381 19.17355 17.18475
+##  [1] 13.95919 17.17076 15.32544 16.19692 14.66258 14.08284 14.75493 14.48560 16.02447 14.23329 15.13841 15.31463 16.89906 17.75441
+## [15] 18.06122 14.81166 15.02477 15.37188 15.99296 15.02477 13.36735 13.57143 14.28271 13.58081 14.88704 14.67278 17.94182 15.53816
+## [29] 14.74435 15.36266 16.92708 15.75485 15.13258 16.29409 14.70051 16.61797 14.73072 20.26936 19.29687 15.24444 13.69613 15.20381
+## [43] 19.17355 17.18475
 \end{verbatim}
 
 I now do not get the warning message and the expected length of BMI values for each school has now been produced.
@@ -814,10 +1035,9 @@ Let us now test it with our 3 sets of data:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481
-## [14] 14.60166 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444
-## [27] 14.87800 16.41539 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153
-## [40] 18.94313
+##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481 14.60166
+## [15] 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444 14.87800 16.41539
+## [29] 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153 18.94313
 \end{verbatim}
 
 \textbf{School 1522}
@@ -832,10 +1052,9 @@ Let us now test it with our 3 sets of data:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 15.50132 15.71429 15.77161 13.77410 16.10277 14.94669 17.65012 14.15908 14.78277 16.73082 15.18017 18.91674 15.79459
-## [14] 15.92991 16.07852 15.83937 16.34076 16.48493 17.45479 15.12217 14.21653 16.30492 15.59978 16.49597 23.15334 18.63150
-## [27] 15.47594 20.65000 19.31656 15.96837 19.32626 17.88178 24.01416 15.04898 15.28626 15.38741 17.75817 20.34543 19.03550
-## [40] 14.64837 20.06095
+##  [1] 15.50132 15.71429 15.77161 13.77410 16.10277 14.94669 17.65012 14.15908 14.78277 16.73082 15.18017 18.91674 15.79459 15.92991
+## [15] 16.07852 15.83937 16.34076 16.48493 17.45479 15.12217 14.21653 16.30492 15.59978 16.49597 23.15334 18.63150 15.47594 20.65000
+## [29] 19.31656 15.96837 19.32626 17.88178 24.01416 15.04898 15.28626 15.38741 17.75817 20.34543 19.03550 14.64837 20.06095
 \end{verbatim}
 
 \textbf{School 1525}
@@ -850,10 +1069,10 @@ Let us now test it with our 3 sets of data:
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] 13.95919 17.17076 15.32544 16.19692 14.66258 14.08284 14.75493 14.48560 16.02447 14.23329 15.13841 15.31463 16.89906
-## [14] 17.75441 18.06122 14.81166 15.02477 15.37188 15.99296 15.02477 13.36735 13.57143 14.28271 13.58081 14.88704 14.67278
-## [27] 17.94182 15.53816 14.74435 15.36266 16.92708 15.75485 15.13258 16.29409 14.70051 16.61797 14.73072 20.26936 19.29687
-## [40] 15.24444 13.69613 15.20381 19.17355 17.18475
+##  [1] 13.95919 17.17076 15.32544 16.19692 14.66258 14.08284 14.75493 14.48560 16.02447 14.23329 15.13841 15.31463 16.89906 17.75441
+## [15] 18.06122 14.81166 15.02477 15.37188 15.99296 15.02477 13.36735 13.57143 14.28271 13.58081 14.88704 14.67278 17.94182 15.53816
+## [29] 14.74435 15.36266 16.92708 15.75485 15.13258 16.29409 14.70051 16.61797 14.73072 20.26936 19.29687 15.24444 13.69613 15.20381
+## [43] 19.17355 17.18475
 \end{verbatim}
 
 In our example here, the \texttt{calculate\_bmi()} function helped a little bit in making the code to calculate BMI for each student in each school more efficient. But the efficiency that functions provide become more evident when you need to make more complex operations. For example, what if you need to get the mean BMI for students in each school? Without a function, we will have to do the following script for each school:
@@ -981,7 +1200,7 @@ This tutorial is a summary of the the instructions described here - \url{https:/
 \hypertarget{copy-the-repository-url-of-the-repository-you-want-to-clone-from-github}{%
 \section{Copy the repository URL of the repository you want to clone from GitHub}\label{copy-the-repository-url-of-the-repository-you-want-to-clone-from-github}}
 
-\includegraphics{https://user-images.githubusercontent.com/5742010/152893606-447d3b63-b5a4-4191-8e2e-5457d2431354.png}
+\includegraphics{images/clone_step1.png}
 
 7.1.1 Go to the GitHub page of the repository you own and click on the green button that is labeled code
 
@@ -990,22 +1209,22 @@ This tutorial is a summary of the the instructions described here - \url{https:/
 \hypertarget{go-to-rstudio-and-create-new-project}{%
 \section{Go to RStudio and create new project}\label{go-to-rstudio-and-create-new-project}}
 
-\includegraphics{https://user-images.githubusercontent.com/5742010/152893999-12eb6fb5-f37f-45e2-99bb-ab752c8d28b2.png}
+\includegraphics{images/clone_step2.png}
 
 \hypertarget{choose-version-control}{%
 \section{Choose Version Control}\label{choose-version-control}}
 
-\includegraphics{https://user-images.githubusercontent.com/5742010/152894141-d70d33b1-23cc-433d-a06e-0f6eb90a5521.png}
+\includegraphics{images/clone_step3.png}
 
 \hypertarget{select-git}{%
 \section{Select Git}\label{select-git}}
 
-\includegraphics{https://user-images.githubusercontent.com/5742010/152894209-da871ce4-830b-4e7f-9ca5-7610447bfef4.png}
+\includegraphics{images/clone_step4.png}
 
 \hypertarget{setup-repository-settings}{%
 \section{Setup repository settings}\label{setup-repository-settings}}
 
-\includegraphics{https://user-images.githubusercontent.com/5742010/152894284-58d28f50-97db-44ec-8363-152f90286610.png}
+\includegraphics{images/clone_step5.png}
 
 7.5.1 Paste the repository URL you copied earlier.
 
@@ -1017,6 +1236,16 @@ This tutorial is a summary of the the instructions described here - \url{https:/
 
 You will now have the GitHub repository in your local computer.
 
+\hypertarget{participate-projects}{%
+\chapter{Participating in an existing R/RStudio project}\label{participate-projects}}
+
+Following are the general steps to take when participating in an existing R/RStudio project that has been initiated and led by someone else.
+
+There can be different scenarios
+
+\hypertarget{steps-when-existing-project-is-not-an-rstudio-project}{%
+\section{Steps when existing project is not an RStudio project}\label{steps-when-existing-project-is-not-an-rstudio-project}}
+
 \hypertarget{commit-and-push}{%
 \chapter{Committing your changes and pushing them to GitHub}\label{commit-and-push}}
 
@@ -1025,12 +1254,12 @@ Following are the steps to take in committing your changes in RStudio and pushin
 \hypertarget{click-on-commit-in-the-git-tab-on-rstudio}{%
 \section{\texorpdfstring{Click on \texttt{Commit} in the Git tab on RStudio}{Click on Commit in the Git tab on RStudio}}\label{click-on-commit-in-the-git-tab-on-rstudio}}
 
-\includegraphics{https://user-images.githubusercontent.com/5742010/152895564-b9fb8960-89da-4b86-8d42-c9687d60fad4.png}
+\includegraphics{images/commit_push_pull1.png}
 
 \hypertarget{getting-changes-saved-and-push-to-github}{%
 \section{Getting changes saved and push to GitHub}\label{getting-changes-saved-and-push-to-github}}
 
-\includegraphics{https://user-images.githubusercontent.com/5742010/152895737-33181b80-c484-444a-bda8-19ee027970d0.png}
+\includegraphics{images/commit_push_pull2.png}
 
 8.2.1 Tick the box beside the file that has changed to stage the changes.
 
@@ -1053,7 +1282,7 @@ R's scripting capability and R's extensibility are its main characteristics that
 
 A typical scientific workflow would have the following steps:
 
-\begin{center}\includegraphics[width=21.96in]{images/scientific-workflow} \end{center}
+\begin{center}\includegraphics[width=11.11in]{images/scientific-workflow} \end{center}
 
 In general, an R script should reflect the different steps outlined above. Hence, an R script of a scientific workflow would tend to look like this:
 
