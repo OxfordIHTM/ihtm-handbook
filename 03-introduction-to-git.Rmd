@@ -16,7 +16,7 @@ GitHub is not a software you need to install. Rather it is a remote or cloud-bas
 
 A good illustration of the `git` and `GitHub` relationship can be viewed below:
 
-![](https://oxford-ihtm.io/open-reproducible-science/images/git_and_github01b.png)
+![](images/git_and_github01b.png)
 
 To use GitHub, you will need create an account at https://github.com.
 
