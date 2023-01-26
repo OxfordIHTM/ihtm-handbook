@@ -190,7 +190,7 @@
 
 \title{University of Oxford International Health and Tropical Medicine}
 \author{Proochista Ariana and Ernest Guevarra}
-\date{2023-01-25}
+\date{2023-01-26}
 
 \begin{document}
 \maketitle
@@ -659,31 +659,6 @@ If you are using free email services such as Gmail, then this is a hihly non-sec
 \end{itemize}
 
 Please \textbf{AVOID} these methods.
-
-\hypertarget{initiate-projects}{%
-\chapter{Initiating an R/RStudio project}\label{initiate-projects}}
-
-Following are the steps to initiating your own R/RStudio project.
-
-\hypertarget{create-a-new-project-in-rstudio}{%
-\section{1. Create a new project in RStudio}\label{create-a-new-project-in-rstudio}}
-
-\hypertarget{structureorganise-your-new-project-appropriately}{%
-\section{2. Structure/organise your new project appropriately}\label{structureorganise-your-new-project-appropriately}}
-
-\hypertarget{start-coding-and-create-an-r-script-for-your-projects-workflow}{%
-\section{3. Start coding and create an R script for your project's workflow}\label{start-coding-and-create-an-r-script-for-your-projects-workflow}}
-
-The next steps are specific for when you decide to use git for versioning your project.
-
-\hypertarget{commit-changes}{%
-\section{4. Commit changes}\label{commit-changes}}
-
-\hypertarget{push-your-changes-to-your-remote-git}{%
-\section{5. Push your changes to your remote git}\label{push-your-changes-to-your-remote-git}}
-
-\hypertarget{section}{%
-\section{6.}\label{section}}
 
 \hypertarget{write-functions}{%
 \chapter{Writing functions}\label{write-functions}}
@@ -1236,16 +1211,6 @@ This tutorial is a summary of the the instructions described here - \url{https:/
 
 You will now have the GitHub repository in your local computer.
 
-\hypertarget{participate-projects}{%
-\chapter{Participating in an existing R/RStudio project}\label{participate-projects}}
-
-Following are the general steps to take when participating in an existing R/RStudio project that has been initiated and led by someone else.
-
-There can be different scenarios
-
-\hypertarget{steps-when-existing-project-is-not-an-rstudio-project}{%
-\section{Steps when existing project is not an RStudio project}\label{steps-when-existing-project-is-not-an-rstudio-project}}
-
 \hypertarget{commit-and-push}{%
 \chapter{Committing your changes and pushing them to GitHub}\label{commit-and-push}}
 
@@ -1268,6 +1233,206 @@ Following are the steps to take in committing your changes in RStudio and pushin
 8.2.3 Click on the \texttt{Commit} button.
 
 8.2.4 Click on the \texttt{Push} button.
+
+\hypertarget{initiate-a-pull-request}{%
+\section{Initiate a pull request}\label{initiate-a-pull-request}}
+
+8.3.1 Click on the \textbf{branches} link from your repository
+
+\includegraphics{images/pull_request1.png}
+
+8.3.2 Click on the \textbf{Make pull request} link on the appropriate branch
+
+\includegraphics{images/pull_request2.png}
+
+8.3.3 Enter a title for your pull request
+
+\includegraphics{images/pull_request3.png}
+
+Make the titel as short but as informative as possible
+
+8.3.4 Add further description about the pull request (optional) and then click on \textbf{Create pull request} button
+
+\includegraphics{images/pull_request4.png}
+
+If you think more information will help the reviewer navigate through the changes you have made, use the comment box to add more details. This comments box can interpret Markdown syntax so you can format your text accordingly.
+
+On the right hand side of the pull request page, you can set a specific reviewer for your pull request (recommended). Also, given that you are making this pull request, assign this pull request to you so you are notified of the progress of this pull request.
+
+Then finally click on the \textbf{Create pull request} button
+
+8.3.5 Wait for review
+
+If the project has automated checks included, you will see that these checks will get initiated.
+
+\includegraphics{images/pull_request5.png}
+
+If there are no issues with the code, the automated checks should show that all checks have passed.
+
+\includegraphics{images/pull_request6.png}
+
+Wait for reviewer's feedback/comments. If reviewer request's changes, make changes to your code and then commit and push again (as above). If your project has automated checks, this will get triggered again within the same pull request. Your reviewer will be notified of the changes you have made and should review your work again. Once reviewer approves changes, you can then merge your work to the main branch.
+
+\hypertarget{participate-projects}{%
+\chapter{Participating in an existing R/RStudio project}\label{participate-projects}}
+
+Following are the general steps to take when participating in an existing R/RStudio project that has been initiated and led by someone else.
+
+The following diagram illustrates the steps in this process:
+
+\includegraphics{images/git_process1.png}
+
+\hypertarget{clone-the-project-to-your-local-machine}{%
+\section{Clone the project to your local machine}\label{clone-the-project-to-your-local-machine}}
+
+Cloning a project to your local machine is described in Chapter \ref{clone-repository}
+
+\hypertarget{create-a-new-branch-from-the-main-branch}{%
+\section{Create a new branch from the main branch}\label{create-a-new-branch-from-the-main-branch}}
+
+Before making any changes to the project, create a new branch as follows:
+
+\hypertarget{click-on-new-branch}{%
+\subsection{\texorpdfstring{Click on \textbf{New Branch}}{Click on New Branch}}\label{click-on-new-branch}}
+
+\includegraphics{images/git_branch1.png}
+
+\hypertarget{name-the-new-branch}{%
+\subsection{Name the new branch}\label{name-the-new-branch}}
+
+\includegraphics{images/git_branch2.png}
+
+Name the branch uniquely. The best way to name a branch will be based on how the team/person you are working with prefers to name branches. Some would like the branch name to succinctly describe the type of change that is being made. Some may ask you to name your branch with your username. Some may ask you to name your branch using coded values.
+
+Once named, click on \textbf{Create}
+
+You will now see the new branch in the list of branches
+
+\includegraphics{images/git_branch3.png}
+
+\hypertarget{code-and-make-changes-to-your-branch}{%
+\section{Code and make changes to your branch}\label{code-and-make-changes-to-your-branch}}
+
+Start coding and implement the changes you want to make or the changes that your collaborator/s asked you to make.
+
+\hypertarget{commit-and-push-your-changes-and-initiate-a-pull-request}{%
+\section{Commit and push your changes and initiate a pull request}\label{commit-and-push-your-changes-and-initiate-a-pull-request}}
+
+After making changes, you should \textbf{commit and push} your changes. This process is described in Chapter \ref{commit-and-push}. Your code and your changes do not have to be complete already for your to commit and push changes. It is good practice to commit and push frequently (at least once a day usually at the end of your coding session). See this as similar to saving your work at multiple stages.
+
+Once your code and the changes you want to make are complete (and ideally that they are working correctly on your local machine), and that you are ready to have your work reviewed, you can now make a \textbf{pull request}. This process is also described in Chapter \ref{commit-and-push}.
+
+\hypertarget{merge-pull-request}{%
+\section{Merge pull request}\label{merge-pull-request}}
+
+Once your chosen reviewer has seen your work, they may ask you to make changes based on what they see with your code. If so, then start coding again on the same branch and address the reviewers comments, *commit** those changes and *push\textbf{ the changes to your remote repository. Your changes will push into the same existing open }pull request** that is waiting approval. The reviewer can then view your changes and make the necessary feedback.
+
+Once reviewer approves your changes, they may either merge your pull request themselves or they may let you know in their feedback that they are happy with your changes and that you can now merge your pull request. If so, then click on the \textbf{Merge pull request} button.
+
+Your changes have now been integrated into the main branch of the project.
+
+\hypertarget{initiate-projects}{%
+\chapter{Initiating an R/RStudio project}\label{initiate-projects}}
+
+Following is a diagram of the steps in initiating your own R/RStudio project.
+
+\includegraphics{images/git_process2.png}
+
+\hypertarget{create-a-new-project-in-rstudio}{%
+\section{1. Create a new project in RStudio}\label{create-a-new-project-in-rstudio}}
+
+\hypertarget{click-on-new-project-button-on-rstudio}{%
+\subsection{\texorpdfstring{1.1 Click on \textbf{New Project} button on RStudio}{1.1 Click on New Project button on RStudio}}\label{click-on-new-project-button-on-rstudio}}
+
+\includegraphics{images/new_project1.png}
+
+\includegraphics{images/new_project2.png}
+
+\hypertarget{create-a-new-directory}{%
+\subsection{\texorpdfstring{1.2 Create a \textbf{New Directory}}{1.2 Create a New Directory}}\label{create-a-new-directory}}
+
+\includegraphics{images/new_project3.png}
+
+\hypertarget{select-new-project-as-project-type}{%
+\subsection{\texorpdfstring{1.3 Select \textbf{New Project} as project type}{1.3 Select New Project as project type}}\label{select-new-project-as-project-type}}
+
+\includegraphics{images/new_project4.png}
+
+\hypertarget{specify-details-for-new-project}{%
+\subsection{1.4 Specify details for new project}\label{specify-details-for-new-project}}
+
+\includegraphics{images/new_project5.png}
+
+1.4.1 Specify a project name. Best practices for naming a project are:
+
+\begin{itemize}
+\tightlist
+\item
+  Make sure that name is succinct (as short as possible while at the same time descriptive of the project);
+\item
+  Don't use spaces for your project name. If you need to separate words, use a \textbf{dash} or an \textbf{underscore};
+\item
+  Avoid using capital letters.
+\end{itemize}
+
+1.4.2 Specify a directory/location in your local machine where to place the directory of your new project
+
+1.4.3 Decide whether to use git to version this project
+
+Here you can decide whether you want to use \texttt{git} to version your project. Remember that using \texttt{git} doesn't mean you have to use GitHub. \texttt{git} is software installed in your local machine and it versions what you have on your local machine. You don't need \texttt{GitHub} or any other similar service to version your code with \texttt{git} in your local machine.
+
+I would recommend that you tick this option for any new project you create so that you can version your work in your local machine even if you don't want or decide not to use \texttt{GitHub} or any other remote \texttt{git} service.
+
+1.4.4 Do you want to open a new session
+
+This is by default unticked and will open the new project within the existing RStudio session (if any). This means that if you have an existing RStudio session with another project that you are working on, that project will be closed and the new project you are creating will open in the existing RStudio session.
+
+If you need your existing RStudio session and the project within it to remain open alongside the new project you are creating, tick this box/option.
+
+1.4.4 Click on \textbf{Create New Project}
+
+Once you click on \textbf{Create New Project}, you will now see the new project open in RStudio.
+
+You will also see something like below witin the file explorer pane of RStudio.
+
+\includegraphics{images/new_project6.png}
+
+\hypertarget{structureorganise-your-new-project-appropriately}{%
+\section{2. Structure/organise your new project appropriately}\label{structureorganise-your-new-project-appropriately}}
+
+Project organisation is vital because:
+
+\begin{itemize}
+\tightlist
+\item
+  supports productivity because the different components of the project are placed in directories where they should be;
+\item
+  enables clarity in communicating project structure;
+\item
+  facilitates collaboration.
+\end{itemize}
+
+Organising an R project can be user- and project-dependent but there are generally accepted project organising structure that is common to most well-organised projects. Below is an example:
+
+.
+\textbar\_\_ my-project
+\textbar-- data
+\textbar-- output
+\textbar-- figures
+\textbar-- R
+\textbar-- my-project.Rproj
+\textbar-- analysis\_workflow.R
+\textbar-- README.md
+
+\hypertarget{start-coding}{%
+\section{3. Start coding}\label{start-coding}}
+
+This will include creating bespoke R functions (as required) and creating an Rscript for the step-by-step processes in your scientific workflow.
+
+\hypertarget{next-steps}{%
+\section{Next steps}\label{next-steps}}
+
+The next steps will depend on whether you will use \texttt{git} and \texttt{GitHub} for versioning your project and whether or not you will work on your project as a solo scientiest or work and collaborate with other scientists.
 
 \hypertarget{portable-reproducible}{%
 \chapter{Creating portable and reproducible scientific workflows}\label{portable-reproducible}}

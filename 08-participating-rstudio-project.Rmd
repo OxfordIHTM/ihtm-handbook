@@ -12,11 +12,25 @@ Cloning a project to your local machine is described in Chapter \@ref(clone-repo
 
 ## Create a new branch from the main branch
 
-Before making any changes to the project, create a new branch. 
+Before making any changes to the project, create a new branch as follows:
+
+### Click on **New Branch**
+
+![](images/git_branch1.png)
+
+### Name the new branch
+
+![](images/git_branch2.png)
 
 Name the branch uniquely. The best way to name a branch will be based on how the team/person you are working with prefers to name branches. Some would like the branch name to succinctly describe the type of change that is being made. Some may ask you to name your branch with your username. Some may ask you to name your branch using coded values.
 
-![](images/git_branch.png)
+Once named, click on **Create**
+
+You will now see the new branch in the list of branches
+
+![](images/git_branch3.png)
+
+
 
 ## Code and make changes to your branch
 
