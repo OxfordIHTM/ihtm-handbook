@@ -62,15 +62,18 @@ Project organisation is vital because:
 
 Organising an R project can be user- and project-dependent but there are generally accepted project organising structure that is common to most well-organised projects. Below is an example:
 
-.
-|__ my-project
-    |-- data
-    |-- output
-        |-- figures
-    |-- R
-    |-- my-project.Rproj
-    |-- analysis_workflow.R
-    |-- README.md
+
+```
+.    
+|-- my-project    
+    |-- data    
+    |-- output    
+        |-- figures    
+    |-- R    
+    |-- my-project.Rproj    
+    |-- analysis_workflow.R    
+    |-- README.md    
+```
 
 
 ## 3. Start coding
