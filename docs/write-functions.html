@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Writing functions | University of Oxford International Health and Tropical Medicine</title>
   <meta name="description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Writing functions | University of Oxford International Health and Tropical Medicine" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Proochista Ariana and Ernest Guevarra" />
 
 
-<meta name="date" content="2023-03-23" />
+<meta name="date" content="2023-09-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -90,11 +90,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
+code span.at { color: #204a87; } /* Attribute */
 code span.bn { color: #0000cf; } /* BaseN */
 code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
+code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #8f5902; font-style: italic; } /* Comment */
 code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
 code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
@@ -103,14 +103,14 @@ code span.dv { color: #0000cf; } /* DecVal */
 code span.er { color: #a40000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
 code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
 code span.ot { color: #8f5902; } /* Other */
 code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
 code span.ss { color: #4e9a06; } /* SpecialString */
 code span.st { color: #4e9a06; } /* String */
 code span.va { color: #000000; } /* Variable */
@@ -141,20 +141,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#all-about-r"><i class="fa fa-check"></i><b>1.1</b> All about R</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#open-and-reproducible-science"><i class="fa fa-check"></i><b>1.2</b> Open and reproducible science</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="install-r.html"><a href="install-r.html"><i class="fa fa-check"></i><b>2</b> Installing R and RStudio</a>
+<li class="chapter" data-level="2" data-path="install-r.html"><a href="install-r.html"><i class="fa fa-check"></i><b>2</b> Installing R, RStudio, and Git and registering a GitHub account</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="install-r.html"><a href="install-r.html#setup-for-windows-machines"><i class="fa fa-check"></i><b>2.1</b> Setup for Windows machines</a>
+<li class="chapter" data-level="2.1" data-path="install-r.html"><a href="install-r.html#github-account"><i class="fa fa-check"></i><b>2.1</b> Register a GitHub account</a></li>
+<li class="chapter" data-level="2.2" data-path="install-r.html"><a href="install-r.html#setup-windows"><i class="fa fa-check"></i><b>2.2</b> Setup for Windows machines</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="install-r.html"><a href="install-r.html#install-r-for-windows-machines"><i class="fa fa-check"></i><b>2.1.1</b> Install R for Windows machines</a></li>
-<li class="chapter" data-level="2.1.2" data-path="install-r.html"><a href="install-r.html#install-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> Install RStudio</a></li>
-<li class="chapter" data-level="2.1.3" data-path="install-r.html"><a href="install-r.html#install-rtools"><i class="fa fa-check"></i><b>2.1.3</b> Install <code>Rtools</code></a></li>
-<li class="chapter" data-level="2.1.4" data-path="install-r.html"><a href="install-r.html#install-git-for-windows"><i class="fa fa-check"></i><b>2.1.4</b> Install Git for Windows</a></li>
+<li class="chapter" data-level="2.2.1" data-path="install-r.html"><a href="install-r.html#install-r-windows"><i class="fa fa-check"></i><b>2.2.1</b> Install R for Windows machines</a></li>
+<li class="chapter" data-level="2.2.2" data-path="install-r.html"><a href="install-r.html#install-rstudio-windows"><i class="fa fa-check"></i><b>2.2.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.2.3" data-path="install-r.html"><a href="install-r.html#install-rtools"><i class="fa fa-check"></i><b>2.2.3</b> Install <code>Rtools</code></a></li>
+<li class="chapter" data-level="2.2.4" data-path="install-r.html"><a href="install-r.html#install-git-windows"><i class="fa fa-check"></i><b>2.2.4</b> Install Git for Windows</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="install-r.html"><a href="install-r.html#setup-for-macos-machines"><i class="fa fa-check"></i><b>2.2</b> Setup for macOS machines</a>
+<li class="chapter" data-level="2.3" data-path="install-r.html"><a href="install-r.html#setup-macos"><i class="fa fa-check"></i><b>2.3</b> Setup for macOS machines</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="install-r.html"><a href="install-r.html#install-r-for-macos-machines"><i class="fa fa-check"></i><b>2.2.1</b> Install R for macOS machines</a></li>
-<li class="chapter" data-level="2.2.2" data-path="install-r.html"><a href="install-r.html#install-rstudio-1"><i class="fa fa-check"></i><b>2.2.2</b> Install RStudio</a></li>
-<li class="chapter" data-level="2.2.3" data-path="install-r.html"><a href="install-r.html#install-git-for-macos"><i class="fa fa-check"></i><b>2.2.3</b> Install git for macOS</a></li>
+<li class="chapter" data-level="2.3.1" data-path="install-r.html"><a href="install-r.html#install-r-macos"><i class="fa fa-check"></i><b>2.3.1</b> Install R for macOS machines</a></li>
+<li class="chapter" data-level="2.3.2" data-path="install-r.html"><a href="install-r.html#install-rstudio-macos"><i class="fa fa-check"></i><b>2.3.2</b> Install RStudio</a></li>
+<li class="chapter" data-level="2.3.3" data-path="install-r.html"><a href="install-r.html#install-git-macos"><i class="fa fa-check"></i><b>2.3.3</b> Install git for macOS</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="install-r.html"><a href="install-r.html#setup-git-github"><i class="fa fa-check"></i><b>2.4</b> Setup Git and GitHub for all machines</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="install-r.html"><a href="install-r.html#introduce-git"><i class="fa fa-check"></i><b>2.4.1</b> Introduce yourself to Git</a></li>
+<li class="chapter" data-level="2.4.2" data-path="install-r.html"><a href="install-r.html#connect-git-github-rstudio"><i class="fa fa-check"></i><b>2.4.2</b> Connecting Git, GitHub, and RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="intro-r.html"><a href="intro-r.html"><i class="fa fa-check"></i><b>3</b> Introduction to R and RStudio</a>
@@ -247,7 +253,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 For this topic on writing functions in R, we will use BMI as an example to explore and demonstrate how we can create our own functions in R.</p>
 <p>Let’s say for example that you have been doing a research on children aged 11 years and older in 3 schools and you have collected the following data:</p>
 <p><strong>School 1516</strong></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="write-functions.html#cb7-1" aria-hidden="true" tabindex="-1"></a>school1516</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="write-functions.html#cb9-1" tabindex="-1"></a>school1516</span></code></pre></div>
 <pre><code>##     school sex ageMonths weight height
 ## 427   1516   1       138   24.5  126.0
 ## 428   1516   1       150   28.3  136.3
@@ -290,7 +296,7 @@ For this topic on writing functions in R, we will use BMI as an example to explo
 ## 465   1516   2       138   36.0  154.5
 ## 466   1516   2       138   46.1  156.0</code></pre>
 <p><strong>School 1522</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="write-functions.html#cb9-1" aria-hidden="true" tabindex="-1"></a>school1522</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="write-functions.html#cb11-1" tabindex="-1"></a>school1522</span></code></pre></div>
 <pre><code>##     school sex ageMonths weight height
 ## 646   1522   1       203   30.6  140.5
 ## 647   1522   1       174   30.8  140.0
@@ -334,7 +340,7 @@ For this topic on writing functions in R, we will use BMI as an example to explo
 ## 685   1522   2       138   36.8  158.5
 ## 686   1522   2       138   52.0  161.0</code></pre>
 <p><strong>School 1525</strong></p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="write-functions.html#cb11-1" aria-hidden="true" tabindex="-1"></a>school1525</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="write-functions.html#cb13-1" tabindex="-1"></a>school1525</span></code></pre></div>
 <pre><code>##     school sex ageMonths weight height
 ## 752   1525   1       186   26.2    137
 ## 753   1525   1       186   32.7    138
@@ -382,162 +388,156 @@ For this topic on writing functions in R, we will use BMI as an example to explo
 ## 795   1525   2       138   42.9    158</code></pre>
 <p>In this dataset, the units of the height measurement is in centimetres.</p>
 <p>Using what we have learned earlier on calculating BMI using R, I can perform the following R commands to get the BMI for each child in each of the schools:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="write-functions.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb13-2"><a href="write-functions.html#cb13-2" aria-hidden="true" tabindex="-1"></a>school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb13-3"><a href="write-functions.html#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="write-functions.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb13-5"><a href="write-functions.html#cb13-5" aria-hidden="true" tabindex="-1"></a>school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb13-6"><a href="write-functions.html#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="write-functions.html#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb13-8"><a href="write-functions.html#cb13-8" aria-hidden="true" tabindex="-1"></a>school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="write-functions.html#cb15-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb15-2"><a href="write-functions.html#cb15-2" tabindex="-1"></a>school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb15-3"><a href="write-functions.html#cb15-3" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="write-functions.html#cb15-4" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb15-5"><a href="write-functions.html#cb15-5" tabindex="-1"></a>school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb15-6"><a href="write-functions.html#cb15-6" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="write-functions.html#cb15-7" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb15-8"><a href="write-functions.html#cb15-8" tabindex="-1"></a>school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
 <p>Because the commands are repetitive, I can easily copy and paste my initial line of code to calculate BMI for children in school 1516 and then just change the object names accordingly to calculate the BMI for children in the two other schools.</p>
 <p>When I run these lines of code, I get the following results:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="write-functions.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb14-2"><a href="write-functions.html#cb14-2" aria-hidden="true" tabindex="-1"></a>school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
-<pre><code>##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481
-## [14] 14.60166 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444
-## [27] 14.87800 16.41539 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153
-## [40] 18.94313</code></pre>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="write-functions.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb16-2"><a href="write-functions.html#cb16-2" aria-hidden="true" tabindex="-1"></a>school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="write-functions.html#cb16-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb16-2"><a href="write-functions.html#cb16-2" tabindex="-1"></a>school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481 14.60166
+## [15] 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444 14.87800 16.41539
+## [29] 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153 18.94313</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="write-functions.html#cb18-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb18-2"><a href="write-functions.html#cb18-2" tabindex="-1"></a>school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## Warning in school1522$weight/(school1516$height/100)^2: longer object length is not a multiple of shorter object length</code></pre>
-<pre><code>##  [1] 19.27438 16.57903 14.22865 11.65487 14.97150 15.14814 17.65012 13.10363 11.23083 19.76704 14.03492 19.43787 15.92035
-## [14] 14.74435 12.03967 14.34481 14.78490 13.57079 14.46527 12.21679 11.08343 13.92627 13.59168 19.58058 25.89564 21.92561
-## [27] 17.40726 26.08609 16.07485 15.58488 18.61440 22.96095 24.68185 13.94381 15.10926 17.16604 16.64656 21.43600 19.85735
-## [40] 15.12163 32.75384</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="write-functions.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb19-2"><a href="write-functions.html#cb19-2" aria-hidden="true" tabindex="-1"></a>school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>##  [1] 19.27438 16.57903 14.22865 11.65487 14.97150 15.14814 17.65012 13.10363 11.23083 19.76704 14.03492 19.43787 15.92035 14.74435
+## [15] 12.03967 14.34481 14.78490 13.57079 14.46527 12.21679 11.08343 13.92627 13.59168 19.58058 25.89564 21.92561 17.40726 26.08609
+## [29] 16.07485 15.58488 18.61440 22.96095 24.68185 13.94381 15.10926 17.16604 16.64656 21.43600 19.85735 15.12163 32.75384</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="write-functions.html#cb21-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb21-2"><a href="write-functions.html#cb21-2" tabindex="-1"></a>school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## Warning in school1525$weight/(school1516$height/100)^2: longer object length is not a multiple of shorter object length</code></pre>
-<pre><code>##  [1] 16.50290 17.60176 12.57755 14.76284 13.00016 13.25462 13.46983 13.56612 16.02447 15.58555 13.69260 14.42986 17.80624
-## [14] 17.02735 14.69670 10.41216 13.32058 11.04253 12.14611 12.17362 10.83529 11.36315 11.58914 12.41023 14.02307 16.93116
-## [27] 20.82920 18.99425 11.04923 14.54889 14.42308 16.13472 14.13479 18.68887 13.40271 14.20099 11.74611 18.73049 20.69522
-## [40] 14.09435 18.89645 19.91636 25.34934 20.83308</code></pre>
+<pre><code>##  [1] 16.50290 17.60176 12.57755 14.76284 13.00016 13.25462 13.46983 13.56612 16.02447 15.58555 13.69260 14.42986 17.80624 17.02735
+## [15] 14.69670 10.41216 13.32058 11.04253 12.14611 12.17362 10.83529 11.36315 11.58914 12.41023 14.02307 16.93116 20.82920 18.99425
+## [29] 11.04923 14.54889 14.42308 16.13472 14.13479 18.68887 13.40271 14.20099 11.74611 18.73049 20.69522 14.09435 18.89645 19.91636
+## [43] 25.34934 20.83308</code></pre>
 <p>The calculation for the BMI of children in school 1516 seems to have completed without issues and a vector of BMI results have been produced. However, for school 1522 and school 1525, there is a warning saying:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="write-functions.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Warning in school1522$weight/(school1516$height)^2: longer object length is not a multiple</span></span>
-<span id="cb22-2"><a href="write-functions.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="do">## of shorter object length</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="write-functions.html#cb24-1" tabindex="-1"></a><span class="do">## Warning in school1522$weight/(school1516$height)^2: longer object length is not a multiple</span></span>
+<span id="cb24-2"><a href="write-functions.html#cb24-2" tabindex="-1"></a><span class="do">## of shorter object length</span></span></code></pre></div>
 <p>Although a result has been provided, the warning gives me an indication that someting is not quite right with my calculation and when I inspect further, I notice that in my formula for school 1522 and for school 1525, my denominator is still using data for school 1516 and this is most likely what is causing the warning message.</p>
 <p>So, to correct this I go back to my lines of code and edit the denominators for school 1522 and school 1525 as follows:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="write-functions.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb23-2"><a href="write-functions.html#cb23-2" aria-hidden="true" tabindex="-1"></a>school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb23-3"><a href="write-functions.html#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="write-functions.html#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb23-5"><a href="write-functions.html#cb23-5" aria-hidden="true" tabindex="-1"></a>school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb23-6"><a href="write-functions.html#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="write-functions.html#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb23-8"><a href="write-functions.html#cb23-8" aria-hidden="true" tabindex="-1"></a>school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1525<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="write-functions.html#cb25-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb25-2"><a href="write-functions.html#cb25-2" tabindex="-1"></a>school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb25-3"><a href="write-functions.html#cb25-3" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="write-functions.html#cb25-4" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb25-5"><a href="write-functions.html#cb25-5" tabindex="-1"></a>school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb25-6"><a href="write-functions.html#cb25-6" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="write-functions.html#cb25-7" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb25-8"><a href="write-functions.html#cb25-8" tabindex="-1"></a>school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1525<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
 <p>which gives me:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="write-functions.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb24-2"><a href="write-functions.html#cb24-2" aria-hidden="true" tabindex="-1"></a>school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
-<pre><code>##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481
-## [14] 14.60166 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444
-## [27] 14.87800 16.41539 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153
-## [40] 18.94313</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="write-functions.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb26-2"><a href="write-functions.html#cb26-2" aria-hidden="true" tabindex="-1"></a>school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
-<pre><code>##  [1] 15.50132 15.71429 15.77161 13.77410 16.10277 14.94669 17.65012 14.15908 14.78277 16.73082 15.18017 18.91674 15.79459
-## [14] 15.92991 16.07852 15.83937 16.34076 16.48493 17.45479 15.12217 14.21653 16.30492 15.59978 16.49597 23.15334 18.63150
-## [27] 15.47594 20.65000 19.31656 15.96837 19.32626 17.88178 24.01416 15.04898 15.28626 15.38741 17.75817 20.34543 19.03550
-## [40] 14.64837 20.06095</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="write-functions.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb28-2"><a href="write-functions.html#cb28-2" aria-hidden="true" tabindex="-1"></a>school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1525<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
-<pre><code>##  [1] 13.95919 17.17076 15.32544 16.19692 14.66258 14.08284 14.75493 14.48560 16.02447 14.23329 15.13841 15.31463 16.89906
-## [14] 17.75441 18.06122 14.81166 15.02477 15.37188 15.99296 15.02477 13.36735 13.57143 14.28271 13.58081 14.88704 14.67278
-## [27] 17.94182 15.53816 14.74435 15.36266 16.92708 15.75485 15.13258 16.29409 14.70051 16.61797 14.73072 20.26936 19.29687
-## [40] 15.24444 13.69613 15.20381 19.17355 17.18475</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="write-functions.html#cb26-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb26-2"><a href="write-functions.html#cb26-2" tabindex="-1"></a>school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481 14.60166
+## [15] 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444 14.87800 16.41539
+## [29] 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153 18.94313</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="write-functions.html#cb28-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb28-2"><a href="write-functions.html#cb28-2" tabindex="-1"></a>school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>##  [1] 15.50132 15.71429 15.77161 13.77410 16.10277 14.94669 17.65012 14.15908 14.78277 16.73082 15.18017 18.91674 15.79459 15.92991
+## [15] 16.07852 15.83937 16.34076 16.48493 17.45479 15.12217 14.21653 16.30492 15.59978 16.49597 23.15334 18.63150 15.47594 20.65000
+## [29] 19.31656 15.96837 19.32626 17.88178 24.01416 15.04898 15.28626 15.38741 17.75817 20.34543 19.03550 14.64837 20.06095</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="write-functions.html#cb30-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb30-2"><a href="write-functions.html#cb30-2" tabindex="-1"></a>school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1525<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>##  [1] 13.95919 17.17076 15.32544 16.19692 14.66258 14.08284 14.75493 14.48560 16.02447 14.23329 15.13841 15.31463 16.89906 17.75441
+## [15] 18.06122 14.81166 15.02477 15.37188 15.99296 15.02477 13.36735 13.57143 14.28271 13.58081 14.88704 14.67278 17.94182 15.53816
+## [29] 14.74435 15.36266 16.92708 15.75485 15.13258 16.29409 14.70051 16.61797 14.73072 20.26936 19.29687 15.24444 13.69613 15.20381
+## [43] 19.17355 17.18475</code></pre>
 <p>I now do not get the warning message and the expected length of BMI values for each school has now been produced.</p>
 <p>From this short example above, we realise how tedious a task it is to type in the code above every time we need to calculate BMI. Also, it becomes even challenging to debug issues with the code because we have to review and edit (as needed) each iteration of the calculation to see where it may have gone wrong (especially when doing a cut and paste approach).</p>
 <p>It would be better (and easier) to have a function that calculates and displays the BMI values automatically. Fortunately, <code>R</code> allows us to do just that.</p>
 <p>The <code>function()</code> function allows us to create new functions in <code>R</code> with the following generic syntax:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="write-functions.html#cb30-1" aria-hidden="true" tabindex="-1"></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(argument1, argument2, ...) {</span>
-<span id="cb30-2"><a href="write-functions.html#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="do">## Your code here</span></span>
-<span id="cb30-3"><a href="write-functions.html#cb30-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="write-functions.html#cb32-1" tabindex="-1"></a>function_name <span class="ot">&lt;-</span> <span class="cf">function</span>(argument1, argument2, ...) {</span>
+<span id="cb32-2"><a href="write-functions.html#cb32-2" tabindex="-1"></a>  <span class="do">## Your code here</span></span>
+<span id="cb32-3"><a href="write-functions.html#cb32-3" tabindex="-1"></a>}</span></code></pre></div>
 <p>Using this template/generic syntax, we apply it to create a function called <code>calculate_bmi</code> as follows:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="write-functions.html#cb31-1" aria-hidden="true" tabindex="-1"></a>calculate_bmi <span class="ot">&lt;-</span> <span class="cf">function</span>(weight, height) {</span>
-<span id="cb31-2"><a href="write-functions.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  weight <span class="sc">/</span> height <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb31-3"><a href="write-functions.html#cb31-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="write-functions.html#cb33-1" tabindex="-1"></a>calculate_bmi <span class="ot">&lt;-</span> <span class="cf">function</span>(weight, height) {</span>
+<span id="cb33-2"><a href="write-functions.html#cb33-2" tabindex="-1"></a>  weight <span class="sc">/</span> height <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb33-3"><a href="write-functions.html#cb33-3" tabindex="-1"></a>}</span></code></pre></div>
 <p>We now have a function for calculating and outputing BMI values.</p>
 <p>Let us now test it with our 3 sets of data:</p>
 <p><strong>School 1516</strong></p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="write-functions.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calculate_bmi</span>(</span>
-<span id="cb32-2"><a href="write-functions.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">weight =</span> school1516<span class="sc">$</span>weight,</span>
-<span id="cb32-3"><a href="write-functions.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
-<span id="cb32-4"><a href="write-functions.html#cb32-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481
-## [14] 14.60166 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444
-## [27] 14.87800 16.41539 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153
-## [40] 18.94313</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="write-functions.html#cb34-1" tabindex="-1"></a><span class="fu">calculate_bmi</span>(</span>
+<span id="cb34-2"><a href="write-functions.html#cb34-2" tabindex="-1"></a>  <span class="at">weight =</span> school1516<span class="sc">$</span>weight,</span>
+<span id="cb34-3"><a href="write-functions.html#cb34-3" tabindex="-1"></a>  <span class="at">height =</span> school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
+<span id="cb34-4"><a href="write-functions.html#cb34-4" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##  [1] 15.43210 15.23333 15.63695 15.87976 15.23789 14.75830 15.43095 15.41604 15.52228 13.79349 15.79539 16.25481 18.24481 14.60166
+## [15] 19.42954 17.45347 15.82409 17.47472 16.15550 16.87903 16.91463 16.95929 17.42632 15.71962 18.72730 13.98444 14.87800 16.41539
+## [29] 16.43128 16.30557 19.47732 13.43083 15.73414 15.15088 18.35588 16.50280 18.85363 15.65036 15.08153 18.94313</code></pre>
 <p><strong>School 1522</strong></p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="write-functions.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calculate_bmi</span>(</span>
-<span id="cb34-2"><a href="write-functions.html#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">weight =</span> school1522<span class="sc">$</span>weight,</span>
-<span id="cb34-3"><a href="write-functions.html#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
-<span id="cb34-4"><a href="write-functions.html#cb34-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>##  [1] 15.50132 15.71429 15.77161 13.77410 16.10277 14.94669 17.65012 14.15908 14.78277 16.73082 15.18017 18.91674 15.79459
-## [14] 15.92991 16.07852 15.83937 16.34076 16.48493 17.45479 15.12217 14.21653 16.30492 15.59978 16.49597 23.15334 18.63150
-## [27] 15.47594 20.65000 19.31656 15.96837 19.32626 17.88178 24.01416 15.04898 15.28626 15.38741 17.75817 20.34543 19.03550
-## [40] 14.64837 20.06095</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="write-functions.html#cb36-1" tabindex="-1"></a><span class="fu">calculate_bmi</span>(</span>
+<span id="cb36-2"><a href="write-functions.html#cb36-2" tabindex="-1"></a>  <span class="at">weight =</span> school1522<span class="sc">$</span>weight,</span>
+<span id="cb36-3"><a href="write-functions.html#cb36-3" tabindex="-1"></a>  <span class="at">height =</span> school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
+<span id="cb36-4"><a href="write-functions.html#cb36-4" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##  [1] 15.50132 15.71429 15.77161 13.77410 16.10277 14.94669 17.65012 14.15908 14.78277 16.73082 15.18017 18.91674 15.79459 15.92991
+## [15] 16.07852 15.83937 16.34076 16.48493 17.45479 15.12217 14.21653 16.30492 15.59978 16.49597 23.15334 18.63150 15.47594 20.65000
+## [29] 19.31656 15.96837 19.32626 17.88178 24.01416 15.04898 15.28626 15.38741 17.75817 20.34543 19.03550 14.64837 20.06095</code></pre>
 <p><strong>School 1525</strong></p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="write-functions.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calculate_bmi</span>(</span>
-<span id="cb36-2"><a href="write-functions.html#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">weight =</span> school1525<span class="sc">$</span>weight,</span>
-<span id="cb36-3"><a href="write-functions.html#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> school1525<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
-<span id="cb36-4"><a href="write-functions.html#cb36-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>##  [1] 13.95919 17.17076 15.32544 16.19692 14.66258 14.08284 14.75493 14.48560 16.02447 14.23329 15.13841 15.31463 16.89906
-## [14] 17.75441 18.06122 14.81166 15.02477 15.37188 15.99296 15.02477 13.36735 13.57143 14.28271 13.58081 14.88704 14.67278
-## [27] 17.94182 15.53816 14.74435 15.36266 16.92708 15.75485 15.13258 16.29409 14.70051 16.61797 14.73072 20.26936 19.29687
-## [40] 15.24444 13.69613 15.20381 19.17355 17.18475</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="write-functions.html#cb38-1" tabindex="-1"></a><span class="fu">calculate_bmi</span>(</span>
+<span id="cb38-2"><a href="write-functions.html#cb38-2" tabindex="-1"></a>  <span class="at">weight =</span> school1525<span class="sc">$</span>weight,</span>
+<span id="cb38-3"><a href="write-functions.html#cb38-3" tabindex="-1"></a>  <span class="at">height =</span> school1525<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
+<span id="cb38-4"><a href="write-functions.html#cb38-4" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##  [1] 13.95919 17.17076 15.32544 16.19692 14.66258 14.08284 14.75493 14.48560 16.02447 14.23329 15.13841 15.31463 16.89906 17.75441
+## [15] 18.06122 14.81166 15.02477 15.37188 15.99296 15.02477 13.36735 13.57143 14.28271 13.58081 14.88704 14.67278 17.94182 15.53816
+## [29] 14.74435 15.36266 16.92708 15.75485 15.13258 16.29409 14.70051 16.61797 14.73072 20.26936 19.29687 15.24444 13.69613 15.20381
+## [43] 19.17355 17.18475</code></pre>
 <p>In our example here, the <code>calculate_bmi()</code> function helped a little bit in making the code to calculate BMI for each student in each school more efficient. But the efficiency that functions provide become more evident when you need to make more complex operations. For example, what if you need to get the mean BMI for students in each school? Without a function, we will have to do the following script for each school:</p>
 <p><strong>School 1516</strong></p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="write-functions.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
-<span id="cb38-2"><a href="write-functions.html#cb38-2" aria-hidden="true" tabindex="-1"></a>bmi_school1516 <span class="ot">&lt;-</span> school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb38-3"><a href="write-functions.html#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-4"><a href="write-functions.html#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Get the mean BMI for children in school 1516</span></span>
-<span id="cb38-5"><a href="write-functions.html#cb38-5" aria-hidden="true" tabindex="-1"></a>mean_bmi_school1516 <span class="ot">&lt;-</span> <span class="fu">mean</span>(bmi_school1516)</span>
-<span id="cb38-6"><a href="write-functions.html#cb38-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-7"><a href="write-functions.html#cb38-7" aria-hidden="true" tabindex="-1"></a>mean_bmi_school1516</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="write-functions.html#cb40-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1516</span></span>
+<span id="cb40-2"><a href="write-functions.html#cb40-2" tabindex="-1"></a>bmi_school1516 <span class="ot">&lt;-</span> school1516<span class="sc">$</span>weight <span class="sc">/</span> (school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb40-3"><a href="write-functions.html#cb40-3" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="write-functions.html#cb40-4" tabindex="-1"></a><span class="do">## Get the mean BMI for children in school 1516</span></span>
+<span id="cb40-5"><a href="write-functions.html#cb40-5" tabindex="-1"></a>mean_bmi_school1516 <span class="ot">&lt;-</span> <span class="fu">mean</span>(bmi_school1516)</span>
+<span id="cb40-6"><a href="write-functions.html#cb40-6" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="write-functions.html#cb40-7" tabindex="-1"></a>mean_bmi_school1516</span></code></pre></div>
 <pre><code>## [1] 16.28491</code></pre>
 <p><strong>School 1522</strong></p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="write-functions.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1522</span></span>
-<span id="cb40-2"><a href="write-functions.html#cb40-2" aria-hidden="true" tabindex="-1"></a>bmi_school1522 <span class="ot">&lt;-</span> school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb40-3"><a href="write-functions.html#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-4"><a href="write-functions.html#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Get the mean BMI for children in school 1522</span></span>
-<span id="cb40-5"><a href="write-functions.html#cb40-5" aria-hidden="true" tabindex="-1"></a>mean_bmi_school1522 <span class="ot">&lt;-</span> <span class="fu">mean</span>(bmi_school1522)</span>
-<span id="cb40-6"><a href="write-functions.html#cb40-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-7"><a href="write-functions.html#cb40-7" aria-hidden="true" tabindex="-1"></a>mean_bmi_school1522</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="write-functions.html#cb42-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1522</span></span>
+<span id="cb42-2"><a href="write-functions.html#cb42-2" tabindex="-1"></a>bmi_school1522 <span class="ot">&lt;-</span> school1522<span class="sc">$</span>weight <span class="sc">/</span> (school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span>) <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb42-3"><a href="write-functions.html#cb42-3" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="write-functions.html#cb42-4" tabindex="-1"></a><span class="do">## Get the mean BMI for children in school 1522</span></span>
+<span id="cb42-5"><a href="write-functions.html#cb42-5" tabindex="-1"></a>mean_bmi_school1522 <span class="ot">&lt;-</span> <span class="fu">mean</span>(bmi_school1522)</span>
+<span id="cb42-6"><a href="write-functions.html#cb42-6" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="write-functions.html#cb42-7" tabindex="-1"></a>mean_bmi_school1522</span></code></pre></div>
 <pre><code>## [1] 16.89955</code></pre>
 <p><strong>School 1525</strong></p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="write-functions.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1525</span></span>
-<span id="cb42-2"><a href="write-functions.html#cb42-2" aria-hidden="true" tabindex="-1"></a>bmi_school1525 <span class="ot">&lt;-</span> school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1525<span class="sc">$</span>height) <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb42-3"><a href="write-functions.html#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-4"><a href="write-functions.html#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Get the mean BMI for children in school 1525</span></span>
-<span id="cb42-5"><a href="write-functions.html#cb42-5" aria-hidden="true" tabindex="-1"></a>mean_bmi_school1525 <span class="ot">&lt;-</span> <span class="fu">mean</span>(bmi_school1525)</span>
-<span id="cb42-6"><a href="write-functions.html#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-7"><a href="write-functions.html#cb42-7" aria-hidden="true" tabindex="-1"></a>mean_bmi_school1525</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="write-functions.html#cb44-1" tabindex="-1"></a><span class="do">## Calculate BMI for children in school 1525</span></span>
+<span id="cb44-2"><a href="write-functions.html#cb44-2" tabindex="-1"></a>bmi_school1525 <span class="ot">&lt;-</span> school1525<span class="sc">$</span>weight <span class="sc">/</span> (school1525<span class="sc">$</span>height) <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb44-3"><a href="write-functions.html#cb44-3" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="write-functions.html#cb44-4" tabindex="-1"></a><span class="do">## Get the mean BMI for children in school 1525</span></span>
+<span id="cb44-5"><a href="write-functions.html#cb44-5" tabindex="-1"></a>mean_bmi_school1525 <span class="ot">&lt;-</span> <span class="fu">mean</span>(bmi_school1525)</span>
+<span id="cb44-6"><a href="write-functions.html#cb44-6" tabindex="-1"></a></span>
+<span id="cb44-7"><a href="write-functions.html#cb44-7" tabindex="-1"></a>mean_bmi_school1525</span></code></pre></div>
 <pre><code>## [1] 0.001564695</code></pre>
 <p>As the operations/calculations we want to perform become more complex, the copy and paste method becomes more and more tedious. With the function approach, we can use the following:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="write-functions.html#cb44-1" aria-hidden="true" tabindex="-1"></a>calculate_mean_bmi <span class="ot">&lt;-</span> <span class="cf">function</span>(weight, height) {</span>
-<span id="cb44-2"><a href="write-functions.html#cb44-2" aria-hidden="true" tabindex="-1"></a>  bmi <span class="ot">&lt;-</span> weight <span class="sc">/</span> height <span class="sc">^</span> <span class="dv">2</span></span>
-<span id="cb44-3"><a href="write-functions.html#cb44-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb44-4"><a href="write-functions.html#cb44-4" aria-hidden="true" tabindex="-1"></a>  mean_bmi <span class="ot">&lt;-</span> <span class="fu">mean</span>(bmi)</span>
-<span id="cb44-5"><a href="write-functions.html#cb44-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb44-6"><a href="write-functions.html#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(mean_bmi)</span>
-<span id="cb44-7"><a href="write-functions.html#cb44-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="write-functions.html#cb46-1" tabindex="-1"></a>calculate_mean_bmi <span class="ot">&lt;-</span> <span class="cf">function</span>(weight, height) {</span>
+<span id="cb46-2"><a href="write-functions.html#cb46-2" tabindex="-1"></a>  bmi <span class="ot">&lt;-</span> weight <span class="sc">/</span> height <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb46-3"><a href="write-functions.html#cb46-3" tabindex="-1"></a>  </span>
+<span id="cb46-4"><a href="write-functions.html#cb46-4" tabindex="-1"></a>  mean_bmi <span class="ot">&lt;-</span> <span class="fu">mean</span>(bmi)</span>
+<span id="cb46-5"><a href="write-functions.html#cb46-5" tabindex="-1"></a>  </span>
+<span id="cb46-6"><a href="write-functions.html#cb46-6" tabindex="-1"></a>  <span class="fu">return</span>(mean_bmi)</span>
+<span id="cb46-7"><a href="write-functions.html#cb46-7" tabindex="-1"></a>}</span></code></pre></div>
 <p>Applying the function to the datasets, we get:</p>
 <p><strong>School 1516</strong></p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="write-functions.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calculate_mean_bmi</span>(</span>
-<span id="cb45-2"><a href="write-functions.html#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">weight =</span> school1516<span class="sc">$</span>weight,</span>
-<span id="cb45-3"><a href="write-functions.html#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
-<span id="cb45-4"><a href="write-functions.html#cb45-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="write-functions.html#cb47-1" tabindex="-1"></a><span class="fu">calculate_mean_bmi</span>(</span>
+<span id="cb47-2"><a href="write-functions.html#cb47-2" tabindex="-1"></a>  <span class="at">weight =</span> school1516<span class="sc">$</span>weight,</span>
+<span id="cb47-3"><a href="write-functions.html#cb47-3" tabindex="-1"></a>  <span class="at">height =</span> school1516<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
+<span id="cb47-4"><a href="write-functions.html#cb47-4" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## [1] 16.28491</code></pre>
 <p><strong>School 1522</strong></p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="write-functions.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calculate_mean_bmi</span>(</span>
-<span id="cb47-2"><a href="write-functions.html#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">weight =</span> school1522<span class="sc">$</span>weight,</span>
-<span id="cb47-3"><a href="write-functions.html#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
-<span id="cb47-4"><a href="write-functions.html#cb47-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="write-functions.html#cb49-1" tabindex="-1"></a><span class="fu">calculate_mean_bmi</span>(</span>
+<span id="cb49-2"><a href="write-functions.html#cb49-2" tabindex="-1"></a>  <span class="at">weight =</span> school1522<span class="sc">$</span>weight,</span>
+<span id="cb49-3"><a href="write-functions.html#cb49-3" tabindex="-1"></a>  <span class="at">height =</span> school1522<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
+<span id="cb49-4"><a href="write-functions.html#cb49-4" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## [1] 16.89955</code></pre>
 <p><strong>School 1525</strong></p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="write-functions.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">calculate_mean_bmi</span>(</span>
-<span id="cb49-2"><a href="write-functions.html#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">weight =</span> school1525<span class="sc">$</span>weight,</span>
-<span id="cb49-3"><a href="write-functions.html#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">height =</span> school1525<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
-<span id="cb49-4"><a href="write-functions.html#cb49-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="write-functions.html#cb51-1" tabindex="-1"></a><span class="fu">calculate_mean_bmi</span>(</span>
+<span id="cb51-2"><a href="write-functions.html#cb51-2" tabindex="-1"></a>  <span class="at">weight =</span> school1525<span class="sc">$</span>weight,</span>
+<span id="cb51-3"><a href="write-functions.html#cb51-3" tabindex="-1"></a>  <span class="at">height =</span> school1525<span class="sc">$</span>height <span class="sc">/</span> <span class="dv">100</span></span>
+<span id="cb51-4"><a href="write-functions.html#cb51-4" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>## [1] 15.64695</code></pre>
 
 </div>
