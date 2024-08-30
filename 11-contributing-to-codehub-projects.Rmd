@@ -1,4 +1,4 @@
-# Condtributing to Oxford IHTM CodeHub projects {#contributing-codehub}
+# Contributing to Oxford IHTM CodeHub projects {#contributing-codehub}
 
 This section would be relevant to you if:
 
@@ -38,7 +38,7 @@ If you want to brush up on your git and GitHub, please go through Jenny Bryan's 
 
 ### Review our portfolio of research software
 
-Visit the project page of the Oxford IHTM CodeHub website - https://oxfodr-ihtm.io/projects/ to see our current line-up of CodeHub software projects.
+Visit the project page of the Oxford IHTM CodeHub website - https://oxford-ihtm.io/projects/ to see our current line-up of CodeHub software projects.
 
 Have a look at our R Universe of research software - https://oxfordihtm.r-unviverse.dev - for the build status of each project.
 
