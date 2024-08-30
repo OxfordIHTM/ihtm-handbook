@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Connecting RStudio with GitHub | University of Oxford International Health and Tropical Medicine</title>
+  <title>12 Condtributing to Oxford IHTM CodeHub projects | University of Oxford International Health and Tropical Medicine</title>
   <meta name="description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Connecting RStudio with GitHub | University of Oxford International Health and Tropical Medicine" />
+  <meta property="og:title" content="12 Condtributing to Oxford IHTM CodeHub projects | University of Oxford International Health and Tropical Medicine" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="https://oxford-ihtm.io/ihtm-handbook/images/ihtm_small.png" />
   <meta property="og:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="github-repo" content="OxfordIHTM/ihtm-handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Connecting RStudio with GitHub | University of Oxford International Health and Tropical Medicine" />
+  <meta name="twitter:title" content="12 Condtributing to Oxford IHTM CodeHub projects | University of Oxford International Health and Tropical Medicine" />
   
   <meta name="twitter:description" content="A handbook for the MSc in International Health and Tropical Medicine Lecture Series on R and Reproducible Research" />
   <meta name="twitter:image" content="https://oxford-ihtm.io/ihtm-handbook/images/ihtm_small.png" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro-git.html"/>
-<link rel="next" href="write-functions.html"/>
+<link rel="prev" href="portable-reproducible.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -261,99 +261,64 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="connect-rstudio-github" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">5</span> Connecting RStudio with GitHub<a href="connect-rstudio-github.html#connect-rstudio-github" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Once RStudio is installed and a GitHub account has been created and registered, the final step in the R, RStudio, git, and GitHub dance is to create git-related settings on your machine that will identify you as a unique/specific git user and then creating a GitHub <strong>personal access token (PAT)</strong> which will serve as the key or proof that you will use to identify yourself as the git user you claim to be whenever you try to syn/connect to your GitHub account via RStudio or any other tool on your local computer.</p>
-<p>Follow are the steps you will need to perform:</p>
+<div id="contributing-codehub" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">12</span> Condtributing to Oxford IHTM CodeHub projects<a href="contributing-codehub.html#contributing-codehub" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This section would be relevant to you if:</p>
 <ol style="list-style-type: decimal">
-<li>On your local machine, open RStudio and then select the <code>Terminal</code> tab in the console pane.</li>
+<li><p>You have completed the Open Science and Reproducible Research module of the MSc for International Health and Tropical Medicine; or,</p></li>
+<li><p>If you are an MSc for International Health and Tropical Medicine alumni and have experience and knowledge using R.</p></li>
 </ol>
-<p>The <code>Terminal</code> is the tool used to interface with your computer through commands written in a programming language called <code>bash</code>. Most of you would have never used the <code>Terminal</code> because the computers you use have different kinds of software built-in that provide a <strong>graphical user interface (GUI)</strong> that you can use to perform operations and tasks.</p>
-<p>RStudio comes with the <code>Terminal</code> tool built in and usually is already available from the console pane as a separate table along side the R console (see below). By default, whenever you open RStudio, this tab for the <code>Terminal</code> tool should already be available.</p>
-<p>If if is not present, you can easily open a new <code>Terminal</code> tab in the console pane by going to the RStudio menu ribbon and clicking on:</p>
-<pre><code>Tools --&gt; Terminal --&gt; New Terminal</code></pre>
-<p>or you can use the <code>ALT + SHIFT + R</code> keyboard shortcut.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Introduce yourself to git</li>
-</ol>
-<p>In this step, you are basically going to issue a set of commands to your computer to save and store specific settings for the <code>git</code> software that you have installed.</p>
-<p>Specifically, you are going to let git know who you are (your name) and what your email address is <strong>that is associated with your GitHub account</strong>.</p>
-<p>The commands will be issued on the <code>Terminal</code> that we mentioned in step 1. The commands are:</p>
-<pre><code>git config --global user.name &#39;Jane Doe&#39;
-git config --global user.email &#39;jane@example.com&#39;</code></pre>
-<p>Make sure to supply your full proper name (and not your username you created in GitHub).</p>
-<p>Make sure that the email you provide is the email address you used to register and create an account with GitHub.</p>
-<p>Unless there was an error in your syntax, you should not expect any output on the <code>Terminal</code> after you issue the commands. To check that your name and email address have been recorded and/or that the name and email address recorded is correct, you can issue the following command:</p>
-<pre><code>git config --global --list</code></pre>
-<p>Here is an example of what you will see after issue this command:</p>
-<pre><code>$ git config --global --list
+<p>The Oxford IHTM CodeHub actively runs projects focused on either research software development (based in R) or R-based scientific research workflows. Our list of previous and current projects can be found <a href="https://oxford-ihtm.io/projects/">here</a>.</p>
+<div id="research-software-development" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Research software development<a href="contributing-codehub.html#research-software-development" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Oxford IHTM CodeHub develops research software using the R package system. Our collection of research software tools are found <a href="https://oxfordihtm.r-universe.dev">here</a> and the underlying code is available from our <a href="https://github.com/OxfordIHTM">organisational GitHub</a>.</p>
+<p>If you would like to contribute to Oxford IHTM CodeHub’s software development, following is a list of steps on how to.</p>
+<div id="get-familiar-with-rs-package-writing-process" class="section level3 hasAnchor" number="12.1.1">
+<h3><span class="header-section-number">12.1.1</span> Get familiar with R’s package writing process<a href="contributing-codehub.html#get-familiar-with-rs-package-writing-process" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We build our research software tools using R. Hence, we use the R package writing process. This is described in the official <a href="https://cran.r-project.org/">R manual for writing extensions</a>. This manual is the official reference for what is considered acceptable R software development by the R Core Team and are the guides that will ensure that your R package can pass submission and entry into the Comprehensive R Archive Network (CRAN). So, from an academic perspective, you can see this as the official guide of a publisher/publication on what your manuscript should look like so you can submit to their journal for publication. It is not a guarantee of publication, but that you are meeting their publication standards.</p>
+<p>However, the R manual for writing extensions is not as easy to navigate and not as easy to read. For beginners, we would recommend starting off with Hadley Wickham’s online book called <a href="https://r-pkgs.org/">R Packages</a>. The book is free to use online and has clearly delineated chapters and sections for specific R package writing tasks required. We would expect anyone wanting to contribute to the CodeHub’s software development projects to have been able to go through this book.</p>
+</div>
+<div id="get-familiar-and-reach-intermediate-level-git-and-github-skills" class="section level3 hasAnchor" number="12.1.2">
+<h3><span class="header-section-number">12.1.2</span> Get familiar and reach intermediate level git and GitHub skills<a href="contributing-codehub.html#get-familiar-and-reach-intermediate-level-git-and-github-skills" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Our software development process uses git and GitHub to facilitate code sharing and versioning. It is paramount that anyone wanting to contribute to any software project should have at least intermediate level git and GitHub skills. These include:</p>
+<ul>
+<li><p>Competent in cloning and/or forking software project repositories;</p></li>
+<li><p>Competent in the branching process of git and GitHub;</p></li>
+<li><p>Competent in the pull request process of GitHub;</p></li>
+<li><p>Competent in GitHub’s issues tracker and project tracker system;</p></li>
+<li><p>Competent in code review process of GitHub.</p></li>
+</ul>
+<p>If you want to brush up on your git and GitHub, please go through Jenny Bryan’s <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a>.</p>
+</div>
+<div id="review-our-portfolio-of-research-software" class="section level3 hasAnchor" number="12.1.3">
+<h3><span class="header-section-number">12.1.3</span> Review our portfolio of research software<a href="contributing-codehub.html#review-our-portfolio-of-research-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Visit the project page of the Oxford IHTM CodeHub website - <a href="https://oxfodr-ihtm.io/projects/" class="uri">https://oxfodr-ihtm.io/projects/</a> to see our current line-up of CodeHub software projects.</p>
+<p>Have a look at our R Universe of research software - <a href="https://oxfordihtm.r-unviverse.dev" class="uri">https://oxfordihtm.r-unviverse.dev</a> - for the build status of each project.</p>
+<p>Have a look at our GitHub organisation - <a href="https://github.com/OxfordIHM" class="uri">https://github.com/OxfordIHM</a> - to see the code for each of these projects.</p>
+<p>Each project is in continuous development. We recommend looking at the repository for each of the projects, understand via the README what the project is trying to achieve and then review each projects issues page to see what the current line up of tasks or issues that the development requires. If for some reason there is no issues listed in a project, this is most likely that current developers have not gotten around to documenting their tasks/issues at hand. If so, you can make an issue to ask developers what the best task is to do for a beginner to contribute to.</p>
+</div>
+<div id="communicate-with-developers" class="section level3 hasAnchor" number="12.1.4">
+<h3><span class="header-section-number">12.1.4</span> Communicate with developers<a href="contributing-codehub.html#communicate-with-developers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once you have found a project and an issue that you want to work on, make a comment on that issue making sure to tag the developer/maintainer stating that you are going to have a go at this issue and then will make a pull request of your contribution.</p>
+<p>This communication is important as this will trigger the developer/maintainer to confirm that you are an eligible member of the CodeHub (the pre-requisites above) and then will add you as a collaborator on the project. This step is important because your status in the project as a collaborator will determine your next step on contributing. We prefer that CodeHub members are internal collaborators as this simplifies their participation (see next section).</p>
+</div>
+<div id="clone-or-fork-the-project-repository" class="section level3 hasAnchor" number="12.1.5">
+<h3><span class="header-section-number">12.1.5</span> Clone or fork the project repository<a href="contributing-codehub.html#clone-or-fork-the-project-repository" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once you have been added to the project repository as a collaborator, you can now <code>clone</code> the repository to your local machine and then start making your contribution.</p>
+<p>If for some reason you haven’t been added to the project repository as a collaborator yet but you are itching to contribute, you can still start contributing but instead of cloning, you will need to <code>fork</code> the repository. This is similar to cloning but your <code>fork</code> is identified as being from someone outside the organisation. This means you will need to make your own GitHub repository under your own username of the project as a fork of the original, write your code contribution and commit to your repository and then make a pull requeset to the original repository.</p>
+<p>These forking steps are described in all the CONTRIBUTING notes/guidance in each project as we open contributions from anyone (not just CodeHub members) but not all are eligible to be internal collaborators.</p>
+<p>We would like to avoid this for eligible members of CodeHub so will endeavour to keep up with collaborator requests. So, if you are impatient and would really like to contribute already, consider forking but be warned that this has a lot more complicated steps than simple cloning. Either follow-up your request to be made a collaborator.</p>
 
-user.name=Jane Doe
-user.email=jane@example.com</code></pre>
-<p>Check this output to what you expect it to be specified as. If the information is correct, then you’ve completed this step. If you need to correct any of this information, then repeat this step making sure that the name and email address you provide is correct.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Create a GitHub personal access token (PAT)</li>
-</ol>
-<p>Now that you have introduced yourself to the <code>git</code> that is installed in your local machine/computer, you should now visit GitHub on a browser (<a href="https://github.com" class="uri">https://github.com</a>) and create a <strong>personal access token (PAT)</strong>.</p>
-<p>When you communicate/sync/interact with a remote git server, such as GitHub, you have to include credentials in the communication you are sending. These credentials prove that you are a specific GitHub user, who’s allowed to do whatever you’re asking to do.</p>
-<p><code>git</code> can communicate with a remote server using one of two protocols, HTTPS or SSH, and the different protocols use different credentials.</p>
-<p>Here we describe the credential setup for the HTTPS protocol, which is what we recommend if you have no burning reason to pick SSH. With HTTPS, we will use a <strong>personal access token (PAT)</strong>.</p>
-<p>Please note that the <strong>personal access token (PAT)</strong> is not the same as the password you provided when registering for your GitHub account. Also, in performing a connection to GitHub via HTTPS protocol, your password is not an acceptable credential for communicating with GitHub as a server.</p>
-<p>To create a GitHub <strong>personal access token (PAT)</strong>, you need to:</p>
-<p>3a. Go to Settings from your GitHub account menu</p>
-<p>Login to your GitHub account. On the upper right hand corner of the GitHub page you will see your account icon. Click on it to reveal a drop down menu as shown below. Select the <strong>Settings</strong> option.</p>
-<p><img src="images/github_pat2.png" /></p>
-<p>3b. From Settings navigate to Developer Settings</p>
-<p>In the <strong>Settings</strong> page, find the <strong>Developer Settings</strong> option on the left hand sidebar as shown below:</p>
-<p><img src="images/github_pat3.png" /></p>
-<p>3c. From Developer Settings navigate to Personal Access Token</p>
-<p>In the <strong>Developer Settings</strong> page, find the <strong>Personal Access Token</strong> option on the left hand sidebar as shown below:</p>
-<p><img src="images/github_pat4.png" /></p>
-<p>3d. Select Tokens (classic)</p>
-<p><img src="images/github_pat5.png" /></p>
-<p>3e. Click on Generate new token</p>
-<p><img src="images/github_pat7.png" /></p>
-<p>3f. Select Generate new token (classic)</p>
-<p><img src="images/github_pat8.png" /></p>
-<p>3g. Give your token a name</p>
-<p><img src="images/github_pat9.png" /></p>
-<p>The token name should be short but descriptive of the where or how you will use the token. Since we are using this to connect and allow communication between RStudio and GitHub, <strong>RStudio</strong> can be a good name that would remind you that this is what you are using to secure the connection/communication between your RStudio and your GitHub account.</p>
-<p>3f. Set an expiry date for the token</p>
-<p><img src="images/github_pat9.png" /></p>
-<p>By default, GitHub will set a <strong>30 day validity</strong> for any new token created. Clicking on the option menu will show the other possible time periods to choose from including <strong>No expiry date</strong>.</p>
-<p>It is best practice to assign an expiry date for security tokens such as the GitHub PAT. And a 30 day validity is standard practice. However, in reality, it is cumbersome to be creating new tokens frequently and for beginners, having to go through these steps again can be quite a chore. For the purposes of this lecture series, we would recommend setting the expiry for about 90 days to cover the whole period and then as a group, we’ll have a <strong>renew GitHub PAT party</strong> on our last session.</p>
-<p>3g. Set scopes</p>
-<p><img src="images/github_pat10.png" /></p>
-<p>Scopes are the types of permissions that you are attaching the token you are generating. This is again a security feature as takens should only be given specific and limited permissions based on what you intend the token to be used for. It is not good practice to give a token complete or unlimited permissions as you are exposing your account to high risk if and when your token gets compromised.</p>
-<p>For general R users, the following scopes are currently recommended:</p>
-<ul>
-<li>repo</li>
-<li>workflow</li>
-<li>gist</li>
-<li>user</li>
-</ul>
-<p>3h. Click on Generate token</p>
-<p><img src="images/github_pat11.png" /></p>
-<p>After clicking you will now see a long string of characters and numbers which is your GitHub PAT. It is important to remember that once you see the generated GitHub PAT, you should copy this right away and store it securely. Treat your GitHub PAT in the same way you would treat your password for online accounts. The best way to securely store the GitHub PAT is using a password manager (LastPass, 1Password, BitWarden). If you have a macOS computer, you can save your GitHub PAT into your computer’s keychain.</p>
-<p>Non-secure password/token storage practices that has been done by other students before are:</p>
-<ul>
-<li>Email their password/token to themselves</li>
-</ul>
-<p>If you are using free email services such as Gmail, then this is a hihly non-secure method. Others use their University of Oxford email address and argue that this is secure compared to using the free email services. Whilst it is true that a university email account is more secure, email communications and email storage is still one of the most vulnerable places to keep something that is meant to be kept secret.</p>
-<ul>
-<li><p>Paste the token into a Word document and save in personal computer with the filename GITHUB_PAT.docx</p></li>
-<li><p>Paste the token into a Word document and save in Dropbox or in Google Drive</p></li>
-</ul>
-<p>Please <strong>AVOID</strong> these methods.</p>
-
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="intro-git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="write-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="portable-reproducible.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

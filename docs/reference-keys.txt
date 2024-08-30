@@ -58,3 +58,10 @@ step-2-create-an-r-file-called-packages.r
 step-3-create-placeholder-directories-for-different-components-of-workflow
 step-4-create-the-target-script-file-_targets.r
 step-5-edit-the-_targets.r-script-file
+contributing-codehub
+research-software-development
+get-familiar-with-rs-package-writing-process
+get-familiar-and-reach-intermediate-level-git-and-github-skills
+review-our-portfolio-of-research-software
+communicate-with-developers
+clone-or-fork-the-project-repository
