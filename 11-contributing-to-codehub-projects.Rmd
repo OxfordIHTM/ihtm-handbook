@@ -1,0 +1,64 @@
+# Condtributing to Oxford IHTM CodeHub projects {#contributing-codehub}
+
+This section would be relevant to you if:
+
+1. You have completed the Open Science and Reproducible Research module of the MSc for International Health and Tropical Medicine; or,
+
+2. If you are an MSc for International Health and Tropical Medicine alumni and have experience and knowledge using R.
+
+The Oxford IHTM CodeHub actively runs projects focused on either research software development (based in R) or R-based scientific research workflows. Our list of previous and current projects can be found [here](https://oxford-ihtm.io/projects/).
+
+## Research software development
+
+Oxford IHTM CodeHub develops research software using the R package system. Our collection of research software tools are found [here](https://oxfordihtm.r-universe.dev) and the underlying code is available from our [organisational GitHub](https://github.com/OxfordIHTM).
+
+If you would like to contribute to Oxford IHTM CodeHub's software development, following is a list of steps on how to.
+
+### Get familiar with R's package writing process
+
+We build our research software tools using R. Hence, we use the R package writing process. This is described in the official [R manual for writing extensions](https://cran.r-project.org/). This manual is the official reference for what is considered acceptable R software development by the R Core Team and are the guides that will ensure that your R package can pass submission and entry into the Comprehensive R Archive Network (CRAN). So, from an academic perspective, you can see this as the official guide of a publisher/publication on what your manuscript should look like so you can submit to their journal for publication. It is not a guarantee of publication, but that you are meeting their publication standards.
+
+However, the R manual for writing extensions is not as easy to navigate and not as easy to read. For beginners, we would recommend starting off with Hadley Wickham's online book called [R Packages](https://r-pkgs.org/). The book is free to use online and has clearly delineated chapters and sections for specific R package writing tasks required. We would expect anyone wanting to contribute to the CodeHub's software development projects to have been able to go through this book.
+
+### Get familiar and reach intermediate level git and GitHub skills
+
+Our software development process uses git and GitHub to facilitate code sharing and versioning. It is paramount that anyone wanting to contribute to any software project should have at least intermediate level git and GitHub skills. These include:
+
+* Competent in cloning and/or forking software project repositories;
+
+* Competent in the branching process of git and GitHub;
+
+* Competent in the pull request process of GitHub;
+
+* Competent in GitHub's issues tracker and project tracker system;
+
+* Competent in code review process of GitHub.
+
+If you want to brush up on your git and GitHub, please go through Jenny Bryan's [Happy Git and GitHub for the useR](https://happygitwithr.com/).
+
+### Review our portfolio of research software
+
+Visit the project page of the Oxford IHTM CodeHub website - https://oxfodr-ihtm.io/projects/ to see our current line-up of CodeHub software projects.
+
+Have a look at our R Universe of research software - https://oxfordihtm.r-unviverse.dev - for the build status of each project.
+
+Have a look at our GitHub organisation - https://github.com/OxfordIHM - to see the code for each of these projects.
+
+Each project is in continuous development. We recommend looking at the repository for each of the projects, understand via the README what the project is trying to achieve and then review each projects issues page to see what the current line up of tasks or issues that the development requires. If for some reason there is no issues listed in a project, this is most likely that current developers have not gotten around to documenting their tasks/issues at hand. If so, you can make an issue to ask developers what the best task is to do for a beginner to contribute to.
+
+### Communicate with developers
+
+Once you have found a project and an issue that you want to work on, make a comment on that issue making sure to tag the developer/maintainer stating that you are going to have a go at this issue and then will make a pull request of your contribution.
+
+This communication is important as this will trigger the developer/maintainer to confirm that you are an eligible member of the CodeHub (the pre-requisites above) and then will add you as a collaborator on the project. This step is important because your status in the project as a collaborator will determine your next step on contributing. We prefer that CodeHub members are internal collaborators as this simplifies their participation (see next section).
+
+### Clone or fork the project repository
+
+Once you have been added to the project repository as a collaborator, you can now `clone` the repository to your local machine and then start making your contribution.
+
+If for some reason you haven't been added to the project repository as a collaborator yet but you are itching to contribute, you can still start contributing but instead of cloning, you will need to `fork` the repository. This is similar to cloning but your `fork` is identified as being from someone outside the organisation. This means you will need to make your own GitHub repository under your own username of the project as a fork of the original, write your code contribution and commit to your repository and then make a pull requeset to the original repository. 
+
+These forking steps are described in all the CONTRIBUTING notes/guidance in each project as we open contributions from anyone (not just CodeHub members) but not all are eligible to be internal collaborators.
+
+We would like to avoid this for eligible members of CodeHub so will endeavour to keep up with collaborator requests. So, if you are impatient and would really like to contribute already, consider forking but be warned that this has a lot more complicated steps than simple cloning. Either follow-up your request to be made a collaborator.
+
