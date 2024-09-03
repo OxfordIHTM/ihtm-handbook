@@ -1,8 +1,8 @@
-# Introduction to R and RStudio {#intro-r}
+# Introduction to R and RStudio {#sec-intro-r}
 
-## What is R? {#what-r}
+## What is R? {#sec-what-r}
 
-`R` is a system for data manipulation, calculation, and graphics. It provides:
+R is a system for data manipulation, calculation, and graphics. It provides:
 
 * Facilities for data handling and storage
 
@@ -12,39 +12,37 @@
 
 * A simple but powerful programming language
 
-`R` is often described as an environment for working with data. This is in contrast to a statistical *package* which is a collection of very specific tools. `R` is not strictly a statistics system but a system that provides many classical and modern statistical procedures as part of a broader data-analysis tool. This is an important difference between `R` and other statistical systems. In `R` a statistical analysis is usually performed as a series of steps with intermediate results being stored in objects. Systems such as `SPSS` and `SAS` provide copious output from (e.g.) a regression analysis whereas `R` will give minimal output and store the results of a fit for subsequent interrogation or use with other `R` functions. This means that `R` can be tailored to produce exactly the analysis and results that you want rather than produce an analysis designed to fit all situations.
+R is often described as an environment for working with data. This is in contrast to a statistical *package* which is a collection of very specific tools. R is not strictly a statistics system but a system that provides many classical and modern statistical procedures as part of a broader data-analysis tool. This is an important difference between R and other statistical systems. In R a statistical analysis is usually performed as a series of steps with intermediate results being stored in objects. Systems such as SPSS and SAS provide copious output from (e.g.) a regression analysis whereas R will give minimal output and store the results of a fit for subsequent interrogation or use with other R functions. This means that R can be tailored to produce exactly the analysis and results that you want rather than produce an analysis designed to fit all situations.
 
-`R` is a language based product. This means that you interact with `R` by typing commands such as: 
+R is a language based product. This means that you interact with R by typing commands such as: 
 
-&nbsp;
+```{r}
+#| eval: false
 
-```{r, eval = FALSE}
 table(SEX, LIFE)
 ```
 
-&nbsp;
-
 rather than by using menus, dialog boxes, selection lists, and buttons. This may seem to be a drawback but it means that the system is considerably more flexible than one that relies on menus, buttons, and boxes. It also means that every stage of your data management and analysis can be recorded and edited and re-run at a later date. It also provides an audit trail for quality control purposes.
 
-`R` is available under UNIX (including Linux), the Macintosh operating system OS X, and Microsoft Windows. The method used for starting `R` will vary from system to system. On UNIX systems you may need to issue the `R` command in a terminal session or click on an icon or menu option if your system has a windowing system. On Macintosh systems `R` will be available as an application but can also be run in a terminal session. On Microsoft Windows systems there will usually be an icon on the Start menu or the desktop.
+R is available under UNIX (including Linux), the Macintosh operating system OS X, and Microsoft Windows. The method used for starting R will vary from system to system. On UNIX systems you may need to issue the R command in a terminal session or click on an icon or menu option if your system has a windowing system. On Macintosh systems R will be available as an application but can also be run in a terminal session. On Microsoft Windows systems there will usually be an icon on the Start menu or the desktop.
 
-## Why use R? {#why-r}
+## Why use R? {#sec-why-r}
 
-`R` is an open source system and is available under the *GNU general public license* (GPL) which means that it is available for free but that there are some restrictions on how you are allowed to distribute the system and how you may charge for bespoke data analysis solutions written using the `R` system. Details of the general public license are available from http://www.gnu.org/copyleft/gpl.html.
+R is an open source system and is available under the *GNU general public license* (GPL) which means that it is available for free but that there are some restrictions on how you are allowed to distribute the system and how you may charge for bespoke data analysis solutions written using the R system. Details of the general public license are available from [http://www.gnu.org/copyleft/gpl.html](http://www.gnu.org/copyleft/gpl.html).
 
-`R` is available for download from http://www.r-project.org/.
+R is available for download from [http://www.r-project.org/](http://www.r-project.org/).
 
-This is also the best place to get extension packages and documentation. You may also subscribe to the `R` mailing lists from this site. `R` is supported through mailing lists. The level of support is at least as good as for commercial packages. It is typical to have queries answered in a matter of a few hours.
+This is also the best place to get extension packages and documentation. You may also subscribe to the R mailing lists from this site. R is supported through mailing lists. The level of support is at least as good as for commercial packages. It is typical to have queries answered in a matter of a few hours.
 
-Even though `R` is a free package it is more powerful than most commercial packages. Many of the modern procedures found in commercial packages were first developed and tested using `R` or **S-Plus** (the commercial equivalent of `R`).
+Even though R is a free package it is more powerful than most commercial packages. Many of the modern procedures found in commercial packages were first developed and tested using R or S-Plus (the commercial equivalent of R).
 
-## What is RStudio {#what-rstudio}
+## What is RStudio {#sec-what-rstudio}
 
 RStudio is an **integrated development environment (IDE)** for R. It includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.
 
 RStudio is available in open source and commercial editions and runs on the desktop (Windows, Mac, and Linux) or in a browser connected to RStudio Server or RStudio Workbench (Debian/Ubuntu, Red Hat/CentOS, and SUSE Linux).
 
-<p><a href="https://www.rstudio.com/products/rstudio/?wvideo=520zbd3tij"><img src="https://embed-fastly.wistia.com/deliveries/260e6e980f526abaedf8ef3378270c899da74f08.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=71a5d4e0" width="400" height="225" style="width: 400px; height: 225px;"></a></p><p><a href="https://www.rstudio.com/products/rstudio/?wvideo=520zbd3tij">RStudio IDE Overview</a></p>
+{{< video https://youtu.be/n3uue28FD0w?si=DAMZrT6xhLS8ZMLH >}}
 
 <!---
 ## Why use RStudio {#why-rstudio}

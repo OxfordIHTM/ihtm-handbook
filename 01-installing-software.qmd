@@ -1,12 +1,12 @@
-# Installing R, RStudio, and Git {#install-r}
+# Installing R, RStudio, and Git {#sec-install-r}
 
 Following are the steps to installing R, RStudio, and Git depending on your operationg system.
 
 ::: {.panel-tabset}
 
-## Windows {#setup-windows}
+## Windows {#sec-setup-windows}
 
-### Step 1: Download and install R {#install-r-windows .unnumbered}
+### Step 1: Download and install R {#sec-install-r-windows .unnumbered}
 
 Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.
 
@@ -16,7 +16,7 @@ Then click on ***Download R-4.X.X for Windows*** (latest release version). This 
 
 Once downloaded, go to the `.exe` file in your **Downloads** folder, double-click and follow all the install prompts, selecting recommended options all the time.
 
-### Step 2: Download and install RStudio {#install-rstudio-windows .unnumbered}
+### Step 2: Download and install RStudio {#sec-install-rstudio-windows .unnumbered}
 
 This step requires that **Step 1** has been done and was successful.
 
@@ -24,7 +24,7 @@ Go to [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rst
 
 Once downloaded, double-click on `.exe` file downloaded to your **Downloads** folder and then follow all install prompts, always selecting recommended options.
 
-### Step 3: Download and install `Rtools` {#install-rtools .unnumbered}
+### Step 3: Download and install `Rtools` {#sec-install-rtools .unnumbered}
 
 For the things that you will be taught in the **Open and Reproducibile Science** sub-module, you we will need to expand the installation of R by installing the `Rtools` software.
 
@@ -32,7 +32,7 @@ Go to [https://cran.r-project.org/bin/windows/Rtools/](https://cran.r-project.or
 
 Once you have downloaded the `.exe` file, double-click on the `.exe` file and follow all install prompts. Choose all the recommended options.
 
-### Step 4: Download and install Git for Windows {#install-git-windows .unnumbered}
+### Step 4: Download and install Git for Windows {#sec-install-git-windows .unnumbered}
 
 For the things that you will be taught in the **Open and Reproducibile Science** sub-module, you we will need to install **Git for Windows**.
 
@@ -42,7 +42,7 @@ Once you have downloaded the `.exe` file, double-click it and then follow all in
 
 ## macOS {#setup-macos}
 
-### Step 1: Download and install R {#install-r-macos .unnumbered}
+### Step 1: Download and install R {#sec-install-r-macos .unnumbered}
 
 Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.
 
@@ -50,7 +50,7 @@ Go to [https://cran.r-project.org](https://cran.r-project.org) and click on the 
 
 Once downloaded, go to the `.pkg` file in your `Downloads` folder, double-click and follow all the install prompts, selecting recommended options all the time.
 
-### Install RStudio {#install-rstudio-macos}
+### Install RStudio {#sec-install-rstudio-macos}
 
 This step requires that **Step 1** has been done and was successful.
 
@@ -58,7 +58,7 @@ Go to [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rst
 
 Once downloaded, double-click on `.dmg` file downloaded to your `Downloads` folder and then follow all install prompts, always selecting recommended options.
 
-### Install git for macOS {#install-git-macos}
+### Install git for macOS {#sec-install-git-macos}
 
 For the things that you will be taught in the **Open and Reproducibile Science** sub-module, you we will need to install **git for macOS**. Apple machines are already pre-installed with `git` but it is usually an Apple specific version of git and tends to be older and not configured in the way we need it. So we need to install another version of it that comes with Apple's `Xcode command line tools`.
 
@@ -70,17 +70,32 @@ xcode-select --install
 
 :::
 
-## Register a GitHub account {#github-account}
+## Register a GitHub account {#sec-github-account}
 
-For this module, you will need a GitHub account to be able to receive the code materials and assignments that will be provided. This is the mechanism by which these materials will be distributed. Hence you will need to register an account with GitHub (if you don't already have one). It's free!
+For the **Open and Reproducible Science in R** sub-module, you will need a GitHub account to be able to receive the code materials and assignments that will be provided. This is the mechanism by which these materials will be distributed. Hence you will need to register an account with GitHub (if you don't already have one). It's free!
 
-Go to [https://github.com](https://github.com) to register an account.
+**Step 1.** Head to [https://github.com](https://github.com)
+
+**Step 2.** On the upper right hand corner of the page, click on ***Sign-up*** button
+
+![](images/github_account1.png)
+
+**Step 3.** You will be then prompted to provide an email address to register your account with.
+
+![](images/github_account2.png)
+
+With regard to the email address to use for creating a GitHub account, a best practice recommendation is to use an email address that you will have access to all the time. Email addresses such as those for school (if you are a student) or for your current work may not always be the best email address to use as these email addresses tend to be time-limited (i.e., you lose the email address once you graduate or once you leave your current work).
+
+**Step 4.** You will then be prompted for a password.
+
+![](images/github_account2.png)
+
+**Step 5.** Then follow all other prompts after this including confirmation of your email and creating a GitHub username.
+
+With regard to creating/selecting a GitHub username, following are some best practice recommendations (REF):
 
 ::: {.callout-tip}
 ## Tips for selecting GitHub username
-
-Following are some advice on how to select a GitHub username from Bryan et al (REF).
-
 * Incorporate your actual name as this lets people know who they’re dealing with and also makes your username easier for people to guess or remember.
 
 * Reuse your username from other contexts, e.g., Twitter or Slack.
@@ -96,49 +111,4 @@ Following are some advice on how to select a GitHub username from Bryan et al (R
 * Avoid the use of upper vs. lower case to separate words. We highly recommend all lowercase. A better strategy for word separation is to use a hyphen (-).
 :::
 
-## Setup Git and GitHub (Windows and macOS) {#setup-git-github}
-
-### Introduce yourself to Git {#introduce-git}
-
-In the shell or terminal, issue the following commands:
-
-```Bash
-git config --global user.name "YOUR NAME"
-git config --global user.email "YOUR EMAIL REGISTERED WITH GITHUB"
-```
-
-Then check whether Git has indeed changed the configurations to what you have specified by looking at the output of the following shell or terminal command:
-
-```Bash
-git config --global --list
-```
-
-### Connecting Git, GitHub, and RStudio {#connect-git-github-rstudio}
-
-1. Create a personal access token for HTTPS access to GitHub
-
-Interacting with a remote Git server such as GitHub requires creating security credentials that proves you are a specific user (think of it as a digital ID that lets GitHub know that you are who you say you are) who is allowed to do whatever you are asking to do.
-
-There are different ways to securely identify yourself. For our purposes, we will use HTTPS access using a `personal access token (PAT)`.
-
-To create a token, go to https://github.com/settings/tokens
-
-2. Name your PAT
-
-Give this token a name that would remind you of what this token is for. We recommend calling it `rstudio` as it is the token we will use to connect/communicate with GitHub via RStudio. You can name it anything for as long as you remember what this token is for.
-
-3. Select a validity period
-
-It is always good practice to give the PAT a fixed validity period. Note that after said validity period, you will need to go through this process again and create a new PAT.
-
-4. Select the appropriate scopes
-
-For our purposes, we recommend selecting `repo`, `user`, and `workflow`.
-
-5. Click on `Generate token`
-
-Once you click on `Generate token`, your PAT will be shown to you on the browser window. Make sure you copy this PAT right away. Once you move away from the current browser window, the PAT will not be viewable anymore.
-
-6. Store your PAT
-
-It is essential that you store your PAT for future use. Treat this as you would your password. The best practice is to keep your PAT in a secure way such as using a password manager such as 1Password or LastPass.
+**Step 6.** Once you have created a GitHub account, please share your username to the sub-module lead so he can add your username to the Oxford IHTM GitHub account and add you to the Oxford IHTM GitHub Classroom.
