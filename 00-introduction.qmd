@@ -5,22 +5,40 @@
 
 [R](https://r-project.org) is a language and environment for statistical computing and graphics. It is a [GNU](https://en.wikipedia.org/wiki/GNU) project which is similar to the [S language and environment](https://en.wikipedia.org/wiki/S_(programming_language)) which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
 
-[R](https://r-project.org) provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, etc.) and graphical techniques, and is highly extensible. The S language is often the vehicle of choice for research in statistical methodology, and R provides an Open Source route to participation in that activity.
+[R](https://r-project.org) provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, etc.) and graphical techniques, and is highly extensible. The S language is often the vehicle of choice for research in statistical methodology, and R provides an open source route to participation in that activity.
 
 One of [R](https://r-project.org)’s strengths is the ease with which well-designed publication-quality plots can be produced, including mathematical symbols and formulae where needed. Great care has been taken over the defaults for the minor design choices in graphics, but the user retains full control.
 
-R is available as Free Software under the terms of the Free Software Foundation’s GNU General Public License in source code form. It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.
+R is available as free software under the terms of the Free Software Foundation’s GNU General Public License in source code form. It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.
 
 R is unique in that it is not general-purpose. It does not compromise by trying to do a lot of things. It does a few things very well, mainly statistical analysis and data visualization. While you can find data analysis and machine learning libraries for languages like [Python](https://www.python.org/), R has many statistical functionalities built into its core. No third-party libraries are needed for much of the core data analysis you can do with the language.
 
 But even with this specific use case, it is used in every industry you can think of because a modern business runs on data. Using past data, data scientists and data analysts can determine the health of a business and give business leaders actionable insights into the future of their company.
 
-Just because R is specifically used for statistical analysis and data visualization doesn't mean its use is limited. It’s actually quite popular, ranking 12th in the [TIOBE index](https://www.tiobe.com/tiobe-index/) of the most popular programming languages.
+Just because R is specifically used for statistical analysis and data visualization doesn't mean its use is limited. It’s actually quite popular, ranking 19th in the [TIOBE index](https://www.tiobe.com/tiobe-index/) of the most popular programming languages.
 
 Academics, scientists, and researchers use R to analyze the results of experiments. In addition, businesses of all sizes and in every industry use it to extract insights from the increasing amount of daily data they generate.
 
 ## Open and reproducible science
 
-Open Science is the practice of science in such a way that others can collaborate and contribute and where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods. Reproducible research means that research data and code are made available so that others are able to reach the same results as are claimed in scientific outputs. Closely related is the concept of replicability, the act of repeating a scientific methodology to reach similar conclusions. These concepts are core elements of empirical research.
+Open and reproducible science is the practice of science in such a way that others can collaborate and contribute and where research data, lab notes and other research processes are freely available, under terms that enable reuse, redistribution and reproduction of the research and its underlying data and methods. Reproducible research means that research data and code are made available so that others are able to reach the same results as are claimed in scientific outputs. Closely related is the concept of replicability, the act of repeating a scientific methodology to reach similar conclusions. These concepts are core elements of empirical research.
+
+Open science is important because it enhances the **accessibility**, **transparency**, and **collaboration** of scientific research.
+
+Open science makes research data, publications, and resources freely available to anyone, regardless of their location, institutional affiliation, or financial situation. This democratises knowledge and ensures that even those outside of well-funded research institutions can access the latest scientific findings.
+
+By making data, methods, and results openly available, open science allows other researchers to verify, replicate, and build upon previous work. This transparency is essential for the self-correcting nature of science, helping to ensure the reliability and integrity of research findings.
+
+When data and findings are openly shared, other researchers can more quickly build on existing work, leading to faster scientific progress. This is particularly important in fields like medicine or environmental science, where rapid advancements can have significant societal impacts.
+
+Open science fosters collaboration across disciplines, institutions, and borders. Researchers can combine their expertise and resources to tackle complex problems, leading to more innovative solutions. Open data and resources also encourage citizen science, where the general public can contribute to scientific research.
+
+By making research processes and findings open and accessible, science becomes more transparent to the public, which can increase trust in scientific research. Open science also allows the public to engage more directly with science, fostering a greater understanding and appreciation of scientific work.
+
+Open science reduces duplication of effort by making data and methods available for reuse. Researchers can build on existing work rather than starting from scratch, which can save time and resources. Additionally, open access to research outputs can reduce costs for institutions and researchers who would otherwise need to pay for access to publications.
+
+Many of the world’s most pressing challenges, such as climate change, pandemics, and poverty, require global collaboration and knowledge-sharing. Open science facilitates this by making research outputs accessible to scientists and policymakers worldwide, particularly in low- and middle-income countries that may lack access to expensive scientific resources.
+
+In essence, open science enhances the efficiency, equity, and impact of scientific research, making it a critical approach for advancing knowledge and addressing global challenges.
 
 The **Open and Reproducible Science in R** module is designed to give MSc IHTM students a foundational understanding and appreciation of the pillars of open science more broadly and within that the concepts, methods and tools for reproducible research more specifically. To further the students' learning, practical examples and exercises are walked through and discussed using the R language for statistical computing as a way to practically demonstrate these concepts.
