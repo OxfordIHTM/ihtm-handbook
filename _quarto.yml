@@ -12,24 +12,24 @@ book:
   date-format: "DD MMMM YYYY"
   chapters:
     - index.qmd
-    - 00-introduction.qmd
+    - introduction.qmd
     - part: Tools
       chapters:
-        - 01-installing-software.qmd
-        - 02-introduction-to-r.qmd
-        - 03-introduction-to-git.qmd
-        - 04-connecting-git-with-rstudio.qmd
+        - installing-software.qmd
+        - introduction-to-r.qmd
+        - introduction-to-git.qmd
+        - connecting-git-with-rstudio.qmd
     - part: Practices
       chapters:
-        - 05-writing-functions.qmd
+        - writing-functions.qmd
     - part: Processes
       chapters:
-        - 06-clone-repository-rstudio.qmd
-        - 07-commit-and-push.qmd
-        - 08-participating-rstudio-project.qmd
-        - 09-initiating-rstudio-project.qmd
-        - 10-creating-portable-reproducible-workflows.qmd
-        - 11-contributing-to-codehub-projects.qmd
+        - clone-repository-rstudio.qmd
+        - commit-and-push.qmd
+        - participating-rstudio-project.qmd
+        - initiating-rstudio-project.qmd
+        - creating-portable-reproducible-workflows.qmd
+        - contributing-to-codehub-projects.qmd
   cover-image: images/ihealth_base_pos_tn.png
   search: true
   repo-url: https://github.com/OxfordIHTM/ihtm-handbook/
