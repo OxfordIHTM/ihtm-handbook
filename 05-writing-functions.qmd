@@ -1,0 +1,224 @@
+# Writing functions {#write-functions}
+
+For this topic, we will use data on weight and height to calculate body mass index. As a refresher, body mass index is calculated as follows:
+
+$$ \text{Body mass index} ~=~ \frac{weight ~ (kgs)}{height ~ (m) ^ 2} $$
+For this topic on writing functions in R, we will use BMI as an example to explore and demonstrate how we can create our own functions in R.
+
+Let's say for example that you have been doing a research on children aged 11 years and older in 3 schools and you have collected the following data:
+
+```{r, echo = FALSE}
+x <- nipnTK::flag.ex02 |>
+  subset(select = c(school, sex, ageMonths, weight, height))
+
+school1516 <- x |> subset(school == 1516)
+
+school1522 <- x |> subset(school == 1522)
+
+school1525 <- x |> subset(school == 1525)
+```
+
+**School 1516**
+```{r}
+school1516
+```
+
+**School 1522**
+```{r}
+school1522
+```
+
+**School 1525**
+```{r}
+school1525
+```
+
+In this dataset, the units of the height measurement is in centimetres.
+
+Using what we have learned earlier on calculating BMI using R, I can perform the following R commands to get the BMI for each child in each of the schools:
+
+```{r, eval = FALSE}
+## Calculate BMI for children in school 1516
+school1516$weight / (school1516$height / 100) ^ 2
+
+## Calculate BMI for children in school 1516
+school1522$weight / (school1516$height / 100) ^ 2
+
+## Calculate BMI for children in school 1516
+school1525$weight / (school1516$height / 100) ^ 2
+```
+
+Because the commands are repetitive, I can easily copy and paste my initial line of code to calculate BMI for children in school 1516 and then just change the object names accordingly to calculate the BMI for children in the two other schools.
+
+When I run these lines of code, I get the following results:
+
+```{r, eval = TRUE}
+## Calculate BMI for children in school 1516
+school1516$weight / (school1516$height / 100) ^ 2
+
+## Calculate BMI for children in school 1516
+school1522$weight / (school1516$height / 100) ^ 2
+
+## Calculate BMI for children in school 1516
+school1525$weight / (school1516$height / 100) ^ 2
+```
+
+The calculation for the BMI of children in school 1516 seems to have completed without issues and a vector of BMI results have been produced. However, for school 1522 and school 1525, there is a warning saying:
+
+```R
+## Warning in school1522$weight/(school1516$height)^2: longer object length is not a multiple
+## of shorter object length
+```
+
+Although a result has been provided, the warning gives me an indication that someting is not quite right with my calculation and when I inspect further, I notice that in my formula for school 1522 and for school 1525, my denominator is still using data for school 1516 and this is most likely what is causing the warning message.
+
+So, to correct this I go back to my lines of code and edit the denominators for school 1522 and school 1525 as follows:
+
+```{r, eval = FALSE}
+## Calculate BMI for children in school 1516
+school1516$weight / (school1516$height / 100) ^ 2
+
+## Calculate BMI for children in school 1516
+school1522$weight / (school1522$height / 100) ^ 2
+
+## Calculate BMI for children in school 1516
+school1525$weight / (school1525$height / 100) ^ 2
+```
+
+which gives me:
+
+```{r}
+## Calculate BMI for children in school 1516
+school1516$weight / (school1516$height / 100) ^ 2
+
+## Calculate BMI for children in school 1516
+school1522$weight / (school1522$height / 100) ^ 2
+
+## Calculate BMI for children in school 1516
+school1525$weight / (school1525$height / 100) ^ 2
+```
+
+I now do not get the warning message and the expected length of BMI values for each school has now been produced.
+
+From this short example above, we realise how tedious a task it is to type in the code above every time we need to calculate BMI. Also, it becomes even challenging to debug issues with the code because we have to review and edit (as needed) each iteration of the calculation to see where it may have gone wrong (especially when doing a cut and paste approach).
+
+It would be better (and easier) to have a function that calculates and displays the BMI values automatically. Fortunately, `R` allows us to do just that.
+
+The `function()` function allows us to create new functions in `R` with the following generic syntax:
+
+```{r, eval = FALSE}
+function_name <- function(argument1, argument2, ...) {
+  ## Your code here
+}
+```
+
+Using this template/generic syntax, we apply it to create a function called `calculate_bmi` as follows:
+
+```{r}
+calculate_bmi <- function(weight, height) {
+  weight / height ^ 2
+}
+```
+
+We now have a function for calculating and outputing BMI values.
+
+Let us now test it with our 3 sets of data:
+
+**School 1516**
+```{r}
+calculate_bmi(
+  weight = school1516$weight,
+  height = school1516$height / 100
+)
+```
+
+**School 1522**
+```{r}
+calculate_bmi(
+  weight = school1522$weight,
+  height = school1522$height / 100
+)
+```
+
+**School 1525**
+```{r}
+calculate_bmi(
+  weight = school1525$weight,
+  height = school1525$height / 100
+)
+```
+
+
+In our example here, the `calculate_bmi()` function helped a little bit in making the code to calculate BMI for each student in each school more efficient. But the efficiency that functions provide become more evident when you need to make more complex operations. For example, what if you need to get the mean BMI for students in each school? Without a function, we will have to do the following script for each school:
+
+**School 1516**
+```{r}
+## Calculate BMI for children in school 1516
+bmi_school1516 <- school1516$weight / (school1516$height / 100) ^ 2
+
+## Get the mean BMI for children in school 1516
+mean_bmi_school1516 <- mean(bmi_school1516)
+
+mean_bmi_school1516
+```
+
+**School 1522**
+```{r}
+## Calculate BMI for children in school 1522
+bmi_school1522 <- school1522$weight / (school1522$height / 100) ^ 2
+
+## Get the mean BMI for children in school 1522
+mean_bmi_school1522 <- mean(bmi_school1522)
+
+mean_bmi_school1522
+```
+
+**School 1525**
+```{r}
+## Calculate BMI for children in school 1525
+bmi_school1525 <- school1525$weight / (school1525$height) ^ 2
+
+## Get the mean BMI for children in school 1525
+mean_bmi_school1525 <- mean(bmi_school1525)
+
+mean_bmi_school1525
+```
+
+As the operations/calculations we want to perform become more complex, the copy and paste method becomes more and more tedious. With the function approach, we can use the following:
+
+```{r}
+calculate_mean_bmi <- function(weight, height) {
+  bmi <- weight / height ^ 2
+  
+  mean_bmi <- mean(bmi)
+  
+  return(mean_bmi)
+}
+```
+
+Applying the function to the datasets, we get:
+
+**School 1516**
+```{r}
+calculate_mean_bmi(
+  weight = school1516$weight,
+  height = school1516$height / 100
+)
+```
+
+**School 1522**
+```{r}
+calculate_mean_bmi(
+  weight = school1522$weight,
+  height = school1522$height / 100
+)
+```
+
+**School 1525**
+```{r}
+calculate_mean_bmi(
+  weight = school1525$weight,
+  height = school1525$height / 100
+)
+```
+
