@@ -6,7 +6,7 @@
 
 git was developed by Linus Torvalds in 2005. He created git as a replacement for the proprietary version control system he was using at the time. The development of git was driven by the need for a distributed version control system, which allows multiple developers to work on a project simultaneously, without the need for a central server. Linus Torvalds is also known for creating the Linux operating system kernel.
 
-To use git in your machines, you will need to install it as described in Chapter @sec-install-r.
+To use git in your machines, you will need to install it as described in @sec-install-r.
 
 ## All about GitHub {#sec-all-about-github}
 
