@@ -1,4 +1,4 @@
-# Writing functions {#write-functions}
+# Writing functions {#sec-write-functions}
 
 For this topic, we will use data on weight and height to calculate body mass index. As a refresher, body mass index is calculated as follows:
 
@@ -7,7 +7,9 @@ For this topic on writing functions in R, we will use BMI as an example to explo
 
 Let's say for example that you have been doing a research on children aged 11 years and older in 3 schools and you have collected the following data:
 
-```{r, echo = FALSE}
+```{r}
+#| echo: false
+#| 
 x <- nipnTK::flag.ex02 |>
   subset(select = c(school, sex, ageMonths, weight, height))
 
@@ -37,7 +39,9 @@ In this dataset, the units of the height measurement is in centimetres.
 
 Using what we have learned earlier on calculating BMI using R, I can perform the following R commands to get the BMI for each child in each of the schools:
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
+
 ## Calculate BMI for children in school 1516
 school1516$weight / (school1516$height / 100) ^ 2
 
@@ -52,7 +56,9 @@ Because the commands are repetitive, I can easily copy and paste my initial line
 
 When I run these lines of code, I get the following results:
 
-```{r, eval = TRUE}
+```{r}
+#| echo: false
+
 ## Calculate BMI for children in school 1516
 school1516$weight / (school1516$height / 100) ^ 2
 
@@ -74,7 +80,9 @@ Although a result has been provided, the warning gives me an indication that som
 
 So, to correct this I go back to my lines of code and edit the denominators for school 1522 and school 1525 as follows:
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
+
 ## Calculate BMI for children in school 1516
 school1516$weight / (school1516$height / 100) ^ 2
 
@@ -88,6 +96,8 @@ school1525$weight / (school1525$height / 100) ^ 2
 which gives me:
 
 ```{r}
+#| echo: false
+
 ## Calculate BMI for children in school 1516
 school1516$weight / (school1516$height / 100) ^ 2
 
@@ -106,7 +116,9 @@ It would be better (and easier) to have a function that calculates and displays 
 
 The `function()` function allows us to create new functions in `R` with the following generic syntax:
 
-```{r, eval = FALSE}
+```{r}
+#| eval: false
+
 function_name <- function(argument1, argument2, ...) {
   ## Your code here
 }

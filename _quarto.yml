@@ -31,6 +31,11 @@ book:
         - 10-creating-portable-reproducible-workflows.qmd
         - 11-contributing-to-codehub-projects.qmd
   cover-image: images/ihealth_base_pos_tn.png
+  search: true
+  repo-url: https://github.com/OxfordIHTM/ihtm-handbook/
+  repo-actions: [edit]
+  downloads: [pdf, epub]
+  sharing: [twitter, facebook]
 
 bibliography: references.bib
 

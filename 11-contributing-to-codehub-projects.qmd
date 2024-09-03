@@ -1,14 +1,14 @@
-# Contributing to Oxford IHTM CodeHub projects {#contributing-codehub}
+# Contributing to Oxford IHTM CodeHub projects {#sec-contributing-codehub}
 
 This section would be relevant to you if:
 
-1. You have completed the Open Science and Reproducible Research module of the MSc for International Health and Tropical Medicine; or,
+1. You have completed the **Open and Reproducible Science in R** sub-module of the MSc for International Health and Tropical Medicine; or,
 
 2. If you are an MSc for International Health and Tropical Medicine alumni and have experience and knowledge using R.
 
 The Oxford IHTM CodeHub actively runs projects focused on either research software development (based in R) or R-based scientific research workflows. Our list of previous and current projects can be found [here](https://oxford-ihtm.io/projects/).
 
-## Research software development
+## Research software development {#sec-research-software}
 
 Oxford IHTM CodeHub develops research software using the R package system. Our collection of research software tools are found [here](https://oxfordihtm.r-universe.dev) and the underlying code is available from our [organisational GitHub](https://github.com/OxfordIHTM).
 
@@ -38,11 +38,11 @@ If you want to brush up on your git and GitHub, please go through Jenny Bryan's 
 
 ### Review our portfolio of research software
 
-Visit the project page of the Oxford IHTM CodeHub website - https://oxford-ihtm.io/projects/ to see our current line-up of CodeHub software projects.
+Visit the project page of the Oxford IHTM CodeHub website - [https://oxford-ihtm.io/projects/](https://oxford-ihtm.io/projects/) to see our current line-up of CodeHub software projects.
 
-Have a look at our R Universe of research software - https://oxfordihtm.r-unviverse.dev - for the build status of each project.
+Have a look at our R Universe of research software - [https://oxfordihtm.r-unviverse.dev](https://oxfordihtm.r-unviverse.dev) - for the build status of each project.
 
-Have a look at our GitHub organisation - https://github.com/OxfordIHM - to see the code for each of these projects.
+Have a look at our GitHub organisation - [https://github.com/OxfordIHM](https://github.com/OxfordIHM) - to see the code for each of these projects.
 
 Each project is in continuous development. We recommend looking at the repository for each of the projects, understand via the README what the project is trying to achieve and then review each projects issues page to see what the current line up of tasks or issues that the development requires. If for some reason there is no issues listed in a project, this is most likely that current developers have not gotten around to documenting their tasks/issues at hand. If so, you can make an issue to ask developers what the best task is to do for a beginner to contribute to.
 
