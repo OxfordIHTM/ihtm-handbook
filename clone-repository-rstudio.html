@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Creating portable and reproducible scientific workflows – Open and Reprodubile Science in R</title>
+<title>6&nbsp; Cloning a GitHub repository into your local computer using RStudio – Open and Reprodubile Science in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./11-contributing-to-codehub-projects.html" rel="next">
-<link href="./09-initiating-rstudio-project.html" rel="prev">
+<link href="./commit-and-push.html" rel="next">
+<link href="./writing-functions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./10-creating-portable-reproducible-workflows.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating portable and reproducible scientific workflows</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -185,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -200,25 +166,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-installing-software.html" class="sidebar-item-text sidebar-link">
+  <a href="./installing-software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R, RStudio, and Git</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introduction-to-r.html" class="sidebar-item-text sidebar-link">
+  <a href="./introduction-to-r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-introduction-to-git.html" class="sidebar-item-text sidebar-link">
+  <a href="./introduction-to-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to git and GitHub</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-connecting-git-with-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./connecting-git-with-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Connecting RStudio with GitHub</span></span></a>
   </div>
 </li>
@@ -235,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-writing-functions.html" class="sidebar-item-text sidebar-link">
+  <a href="./writing-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Writing functions</span></span></a>
   </div>
 </li>
@@ -252,37 +218,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-clone-repository-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./clone-repository-rstudio.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-commit-and-push.html" class="sidebar-item-text sidebar-link">
+  <a href="./commit-and-push.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Committing your changes and pushing them to GitHub</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-participating-rstudio-project.html" class="sidebar-item-text sidebar-link">
+  <a href="./participating-rstudio-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participating in an existing R/RStudio project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09-initiating-rstudio-project.html" class="sidebar-item-text sidebar-link">
+  <a href="./initiating-rstudio-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Initiating an R/RStudio project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./10-creating-portable-reproducible-workflows.html" class="sidebar-item-text sidebar-link active">
+  <a href="./creating-portable-reproducible-workflows.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating portable and reproducible scientific workflows</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-contributing-to-codehub-projects.html" class="sidebar-item-text sidebar-link">
+  <a href="./contributing-to-codehub-projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford IHTM CodeHub projects</span></span></a>
   </div>
 </li>
@@ -298,20 +264,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#step-1-create-a-new-rstudio-project" id="toc-step-1-create-a-new-rstudio-project" class="nav-link active" data-scroll-target="#step-1-create-a-new-rstudio-project"><span class="header-section-number">10.1</span> Step 1: Create a new RStudio project</a></li>
-  <li><a href="#step-2-create-an-r-file-called-packages.r" id="toc-step-2-create-an-r-file-called-packages.r" class="nav-link" data-scroll-target="#step-2-create-an-r-file-called-packages.r"><span class="header-section-number">10.2</span> Step 2: Create an R file called <code>packages.R</code></a></li>
-  <li><a href="#step-3-create-placeholder-directories-for-different-components-of-workflow" id="toc-step-3-create-placeholder-directories-for-different-components-of-workflow" class="nav-link" data-scroll-target="#step-3-create-placeholder-directories-for-different-components-of-workflow"><span class="header-section-number">10.3</span> Step 3: Create placeholder directories for different components of workflow</a></li>
-  <li><a href="#step-4-create-the-target-script-file-_targets.r" id="toc-step-4-create-the-target-script-file-_targets.r" class="nav-link" data-scroll-target="#step-4-create-the-target-script-file-_targets.r"><span class="header-section-number">10.4</span> Step 4: Create the target script file (<code>_targets.R</code>)</a></li>
-  <li><a href="#step-5-edit-the-_targets.r-script-file" id="toc-step-5-edit-the-_targets.r-script-file" class="nav-link" data-scroll-target="#step-5-edit-the-_targets.r-script-file"><span class="header-section-number">10.5</span> Step 5: Edit the <code>_targets.R</code> script file</a></li>
+  <li><a href="#copy-the-repository-url-of-the-repository-you-want-to-clone-from-github" id="toc-copy-the-repository-url-of-the-repository-you-want-to-clone-from-github" class="nav-link active" data-scroll-target="#copy-the-repository-url-of-the-repository-you-want-to-clone-from-github"><span class="header-section-number">6.1</span> Copy the repository URL of the repository you want to clone from GitHub</a></li>
+  <li><a href="#go-to-rstudio-and-create-new-project" id="toc-go-to-rstudio-and-create-new-project" class="nav-link" data-scroll-target="#go-to-rstudio-and-create-new-project"><span class="header-section-number">6.2</span> Go to RStudio and create new project</a></li>
+  <li><a href="#choose-version-control" id="toc-choose-version-control" class="nav-link" data-scroll-target="#choose-version-control"><span class="header-section-number">6.3</span> Choose Version Control</a></li>
+  <li><a href="#select-git" id="toc-select-git" class="nav-link" data-scroll-target="#select-git"><span class="header-section-number">6.4</span> Select Git</a></li>
+  <li><a href="#setup-repository-settings" id="toc-setup-repository-settings" class="nav-link" data-scroll-target="#setup-repository-settings"><span class="header-section-number">6.5</span> Setup repository settings</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/10-creating-portable-reproducible-workflows.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/clone-repository-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06-clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./10-creating-portable-reproducible-workflows.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating portable and reproducible scientific workflows</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="portable-reproducible" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating portable and reproducible scientific workflows</span></span></h1>
+<h1 class="title"><span id="clone-repository" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></span></h1>
 </div>
 
 
@@ -328,154 +294,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>At this point, you would have written your own R code and R scripts and saved these within an R file (<code>.R</code>).</p>
-<p>By now, you would have also appreciated how extensible R is through built-in packages and/or through functions that you have created yourself.</p>
-<p>So far, in the examples that we have worked on, the operations and the problems have been quite straightforward. But from your own experience dealing with your own data, real world data is far from straightforward and far from simple. Complexity is almost always a given.</p>
-<p>R’s scripting capability and R’s extensibility are its main characteristics that make R a good tool for creating robust scientific workflows particularly for complex data and research projects.</p>
-<p>A typical scientific workflow would have the following steps:</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/scientific-workflow.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>In general, an R script should reflect the different steps outlined above. Hence, an R script of a scientific workflow would tend to look like this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load libraries</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Retrieve and read data</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Process data</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Analyse data</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="do">### Descriptive analysis</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="do">### Statistical tests</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="do">### Model specifications</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Outputs</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="do">### Tabulation of results</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="do">### Model outputs</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="do">### Plots</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="do">## Report</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In this chapter, we will go through a step-by-step walkthrough of how to build a robust scientific workflow in R. A robust worklow is one that is <strong>portable</strong> i.e., not dependent on hardware and software and instead can be run on almost any machine with very minimal, if any, additional setup or configuration required, and one that is <strong>reproducible</strong> i.e., can be run over and over again without issues, providing the expected results with the same data or providing updated results with new and/or updated data.</p>
-<section id="step-1-create-a-new-rstudio-project" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="step-1-create-a-new-rstudio-project"><span class="header-section-number">10.1</span> Step 1: Create a new RStudio project</h2>
-<ul>
-<li><p>Open RStudio</p></li>
-<li><p>Click on the <code>File</code> option in the RStudio menu. In the dropdown menu, select <code>New Project</code></p></li>
-<li><p>In the menu window, select <code>New directory</code> option.</p></li>
-<li><p>In the next menu window, select <code>New project</code> option.</p></li>
-<li><p>In the next menu window, enter the following details:</p>
-<ul>
-<li><p>Name of the project - important to make the project name as short as possible but descriptive of the project you are creating; don’t use spaces, instead use dash (or underscore) and avoid using capital letters;</p></li>
-<li><p>Select the directory in your computer in which you want to save the project in. Click on <code>Browse</code> to open your computers file manager and navigate to the directory you want to save your project in;</p></li>
-<li><p>Tick the selection box to make this project a git repository (whilst this is not necessary, this is highly recommended especially if you are collaborating with others);</p></li>
-<li><p>Tick the selection box to enable <code>renv</code> in this project (this is what mainly contribute to the portability of your project); and,</p></li>
-<li><p>Click on <code>Create project</code></p></li>
-</ul></li>
-</ul>
+<p>This tutorial is a summary of the the instructions described here - https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository.</p>
+<section id="copy-the-repository-url-of-the-repository-you-want-to-clone-from-github" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="copy-the-repository-url-of-the-repository-you-want-to-clone-from-github"><span class="header-section-number">6.1</span> Copy the repository URL of the repository you want to clone from GitHub</h2>
+<p><img src="images/clone_step1.png" class="img-fluid"></p>
+<p>7.1.1 Go to the GitHub page of the repository you own and click on the green button that is labeled code</p>
+<p>7.1.2 Click on the copy to clipboard icon to copy the repository URL.</p>
 </section>
-<section id="step-2-create-an-r-file-called-packages.r" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="step-2-create-an-r-file-called-packages.r"><span class="header-section-number">10.2</span> Step 2: Create an R file called <code>packages.R</code></h2>
-<ul>
-<li><p>Click on the <code>File</code> option in the RStudio menu. In the dropdown menu, select <code>New File</code> and then in the next dropdown menu, select <code>R script</code>.</p></li>
-<li><p>A new tab will open in your text editor pane of RStudio (upper left pane) with the name <em>Untitled1</em>. Save this file by clicking on the disk icon on the text editor menu or do a keyboard shortcut with <code>CTRL + s</code>. Give this empty R script the filename <code>packages.R</code>.</p></li>
-<li><p>You should now see a file in the main directory/root directory of your project named <code>packages.R</code></p></li>
-<li><p>Add code in the <code>packages.R</code> file specifying the packages you will be using in this project. There will be standard packages that we will always use with this type of workflow. So a template/generic <code>packages.R</code> file will contain the following:</p></li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#' General packages needed for a targets workflow</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tarchetypes)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rmarkdown)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="co">#' Add other packages that will be used in the project below</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co">#'</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="do">################################################################################</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="go-to-rstudio-and-create-new-project" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="go-to-rstudio-and-create-new-project"><span class="header-section-number">6.2</span> Go to RStudio and create new project</h2>
+<p><img src="images/clone_step2.png" class="img-fluid"></p>
 </section>
-<section id="step-3-create-placeholder-directories-for-different-components-of-workflow" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="step-3-create-placeholder-directories-for-different-components-of-workflow"><span class="header-section-number">10.3</span> Step 3: Create placeholder directories for different components of workflow</h2>
-<ul>
-<li><p>In the lower right pane of RStudio (the file manager pane), find the menu button labelled <code>Folder</code>.</p></li>
-<li><p>Give this new folder the label of <code>R</code>. This filder will hold all bespoke functions that we will create to use for this project workflow;</p></li>
-<li><p>Repeat these steps to create new folders with the following labels:</p>
-<ul>
-<li><p><code>data</code> - This folder will hold any data that we retrieve as part of this workflow.</p></li>
-<li><p><code>outputs</code> - This folder will hold all our workflow outputs such as plots/figures, tables (in Excel or CSV files), HTML and/or Word and/or PDF outputs</p></li>
-<li><p><code>reports</code> - This folder will hold all our RMarkdown report (<code>.Rmd</code>) files</p></li>
-<li><p><code>docs</code> - This folder will hold any of our deployed outputs such as HTML report, dashboard, etc.</p></li>
-</ul></li>
-</ul>
-<p>These are placeholder directories which we will populate as we work through the workflow for this project.</p>
+<section id="choose-version-control" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="choose-version-control"><span class="header-section-number">6.3</span> Choose Version Control</h2>
+<p><img src="images/clone_step3.png" class="img-fluid"></p>
 </section>
-<section id="step-4-create-the-target-script-file-_targets.r" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="step-4-create-the-target-script-file-_targets.r"><span class="header-section-number">10.4</span> Step 4: Create the target script file (<code>_targets.R</code>)</h2>
-<p>The next task is to create a {targets} script file (<code>_targets.R</code>) which is the file that will define the workflow that we will be creating.</p>
-<p>Create the file by:</p>
-<ul>
-<li><p>Clicking on File –&gt; New File –&gt; R Script in RStudio.</p></li>
-<li><p>A new tab will show in your Source window on the top left quadrant of your RStudio screen. This tab will usually be called <code>Untitled1</code>.</p></li>
-<li><p>Save this file first and change its name to <code>_targets.R</code>. Make sure to save it in the current project directory.</p></li>
-<li><p>You know that you were successful in doing this once you see a file called <code>_targets.R</code> in the File system window in the lower right quadrant of your RStudio screen.</p></li>
-</ul>
+<section id="select-git" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="select-git"><span class="header-section-number">6.4</span> Select Git</h2>
+<p><img src="images/clone_step4.png" class="img-fluid"></p>
 </section>
-<section id="step-5-edit-the-_targets.r-script-file" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="step-5-edit-the-_targets.r-script-file"><span class="header-section-number">10.5</span> Step 5: Edit the <code>_targets.R</code> script file</h2>
-<p>Now, the next step is to edit your script file by adding sets of R code that does the following:</p>
-<ul>
-<li>Loads the packages required</li>
-<li>Loads custom functions (if any)</li>
-<li>Defines individual targets using <code>tar_targets</code> function</li>
-<li>Ends with a list of targets objects</li>
-</ul>
-<p>A basic <code>{targets}</code> workflow will look like this:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load libraries --------------------------------------------------------------</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Load custom functions -------------------------------------------------------</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (f <span class="cf">in</span> <span class="fu">list.files</span>(<span class="st">"R"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)) <span class="fu">source</span> (f)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (f <span class="cf">in</span> <span class="fu">list.files</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"R"</span>), <span class="at">full.names =</span> <span class="cn">TRUE</span>)) <span class="fu">source</span> (f)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Create targets and list targets objects -------------------------------------</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="setup-repository-settings" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="setup-repository-settings"><span class="header-section-number">6.5</span> Setup repository settings</h2>
+<p><img src="images/clone_step5.png" class="img-fluid"></p>
+<p>7.5.1 Paste the repository URL you copied earlier.</p>
+<p>7.5.2 The Project directory name should be specified already after you paste the repository URL. Use the suggested directory name.</p>
+<p>7.5.3 Browse for the directory on your local computer where you want to save the files for the specified project.</p>
+<p>7.5.4 Click on the <code>Create Project</code> button/icon.</p>
+<p>You will now have the GitHub repository in your local computer.</p>
 
 
 </section>
@@ -903,13 +748,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./09-initiating-rstudio-project.html" class="pagination-link" aria-label="Initiating an R/RStudio project">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Initiating an R/RStudio project</span></span>
+      <a href="./writing-functions.html" class="pagination-link" aria-label="Writing functions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Writing functions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./11-contributing-to-codehub-projects.html" class="pagination-link" aria-label="Contributing to Oxford IHTM CodeHub projects">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford IHTM CodeHub projects</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./commit-and-push.html" class="pagination-link" aria-label="Committing your changes and pushing them to GitHub">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Committing your changes and pushing them to GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -918,4 +763,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/10-creating-portable-reproducible-workflows.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/clone-repository-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>

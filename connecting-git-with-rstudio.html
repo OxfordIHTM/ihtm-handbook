@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Installing R, RStudio, and Git – Open and Reprodubile Science in R</title>
+<title>4&nbsp; Connecting RStudio with GitHub – Open and Reprodubile Science in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./02-introduction-to-r.html" rel="next">
-<link href="./00-introduction.html" rel="prev">
+<link href="./writing-functions.html" rel="next">
+<link href="./introduction-to-git.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-installing-software.html">Tools</a></li><li class="breadcrumb-item"><a href="./01-installing-software.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R, RStudio, and Git</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tools</a></li><li class="breadcrumb-item"><a href="./connecting-git-with-rstudio.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Connecting RStudio with GitHub</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./00-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -166,25 +166,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-installing-software.html" class="sidebar-item-text sidebar-link active">
+  <a href="./installing-software.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R, RStudio, and Git</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-introduction-to-r.html" class="sidebar-item-text sidebar-link">
+  <a href="./introduction-to-r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-introduction-to-git.html" class="sidebar-item-text sidebar-link">
+  <a href="./introduction-to-git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to git and GitHub</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-connecting-git-with-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./connecting-git-with-rstudio.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Connecting RStudio with GitHub</span></span></a>
   </div>
 </li>
@@ -201,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-writing-functions.html" class="sidebar-item-text sidebar-link">
+  <a href="./writing-functions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Writing functions</span></span></a>
   </div>
 </li>
@@ -218,37 +218,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-clone-repository-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./clone-repository-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-commit-and-push.html" class="sidebar-item-text sidebar-link">
+  <a href="./commit-and-push.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Committing your changes and pushing them to GitHub</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-participating-rstudio-project.html" class="sidebar-item-text sidebar-link">
+  <a href="./participating-rstudio-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participating in an existing R/RStudio project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09-initiating-rstudio-project.html" class="sidebar-item-text sidebar-link">
+  <a href="./initiating-rstudio-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Initiating an R/RStudio project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./10-creating-portable-reproducible-workflows.html" class="sidebar-item-text sidebar-link">
+  <a href="./creating-portable-reproducible-workflows.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating portable and reproducible scientific workflows</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./11-contributing-to-codehub-projects.html" class="sidebar-item-text sidebar-link">
+  <a href="./contributing-to-codehub-projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford IHTM CodeHub projects</span></span></a>
   </div>
 </li>
@@ -264,16 +264,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-github-account" id="toc-sec-github-account" class="nav-link active" data-scroll-target="#sec-github-account"><span class="header-section-number">1.1</span> Register a GitHub account</a></li>
+  <li><a href="#open-rstudio-and-then-select-the-terminal-tab-in-the-console-pane." id="toc-open-rstudio-and-then-select-the-terminal-tab-in-the-console-pane." class="nav-link active" data-scroll-target="#open-rstudio-and-then-select-the-terminal-tab-in-the-console-pane."><span class="header-section-number">4.1</span> Open RStudio and then select the <code>Terminal</code> tab in the console pane.</a></li>
+  <li><a href="#introduce-yourself-to-git" id="toc-introduce-yourself-to-git" class="nav-link" data-scroll-target="#introduce-yourself-to-git"><span class="header-section-number">4.2</span> Introduce yourself to git</a></li>
+  <li><a href="#create-a-github-personal-access-token-pat" id="toc-create-a-github-personal-access-token-pat" class="nav-link" data-scroll-target="#create-a-github-personal-access-token-pat"><span class="header-section-number">4.3</span> Create a GitHub personal access token (PAT)</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/01-installing-software.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/connecting-git-with-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-installing-software.html">Tools</a></li><li class="breadcrumb-item"><a href="./01-installing-software.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R, RStudio, and Git</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./installing-software.html">Tools</a></li><li class="breadcrumb-item"><a href="./connecting-git-with-rstudio.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Connecting RStudio with GitHub</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-install-r" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R, RStudio, and Git</span></span></h1>
+<h1 class="title"><span id="sec-connect-rstudio-github" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Connecting RStudio with GitHub</span></span></h1>
 </div>
 
 
@@ -290,94 +292,89 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Following are the steps to installing R, RStudio, and Git depending on your operationg system.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">macOS</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<section id="sec-install-r-windows" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-install-r-windows">Step 1: Download and install R</h3>
-<p>Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.</p>
-<p>Go to <a href="https://cran.r-project.org">https://cran.r-project.org</a> and click on the link that says <strong><em>Download R for Windows</em></strong>. In the following page, click on the link that says <strong><em>install R for the first time</em></strong>.</p>
-<p>Then click on <strong><em>Download R-4.X.X for Windows</em></strong> (latest release version). This will start the download process.</p>
-<p>Once downloaded, go to the <code>.exe</code> file in your <strong>Downloads</strong> folder, double-click and follow all the install prompts, selecting recommended options all the time.</p>
+<p>Once RStudio is installed and a GitHub account has been created and registered, the final step in the R, RStudio, git, and GitHub dance is to create git-related settings on your machine that will identify you as a unique/specific git user and then creating a GitHub <strong>personal access token (PAT)</strong> which will serve as the key or proof that you will use to identify yourself as the git user you claim to be whenever you try to syn/connect to your GitHub account via RStudio or any other tool on your local computer.</p>
+<p>Follow are the steps you will need to perform:</p>
+<section id="open-rstudio-and-then-select-the-terminal-tab-in-the-console-pane." class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="open-rstudio-and-then-select-the-terminal-tab-in-the-console-pane."><span class="header-section-number">4.1</span> Open RStudio and then select the <code>Terminal</code> tab in the console pane.</h2>
+<p>The <code>Terminal</code> is the tool used to interface with your computer through commands written in a programming language called <code>bash</code>. Most of you would have never used the <code>Terminal</code> because the computers you use have different kinds of software built-in that provide a <strong>graphical user interface (GUI)</strong> that you can use to perform operations and tasks.</p>
+<p>RStudio comes with the <code>Terminal</code> tool built in and usually is already available from the console pane as a separate table along side the R console (see below). By default, whenever you open RStudio, this tab for the <code>Terminal</code> tool should already be available.</p>
+<p>If if is not present, you can easily open a new <code>Terminal</code> tab in the console pane by going to the RStudio menu ribbon and clicking on:</p>
+<pre><code>Tools --&gt; Terminal --&gt; New Terminal</code></pre>
+<p>or you can use the <code>ALT + SHIFT + R</code> keyboard shortcut.</p>
 </section>
-<section id="sec-install-rstudio-windows" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-install-rstudio-windows">Step 2: Download and install RStudio</h3>
-<p>This step requires that <strong>Step 1</strong> has been done and was successful.</p>
-<p>Go to <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a> and select the download specific for your Windows machine.</p>
-<p>Once downloaded, double-click on <code>.exe</code> file downloaded to your <strong>Downloads</strong> folder and then follow all install prompts, always selecting recommended options.</p>
+<section id="introduce-yourself-to-git" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="introduce-yourself-to-git"><span class="header-section-number">4.2</span> Introduce yourself to git</h2>
+<p>In this step, you are basically going to issue a set of commands to your computer to save and store specific settings for the <code>git</code> software that you have installed.</p>
+<p>Specifically, you are going to let git know who you are (your name) and what your email address is <strong>that is associated with your GitHub account</strong>.</p>
+<p>The commands will be issued on the <code>Terminal</code> that we mentioned in step 1. The commands are:</p>
+<pre><code>git config --global user.name 'Jane Doe'
+git config --global user.email 'jane@example.com'</code></pre>
+<p>Make sure to supply your full proper name (and not your username you created in GitHub).</p>
+<p>Make sure that the email you provide is the email address you used to register and create an account with GitHub.</p>
+<p>Unless there was an error in your syntax, you should not expect any output on the <code>Terminal</code> after you issue the commands. To check that your name and email address have been recorded and/or that the name and email address recorded is correct, you can issue the following command:</p>
+<pre><code>git config --global --list</code></pre>
+<p>Here is an example of what you will see after issue this command:</p>
+<pre><code>$ git config --global --list
+
+user.name=Jane Doe
+user.email=jane@example.com</code></pre>
+<p>Check this output to what you expect it to be specified as. If the information is correct, then you’ve completed this step. If you need to correct any of this information, then repeat this step making sure that the name and email address you provide is correct.</p>
 </section>
-<section id="sec-install-rtools" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-install-rtools">Step 3: Download and install <code>Rtools</code></h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science</strong> sub-module, you we will need to expand the installation of R by installing the <code>Rtools</code> software.</p>
-<p>Go to <a href="https://cran.r-project.org/bin/windows/Rtools/">https://cran.r-project.org/bin/windows/Rtools/</a> and choose to download the latest version of the installer (which is the Rtools version compatible with the R version you have installed in Step 1).</p>
-<p>Once you have downloaded the <code>.exe</code> file, double-click on the <code>.exe</code> file and follow all install prompts. Choose all the recommended options.</p>
-</section>
-<section id="sec-install-git-windows" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-install-git-windows">Step 4: Download and install Git for Windows</h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science</strong> sub-module, you we will need to install <strong>Git for Windows</strong>.</p>
-<p>Go to this link - <a href="https://github.com/git-for-windows/git/releases/latest">https://github.com/git-for-windows/git/releases/latest</a> - to download the latest version of git. Make sure to select the version compatible with your Windows machine (64-bit or 32-bit).</p>
-<p>Once you have downloaded the <code>.exe</code> file, double-click it and then follow all install prompts. Choose all recommended options.</p>
-</section>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<section id="sec-install-r-macos" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sec-install-r-macos">Step 1: Download and install R</h3>
-<p>Important that R is installed first. R is the main software and is needed for RStudio to work properly. R should always be installed first.</p>
-<p>Go to <a href="https://cran.r-project.org">https://cran.r-project.org</a> and click on the link that says <strong><em>Download R for macOS</em></strong>. In the following page, you will have two choices of R versions to install. Make sure to install the appropriate version for your macOS version (Apple Silicon vs Apple Intel version). Click on the download link for your macOS version. This will start the download process of the <code>.pkg</code> file specific for installing in macOS computers.</p>
-<p>Once downloaded, go to the <code>.pkg</code> file in your <code>Downloads</code> folder, double-click and follow all the install prompts, selecting recommended options all the time.</p>
-</section>
-<section id="sec-install-rstudio-macos" class="level3" data-number="1.0.1">
-<h3 data-number="1.0.1" class="anchored" data-anchor-id="sec-install-rstudio-macos"><span class="header-section-number">1.0.1</span> Install RStudio</h3>
-<p>This step requires that <strong>Step 1</strong> has been done and was successful.</p>
-<p>Go to <a href="https://posit.co/download/rstudio-desktop/">https://posit.co/download/rstudio-desktop/</a> and select the download specific for your macOS machine.</p>
-<p>Once downloaded, double-click on <code>.dmg</code> file downloaded to your <code>Downloads</code> folder and then follow all install prompts, always selecting recommended options.</p>
-</section>
-<section id="sec-install-git-macos" class="level3" data-number="1.0.2">
-<h3 data-number="1.0.2" class="anchored" data-anchor-id="sec-install-git-macos"><span class="header-section-number">1.0.2</span> Install git for macOS</h3>
-<p>For the things that you will be taught in the <strong>Open and Reproducibile Science</strong> sub-module, you we will need to install <strong>git for macOS</strong>. Apple machines are already pre-installed with <code>git</code> but it is usually an Apple specific version of git and tends to be older and not configured in the way we need it. So we need to install another version of it that comes with Apple’s <code>Xcode command line tools</code>.</p>
-<p>To install, go to the macOS terminal and type the following command:</p>
-<pre class="terminal"><code>xcode-select --install</code></pre>
-</section>
-</div>
-</div>
-</div>
-<section id="sec-github-account" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="sec-github-account"><span class="header-section-number">1.1</span> Register a GitHub account</h2>
-<p>For the <strong>Open and Reproducible Science in R</strong> sub-module, you will need a GitHub account to be able to receive the code materials and assignments that will be provided. This is the mechanism by which these materials will be distributed. Hence you will need to register an account with GitHub (if you don’t already have one). It’s free!</p>
-<p><strong>Step 1.</strong> Head to <a href="https://github.com">https://github.com</a></p>
-<p><strong>Step 2.</strong> On the upper right hand corner of the page, click on <strong><em>Sign-up</em></strong> button</p>
-<p><img src="images/github_account1.png" class="img-fluid"></p>
-<p><strong>Step 3.</strong> You will be then prompted to provide an email address to register your account with.</p>
-<p><img src="images/github_account2.png" class="img-fluid"></p>
-<p>With regard to the email address to use for creating a GitHub account, a best practice recommendation is to use an email address that you will have access to all the time. Email addresses such as those for school (if you are a student) or for your current work may not always be the best email address to use as these email addresses tend to be time-limited (i.e., you lose the email address once you graduate or once you leave your current work).</p>
-<p><strong>Step 4.</strong> You will then be prompted for a password.</p>
-<p><img src="images/github_account2.png" class="img-fluid"></p>
-<p><strong>Step 5.</strong> Then follow all other prompts after this including confirmation of your email and creating a GitHub username.</p>
-<p>With regard to creating/selecting a GitHub username, following are some best practice recommendations (REF):</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tips for selecting GitHub username
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="create-a-github-personal-access-token-pat" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="create-a-github-personal-access-token-pat"><span class="header-section-number">4.3</span> Create a GitHub personal access token (PAT)</h2>
+<p>Now that you have introduced yourself to the git that is installed in your local machine/computer, you should now visit GitHub on a browser (https://github.com) and create a <strong>personal access token (PAT)</strong>.</p>
+<p>When you communicate/sync/interact with a remote git server, such as GitHub, you have to include credentials in the communication you are sending. These credentials prove that you are a specific GitHub user, who’s allowed to do whatever you’re asking to do.</p>
+<p>git can communicate with a remote server using one of two protocols, HTTPS or SSH, and the different protocols use different credentials.</p>
+<p>Here we describe the credential setup for the HTTPS protocol, which is what we recommend if you have no burning reason to pick SSH. With HTTPS, we will use a <strong>personal access token (PAT)</strong>.</p>
+<p>Please note that the <strong>personal access token (PAT)</strong> is not the same as the password you provided when registering for your GitHub account. Also, in performing a connection to GitHub via HTTPS protocol, your password is not an acceptable credential for communicating with GitHub as a server.</p>
+<p>To create a GitHub <strong>personal access token (PAT)</strong>, you need to:</p>
+<p><strong>Step 1:</strong> Go to Settings from your GitHub account menu</p>
+<p>Login to your GitHub account. On the upper right hand corner of the GitHub page you will see your account icon. Click on it to reveal a drop down menu as shown below. Select the <strong>Settings</strong> option.</p>
+<p><img src="images/github_pat2.png" class="img-fluid"></p>
+<p><strong>Step 2:</strong> From Settings navigate to Developer Settings</p>
+<p>In the <strong>Settings</strong> page, find the <strong>Developer Settings</strong> option on the left hand sidebar as shown below:</p>
+<p><img src="images/github_pat3.png" class="img-fluid"></p>
+<p><strong>Step 3:</strong> From Developer Settings navigate to Personal Access Token</p>
+<p>In the <strong>Developer Settings</strong> page, find the <strong>Personal Access Token</strong> option on the left hand sidebar as shown below:</p>
+<p><img src="images/github_pat4.png" class="img-fluid"></p>
+<p><strong>Step 4:</strong> Select Tokens (classic)</p>
+<p><img src="images/github_pat5.png" class="img-fluid"></p>
+<p><strong>Step 5:</strong> Click on Generate new token</p>
+<p><img src="images/github_pat7.png" class="img-fluid"></p>
+<p><strong>Step 6:</strong> Select Generate new token (classic)</p>
+<p><img src="images/github_pat8.png" class="img-fluid"></p>
+<p><strong>Step 7:</strong> Give your token a name</p>
+<p><img src="images/github_pat9.png" class="img-fluid"></p>
+<p>The token name should be short but descriptive of the where or how you will use the token. Since we are using this to connect and allow communication between RStudio and GitHub, <strong>rstudio</strong> can be a good name that would remind you that this is what you are using to secure the connection/communication between your RStudio and your GitHub account.</p>
+<p><strong>Step 8:</strong> Set an expiry date for the token</p>
+<p><img src="images/github_pat9.png" class="img-fluid"></p>
+<p>By default, GitHub will set a <strong>30 day validity</strong> for any new token created. Clicking on the option menu will show the other possible time periods to choose from including <strong>No expiry date</strong>.</p>
+<p>It is best practice to assign an expiry date for security tokens such as the GitHub PAT. And a 30 day validity is standard practice. However, in reality, it is cumbersome to be creating new tokens frequently and for beginners, having to go through these steps again can be quite a chore. For the purposes of this lecture series, we would recommend setting the expiry for about 90 days to cover the whole period and then as a group, we’ll have a <strong>renew GitHub PAT party</strong> on our last session.</p>
+<p><strong>Step 9:</strong> Set scopes</p>
+<p><img src="images/github_pat10.png" class="img-fluid"></p>
+<p>Scopes are the types of permissions that you are attaching the token you are generating. This is again a security feature as takens should only be given specific and limited permissions based on what you intend the token to be used for. It is not good practice to give a token complete or unlimited permissions as you are exposing your account to high risk if and when your token gets compromised.</p>
+<p>For general R users, the following scopes are currently recommended:</p>
 <ul>
-<li><p>Incorporate your actual name as this lets people know who they’re dealing with and also makes your username easier for people to guess or remember.</p></li>
-<li><p>Reuse your username from other contexts, e.g., Twitter or Slack.</p></li>
-<li><p>Pick a username that will be appropriate revealing to a future boss.</p></li>
-<li><p>Shorter is better than longer.</p></li>
-<li><p>Be as unique as possible in as few characters as possible.</p></li>
-<li><p>Make it timeless and context-agnostic. Don’t add a date or year or a reference to your current location, university, or employer.</p></li>
-<li><p>Avoid the use of upper vs.&nbsp;lower case to separate words. We highly recommend all lowercase. A better strategy for word separation is to use a hyphen (-).</p></li>
+<li>repo</li>
+<li>workflow</li>
+<li>gist</li>
+<li>user</li>
 </ul>
-</div>
-</div>
-<p><strong>Step 6.</strong> Once you have created a GitHub account, please share your username to the sub-module lead so he can add your username to the Oxford IHTM GitHub account and add you to the Oxford IHTM GitHub Classroom.</p>
+<p><strong>Step 10:</strong> Click on Generate token</p>
+<p><img src="images/github_pat11.png" class="img-fluid"></p>
+<p>After clicking you will now see a long string of characters and numbers which is your GitHub PAT. It is important to remember that once you see the generated GitHub PAT, you should copy this right away and store it securely.</p>
+<p><strong>Step 11:</strong> Store your PAT</p>
+<p>Treat your GitHub PAT in the same way you would treat your password for online accounts. The best way to securely store the GitHub PAT is using a password manager (<a href="https://1password.com/">1Password</a>, <a href="https://www.lastpass.com/">LastPass</a>, https://bitwarden.com/). If you have a macOS computer, you can save your GitHub PAT into your computer’s keychain.</p>
+<p>Non-secure password/token storage practices that has been done by other students before are:</p>
+<ul>
+<li>Email their password/token to themselves</li>
+</ul>
+<p>If you are using free email services such as Gmail, then this is a highly non-secure method. Others use their University of Oxford email address and argue that this is secure compared to using the free email services. Whilst it is true that a university email account is more secure, email communications and email storage is still one of the most vulnerable places to keep something that is meant to be kept secret.</p>
+<ul>
+<li><p>Paste the token into a Word document and save in personal computer with the filename GITHUB_PAT.docx</p></li>
+<li><p>Paste the token into a Word document and save in Dropbox or in Google Drive</p></li>
+</ul>
+<p>Please <strong>AVOID</strong> these methods.</p>
 
 
 </section>
@@ -805,13 +802,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./00-introduction.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      <a href="./introduction-to-git.html" class="pagination-link" aria-label="Introduction to git and GitHub">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction to git and GitHub</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02-introduction-to-r.html" class="pagination-link" aria-label="Introduction to R and RStudio">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction to R and RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./writing-functions.html" class="pagination-link" aria-label="Writing functions">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Writing functions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -820,4 +817,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/01-installing-software.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/connecting-git-with-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
