@@ -1,3 +1,7 @@
+---
+output-file: creating-portable-reproducible-workflows.html
+---
+
 # Creating portable and reproducible scientific workflows {#portable-reproducible}
 
 At this point, you would have written your own R code and R scripts and saved these within an R file (`.R`).

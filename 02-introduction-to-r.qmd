@@ -1,3 +1,7 @@
+---
+output-file: introduction-to-r.html
+---
+
 # Introduction to R and RStudio {#sec-intro-r}
 
 ## What is R? {#sec-what-r}
