@@ -30,7 +30,7 @@ Specifically, you are going to let git know who you are (your name) and what you
 
 The commands will be issued on the `Terminal` that we mentioned in step 1. The commands are:
 
-```
+```Bash
 git config --global user.name 'Jane Doe'
 git config --global user.email 'jane@example.com'
 ```
@@ -41,13 +41,13 @@ Make sure that the email you provide is the email address you used to register a
 
 Unless there was an error in your syntax, you should not expect any output on the `Terminal` after you issue the commands. To check that your name and email address have been recorded and/or that the name and email address recorded is correct, you can issue the following command:
 
-```
+```Bash
 git config --global --list
 ```
 
 Here is an example of what you will see after issue this command:
 
-```
+```Bash
 $ git config --global --list
 
 user.name=Jane Doe
