@@ -1,3 +1,7 @@
+---
+output-file: writing-functions.html
+---
+
 # Writing functions {#sec-write-functions}
 
 For this topic, we will use data on weight and height to calculate body mass index. As a refresher, body mass index is calculated as follows:

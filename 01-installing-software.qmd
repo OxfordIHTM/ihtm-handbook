@@ -1,3 +1,7 @@
+---
+output-file: installing-software.html
+---
+
 # Installing R, RStudio, and Git {#sec-install-r}
 
 Following are the steps to installing R, RStudio, and Git depending on your operationg system.

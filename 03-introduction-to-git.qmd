@@ -1,3 +1,7 @@
+---
+output-file: introduction-to-git.html
+---
+
 # Introduction to git and GitHub {#sec-intro-git}
 
 ## All about git {#sec-all-about-git}

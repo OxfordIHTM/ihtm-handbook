@@ -1,3 +1,7 @@
+---
+output-file: contributing-to-codehub-projects.html
+---
+
 # Contributing to Oxford IHTM CodeHub projects {#sec-contributing-codehub}
 
 This section would be relevant to you if:

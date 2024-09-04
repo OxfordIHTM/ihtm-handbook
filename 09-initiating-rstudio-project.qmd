@@ -1,3 +1,7 @@
+---
+output-file: initiating-rstudio-project.html
+---
+
 # Initiating an R/RStudio project {#initiate-projects}
 
 Following is a diagram of the steps in initiating your own R/RStudio project.

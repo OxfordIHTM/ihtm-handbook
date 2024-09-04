@@ -1,3 +1,7 @@
+---
+output-file: connecting-git-with-rstudio.html
+---
+
 # Connecting RStudio with GitHub {#sec-connect-rstudio-github}
 
 Once RStudio is installed and a GitHub account has been created and registered, the final step in the R, RStudio, git, and GitHub dance is to create git-related settings on your machine that will identify you as a unique/specific git user and then creating a GitHub **personal access token (PAT)** which will serve as the key or proof that you will use to identify yourself as the git user you claim to be whenever you try to syn/connect to your GitHub account via RStudio or any other tool on your local computer.
