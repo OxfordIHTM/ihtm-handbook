@@ -41,7 +41,7 @@ bibliography: references.bib
 
 format:
   html:
-    theme: pulse
+    theme: cosmo
     highlight-style: breeze
   pdf:
     documentclass: scrreprt
