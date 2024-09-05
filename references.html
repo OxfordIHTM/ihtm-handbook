@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Contributing to Oxford IHTM CodeHub projects – Open and Reprodubile Science in R</title>
+<title>References – Open and Reprodubile Science in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./creating-portable-reproducible-workflows.html" rel="prev">
+<link href="./contributing-to-codehub-projects.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -72,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="floating">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -81,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./contributing-to-codehub-projects.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford IHTM CodeHub projects</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -248,13 +266,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./contributing-to-codehub-projects.html" class="sidebar-item-text sidebar-link active">
+  <a href="./contributing-to-codehub-projects.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford IHTM CodeHub projects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -265,28 +283,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#sec-research-software" id="toc-sec-research-software" class="nav-link active" data-scroll-target="#sec-research-software"><span class="header-section-number">11.1</span> Research software development</a>
-  <ul class="collapse">
-  <li><a href="#get-familiar-with-rs-package-writing-process" id="toc-get-familiar-with-rs-package-writing-process" class="nav-link" data-scroll-target="#get-familiar-with-rs-package-writing-process"><span class="header-section-number">11.1.1</span> Get familiar with R’s package writing process</a></li>
-  <li><a href="#get-familiar-and-reach-intermediate-level-git-and-github-skills" id="toc-get-familiar-and-reach-intermediate-level-git-and-github-skills" class="nav-link" data-scroll-target="#get-familiar-and-reach-intermediate-level-git-and-github-skills"><span class="header-section-number">11.1.2</span> Get familiar and reach intermediate level git and GitHub skills</a></li>
-  <li><a href="#review-our-portfolio-of-research-software" id="toc-review-our-portfolio-of-research-software" class="nav-link" data-scroll-target="#review-our-portfolio-of-research-software"><span class="header-section-number">11.1.3</span> Review our portfolio of research software</a></li>
-  <li><a href="#communicate-with-developers" id="toc-communicate-with-developers" class="nav-link" data-scroll-target="#communicate-with-developers"><span class="header-section-number">11.1.4</span> Communicate with developers</a></li>
-  <li><a href="#clone-or-fork-the-project-repository" id="toc-clone-or-fork-the-project-repository" class="nav-link" data-scroll-target="#clone-or-fork-the-project-repository"><span class="header-section-number">11.1.5</span> Clone or fork the project repository</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/11-contributing-to-codehub-projects.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./contributing-to-codehub-projects.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford IHTM CodeHub projects</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-contributing-codehub" class="quarto-section-identifier"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford IHTM CodeHub projects</span></span></h1>
+<h1 class="title">References</h1>
 </div>
 
 
@@ -303,55 +308,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This section would be relevant to you if:</p>
-<ol type="1">
-<li><p>You have completed the <strong>Open and Reproducible Science in R</strong> sub-module of the MSc for International Health and Tropical Medicine; or,</p></li>
-<li><p>If you are an MSc for International Health and Tropical Medicine alumni and have experience and knowledge using R.</p></li>
-</ol>
-<p>The Oxford IHTM CodeHub actively runs projects focused on either research software development (based in R) or R-based scientific research workflows. Our list of previous and current projects can be found <a href="https://oxford-ihtm.io/projects/">here</a>.</p>
-<section id="sec-research-software" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="sec-research-software"><span class="header-section-number">11.1</span> Research software development</h2>
-<p>Oxford IHTM CodeHub develops research software using the R package system. Our collection of research software tools are found <a href="https://oxfordihtm.r-universe.dev">here</a> and the underlying code is available from our <a href="https://github.com/OxfordIHTM">organisational GitHub</a>.</p>
-<p>If you would like to contribute to Oxford IHTM CodeHub’s software development, following is a list of steps on how to.</p>
-<section id="get-familiar-with-rs-package-writing-process" class="level3" data-number="11.1.1">
-<h3 data-number="11.1.1" class="anchored" data-anchor-id="get-familiar-with-rs-package-writing-process"><span class="header-section-number">11.1.1</span> Get familiar with R’s package writing process</h3>
-<p>We build our research software tools using R. Hence, we use the R package writing process. This is described in the official <a href="https://cran.r-project.org/">R manual for writing extensions</a>. This manual is the official reference for what is considered acceptable R software development by the R Core Team and are the guides that will ensure that your R package can pass submission and entry into the Comprehensive R Archive Network (CRAN). So, from an academic perspective, you can see this as the official guide of a publisher/publication on what your manuscript should look like so you can submit to their journal for publication. It is not a guarantee of publication, but that you are meeting their publication standards.</p>
-<p>However, the R manual for writing extensions is not as easy to navigate and not as easy to read. For beginners, we would recommend starting off with Hadley Wickham’s online book called <a href="https://r-pkgs.org/">R Packages</a>. The book is free to use online and has clearly delineated chapters and sections for specific R package writing tasks required. We would expect anyone wanting to contribute to the CodeHub’s software development projects to have been able to go through this book.</p>
-</section>
-<section id="get-familiar-and-reach-intermediate-level-git-and-github-skills" class="level3" data-number="11.1.2">
-<h3 data-number="11.1.2" class="anchored" data-anchor-id="get-familiar-and-reach-intermediate-level-git-and-github-skills"><span class="header-section-number">11.1.2</span> Get familiar and reach intermediate level git and GitHub skills</h3>
-<p>Our software development process uses git and GitHub to facilitate code sharing and versioning. It is paramount that anyone wanting to contribute to any software project should have at least intermediate level git and GitHub skills. These include:</p>
-<ul>
-<li><p>Competent in cloning and/or forking software project repositories;</p></li>
-<li><p>Competent in the branching process of git and GitHub;</p></li>
-<li><p>Competent in the pull request process of GitHub;</p></li>
-<li><p>Competent in GitHub’s issues tracker and project tracker system;</p></li>
-<li><p>Competent in code review process of GitHub.</p></li>
-</ul>
-<p>If you want to brush up on your git and GitHub, please go through Jenny Bryan’s <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a>.</p>
-</section>
-<section id="review-our-portfolio-of-research-software" class="level3" data-number="11.1.3">
-<h3 data-number="11.1.3" class="anchored" data-anchor-id="review-our-portfolio-of-research-software"><span class="header-section-number">11.1.3</span> Review our portfolio of research software</h3>
-<p>Visit the project page of the Oxford IHTM CodeHub website - <a href="https://oxford-ihtm.io/projects/">https://oxford-ihtm.io/projects/</a> to see our current line-up of CodeHub software projects.</p>
-<p>Have a look at our R Universe of research software - <a href="https://oxfordihtm.r-unviverse.dev">https://oxfordihtm.r-unviverse.dev</a> - for the build status of each project.</p>
-<p>Have a look at our GitHub organisation - <a href="https://github.com/OxfordIHM">https://github.com/OxfordIHM</a> - to see the code for each of these projects.</p>
-<p>Each project is in continuous development. We recommend looking at the repository for each of the projects, understand via the README what the project is trying to achieve and then review each projects issues page to see what the current line up of tasks or issues that the development requires. If for some reason there is no issues listed in a project, this is most likely that current developers have not gotten around to documenting their tasks/issues at hand. If so, you can make an issue to ask developers what the best task is to do for a beginner to contribute to.</p>
-</section>
-<section id="communicate-with-developers" class="level3" data-number="11.1.4">
-<h3 data-number="11.1.4" class="anchored" data-anchor-id="communicate-with-developers"><span class="header-section-number">11.1.4</span> Communicate with developers</h3>
-<p>Once you have found a project and an issue that you want to work on, make a comment on that issue making sure to tag the developer/maintainer stating that you are going to have a go at this issue and then will make a pull request of your contribution.</p>
-<p>This communication is important as this will trigger the developer/maintainer to confirm that you are an eligible member of the CodeHub (the pre-requisites above) and then will add you as a collaborator on the project. This step is important because your status in the project as a collaborator will determine your next step on contributing. We prefer that CodeHub members are internal collaborators as this simplifies their participation (see next section).</p>
-</section>
-<section id="clone-or-fork-the-project-repository" class="level3" data-number="11.1.5">
-<h3 data-number="11.1.5" class="anchored" data-anchor-id="clone-or-fork-the-project-repository"><span class="header-section-number">11.1.5</span> Clone or fork the project repository</h3>
-<p>Once you have been added to the project repository as a collaborator, you can now <code>clone</code> the repository to your local machine and then start making your contribution.</p>
-<p>If for some reason you haven’t been added to the project repository as a collaborator yet but you are itching to contribute, you can still start contributing but instead of cloning, you will need to <code>fork</code> the repository. This is similar to cloning but your <code>fork</code> is identified as being from someone outside the organisation. This means you will need to make your own GitHub repository under your own username of the project as a fork of the original, write your code contribution and commit to your repository and then make a pull requeset to the original repository.</p>
-<p>These forking steps are described in all the CONTRIBUTING notes/guidance in each project as we open contributions from anyone (not just CodeHub members) but not all are eligible to be internal collaborators.</p>
-<p>We would like to avoid this for eligible members of CodeHub so will endeavour to keep up with collaborator requests. So, if you are impatient and would really like to contribute already, consider forking but be warned that this has a lot more complicated steps than simple cloning. Either follow-up your request to be made a collaborator.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-jenny_bryan_happy_nodate" class="csl-entry" role="listitem">
+Jenny Bryan, and Jim Hester. n.d. <em>Happy <span>Git</span> and
+<span>GitHub</span> for the <span class="nocase">useR</span></em>.
+Accessed September 3, 2024. <a href="https://happygitwithr.com/">https://happygitwithr.com/</a>.
+</div>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -776,14 +741,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./creating-portable-reproducible-workflows.html" class="pagination-link" aria-label="Creating portable and reproducible scientific workflows">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating portable and reproducible scientific workflows</span></span>
+      <a href="./contributing-to-codehub-projects.html" class="pagination-link" aria-label="Contributing to Oxford IHTM CodeHub projects">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford IHTM CodeHub projects</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -791,4 +753,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/11-contributing-to-codehub-projects.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/references.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
