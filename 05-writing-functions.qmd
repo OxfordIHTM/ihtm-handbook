@@ -7,6 +7,7 @@ output-file: writing-functions.html
 For this topic, we will use data on weight and height to calculate body mass index. As a refresher, body mass index is calculated as follows:
 
 $$ \text{Body mass index} ~=~ \frac{weight ~ (kgs)}{height ~ (m) ^ 2} $$
+
 For this topic on writing functions in R, we will use BMI as an example to explore and demonstrate how we can create our own functions in R.
 
 Let's say for example that you have been doing a research on children aged 11 years and older in 3 schools and you have collected the following data:

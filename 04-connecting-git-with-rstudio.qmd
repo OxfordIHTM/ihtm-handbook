@@ -8,13 +8,15 @@ Once RStudio is installed and a GitHub account has been created and registered, 
 
 Follow are the steps you will need to perform:
 
-## Open RStudio and then select the `Terminal` tab in the console pane.
+## Introduce yourself to git {#introduce-to-git}
 
-The `Terminal` is the tool used to interface with your computer through commands written in a programming language called `bash`. Most of you would have never used the `Terminal` because the computers you use have different kinds of software built-in that provide a **graphical user interface (GUI)** that you can use to perform operations and tasks.
+Open RStudio and then select the ***Terminal*** tab in the console pane.
 
-RStudio comes with the `Terminal` tool built in and usually is already available from the console pane as a separate table along side the R console (see below). By default, whenever you open RStudio, this tab for the `Terminal` tool should already be available.
+The terminal is the tool used to interface with your computer through commands written in a programming language called `bash`. Most of you would have never used the terminal because we mostly use software built-in our computers that provide a ***graphical user interface (GUI)*** to perform operations and tasks.
 
-If if is not present, you can easily open a new `Terminal` tab in the console pane by going to the RStudio menu ribbon and clicking on:
+RStudio comes with the terminal tool built in and usually is already available from the console pane as a separate table along side the R console (see below). By default, whenever you open RStudio, this tab for the terminal tool should already be available.
+
+If if is not present, you can easily open a new terminal tab in the console pane by going to the RStudio menu ribbon and clicking on:
 
 ```
 Tools --> Terminal --> New Terminal
@@ -22,24 +24,22 @@ Tools --> Terminal --> New Terminal
 
 or you can use the `ALT + SHIFT + R` keyboard shortcut.
 
-## Introduce yourself to git
+In this step, you are basically going to issue a set of commands to your computer to save and store specific settings for the git software that you have installed.
 
-In this step, you are basically going to issue a set of commands to your computer to save and store specific settings for the `git` software that you have installed.
+Specifically, you are going to let git know who you are (your name) and what your email address (associated with your GitHub account) is.
 
-Specifically, you are going to let git know who you are (your name) and what your email address is **that is associated with your GitHub account**.
-
-The commands will be issued on the `Terminal` that we mentioned in step 1. The commands are:
+The commands will be issued on the terminal. The commands are:
 
 ```Bash
-git config --global user.name 'Jane Doe'
-git config --global user.email 'jane@example.com'
+git config --global user.name 'YOUR FULL NAME'
+git config --global user.email 'YOUR EMAIL ADDRESS'
 ```
 
 Make sure to supply your full proper name (and not your username you created in GitHub).
 
 Make sure that the email you provide is the email address you used to register and create an account with GitHub.
 
-Unless there was an error in your syntax, you should not expect any output on the `Terminal` after you issue the commands. To check that your name and email address have been recorded and/or that the name and email address recorded is correct, you can issue the following command:
+Unless there was an error in your syntax, you should not expect any output on the terminal after you issue the commands. To check that your name and email address have been recorded and/or that the name and email address recorded is correct, you can issue the following command:
 
 ```Bash
 git config --global --list
@@ -47,74 +47,72 @@ git config --global --list
 
 Here is an example of what you will see after issue this command:
 
-```Bash
-$ git config --global --list
-
-user.name=Jane Doe
-user.email=jane@example.com
+```
+user.name=YOUR FULL NAME
+user.email=YOUR EMAIL ADDRESS
 ```
 
 Check this output to what you expect it to be specified as. If the information is correct, then you've completed this step. If you need to correct any of this information, then repeat this step making sure that the name and email address you provide is correct.
 
 ## Create a GitHub personal access token (PAT)
 
-Now that you have introduced yourself to the git that is installed in your local machine/computer, you should now visit GitHub on a browser (https://github.com) and create a **personal access token (PAT)**.
+Now that you have introduced yourself to the git that is installed in your local machine/computer, you should now visit [GitHub](https://github.com) on a browser and create a ***personal access token (PAT)***.
 
 When you communicate/sync/interact with a remote git server, such as GitHub, you have to include credentials in the communication you are sending. These credentials prove that you are a specific GitHub user, who’s allowed to do whatever you’re asking to do.
 
 git can communicate with a remote server using one of two protocols, HTTPS or SSH, and the different protocols use different credentials.
 
-Here we describe the credential setup for the HTTPS protocol, which is what we recommend if you have no burning reason to pick SSH. With HTTPS, we will use a **personal access token (PAT)**.
+Here we describe the credential setup for the HTTPS protocol, which is what we recommend if you have no burning reason to pick SSH. With HTTPS, we will use a PAT to connect securely to GitHub from RStudio.
 
-Please note that the **personal access token (PAT)** is not the same as the password you provided when registering for your GitHub account. Also, in performing a connection to GitHub via HTTPS protocol, your password is not an acceptable credential for communicating with GitHub as a server.
+Please note that the PAT is not the same as the password you provided when registering for your GitHub account. Also, in performing a connection to GitHub via HTTPS protocol, your password is not an acceptable credential for communicating with GitHub.
 
-To create a GitHub **personal access token (PAT)**, you need to:
+To create a GitHub PAT, you need to:
 
-**Step 1:** Go to Settings from your GitHub account menu
+### Step 1: Go to Settings from your GitHub account menu {.unnumbered}
 
-Login to your GitHub account. On the upper right hand corner of the GitHub page you will see your account icon. Click on it to reveal a drop down menu as shown below. Select the **Settings** option.
+Login to your GitHub account. On the upper right hand corner of the GitHub page you will see your account icon. Click on it to reveal a drop down menu as shown below. Select the ***Settings*** option.
 
 ![](images/github_pat2.png)
 
-**Step 2:** From Settings navigate to Developer Settings
+### Step 2: From Settings navigate to Developer Settings {.unnumbered}
 
-In the **Settings** page, find the **Developer Settings** option on the left hand sidebar as shown below:
+In the ***Settings*** page, find the ***Developer Settings*** option on the left hand sidebar as shown below:
 
 ![](images/github_pat3.png)
 
-**Step 3:** From Developer Settings navigate to Personal Access Token
+### Step 3: From Developer Settings navigate to Personal Access Token {.unnumbered}
 
-In the **Developer Settings** page, find the **Personal Access Token** option on the left hand sidebar as shown below:
+In the ***Developer Settings*** page, find the ***Personal Access Token*** option on the left hand sidebar as shown below:
 
 ![](images/github_pat4.png)
 
-**Step 4:** Select Tokens (classic)
+### Step 4: Select Tokens (classic) {.unnumbered}
 
 ![](images/github_pat5.png)
 
-**Step 5:** Click on Generate new token
+### Step 5: Click on Generate new token
 
 ![](images/github_pat7.png)
 
-**Step 6:** Select Generate new token (classic)
+### Step 6: Select Generate new token (classic) {.unnumbered}
 
 ![](images/github_pat8.png)
 
-**Step 7:** Give your token a name
+### Step 7: Give your token a name {.unnumbered}
 
 ![](images/github_pat9.png)
 
 The token name should be short but descriptive of the where or how you will use the token. Since we are using this to connect and allow communication between RStudio and GitHub, **rstudio** can be a good name that would remind you that this is what you are using to secure the connection/communication between your RStudio and your GitHub account.
 
-**Step 8:** Set an expiry date for the token
+### Step 8: Set an expiry date for the token {.unnumbered}
 
 ![](images/github_pat9.png)
 
-By default, GitHub will set a **30 day validity** for any new token created. Clicking on the option menu will show the other possible time periods to choose from including **No expiry date**.
+By default, GitHub will set a *30 day validity* for any new token created. Clicking on the option menu will show the other possible time periods to choose from including *No expiry date*.
 
-It is best practice to assign an expiry date for security tokens such as the GitHub PAT. And a 30 day validity is standard practice. However, in reality, it is cumbersome to be creating new tokens frequently and for beginners, having to go through these steps again can be quite a chore. For the purposes of this lecture series, we would recommend setting the expiry for about 90 days to cover the whole period and then as a group, we'll have a **renew GitHub PAT party** on our last session.
+It is best practice to assign an expiry date for security tokens such as the GitHub PAT. And a 30 day validity is standard practice. However, in reality, it is cumbersome to be creating new tokens frequently and for beginners, having to go through these steps again can be quite a chore. For the purposes of this lecture series, we would recommend setting the expiry for about 90 days to cover the whole period and then as a group, we'll have a *renew GitHub PAT party* on our last session.
 
-**Step 9:** Set scopes
+### Step 9: Set scopes {.unnumbered}
 
 ![](images/github_pat10.png)
 
@@ -127,15 +125,15 @@ For general R users, the following scopes are currently recommended:
 * gist
 * user
 
-**Step 10:** Click on Generate token
+### Step 10: Click on Generate token {.unnumbered}
 
 ![](images/github_pat11.png)
 
 After clicking you will now see a long string of characters and numbers which is your GitHub PAT. It is important to remember that once you see the generated GitHub PAT, you should copy this right away and store it securely. 
 
-**Step 11:** Store your PAT
+### Step 11: Store your PAT {.unnumbered}
 
-Treat your GitHub PAT in the same way you would treat your password for online accounts. The best way to securely store the GitHub PAT is using a password manager ([1Password](https://1password.com/), [LastPass](https://www.lastpass.com/), https://bitwarden.com/). If you have a macOS computer, you can save your GitHub PAT into your computer's keychain.
+Treat your GitHub PAT in the same way you would treat your password for online accounts. The best way to securely store the GitHub PAT is using a password manager ([1Password](https://1password.com/), [LastPass](https://www.lastpass.com/), [Bitwarden](https://bitwarden.com/)). If you have a macOS computer, you can save your GitHub PAT into your computer's keychain.
 
 Non-secure password/token storage practices that has been done by other students before are:
 
