@@ -14,41 +14,51 @@ Following are the steps to take in committing your changes in RStudio and pushin
 
 ![](images/commit_push_pull2.png)
 
-7.2.1 Tick the box beside the file that has changed to stage the changes.
+### 1. Stage changes {.unnumbered}
 
-7.2.2 Write a commit message in the `Commit message` dialog box. In the commit message, describe the changes that you made.
+Tick the box beside the file that has changed to stage the changes.
+
+### 2. Add a commit message {.unnumbered}
+
+Every time you make a commit you must also write a short commit message.
+
+Write a commit message in the `Commit message` dialog box. In the commit message, describe the changes that you made.
     
-7.2.3 Click on the `Commit` button.
+### 3. Click on the `Commit` button {.unnumbered}
     
-7.2.4 Click on the `Push` button.
+### 4. Click on the `Push` button {.unnumbered}
 
 ## Initiate a pull request
 
-7.3.1 Click on the **branches** link from your repository
+### 1. Click on the **branches** link from your repository {.unnumbered}
 
 ![](images/pull_request1.png)
 
-7.3.2 Click on the **Make pull request** link on the appropriate branch
+### 2. Make a pull request {.unnumbered}
+
+Click on the **Make pull request** link on the appropriate branch.
 
 ![](images/pull_request2.png)
 
-7.3.3 Enter a title for your pull request
+### 3. Enter a title for your pull request {.unnumbered}
 
 ![](images/pull_request3.png)
 
-Make the titel as short but as informative as possible
+Make the title as short but as informative as possible.
 
-7.3.4 Add further description about the pull request (optional) and then click on **Create pull request** button
+### 4. Create a pull request {.unnumbered}
+
+Add further description about the pull request (optional) and then click on **Create pull request** button
 
 ![](images/pull_request4.png)
 
+::: {.callout-note}
 If you think more information will help the reviewer navigate through the changes you have made, use the comment box to add more details. This comments box can interpret Markdown syntax so you can format your text accordingly.
 
 On the right hand side of the pull request page, you can set a specific reviewer for your pull request (recommended). Also, given that you are making this pull request, assign this pull request to you so you are notified of the progress of this pull request.
+:::
 
-Then finally click on the **Create pull request** button
-
-7.3.5 Wait for review
+### 5. Wait for review {.unnumbered}
 
 If the project has automated checks included, you will see that these checks will get initiated.
 
@@ -58,6 +68,6 @@ If there are no issues with the code, the automated checks should show that all 
 
 ![](images/pull_request6.png)
 
+::: {.callout-note}
 Wait for reviewer's feedback/comments. If reviewer request's changes, make changes to your code and then commit and push again (as above). If your project has automated checks, this will get triggered again within the same pull request. Your reviewer will be notified of the changes you have made and should review your work again. Once reviewer approves changes, you can then merge your work to the main branch.
-
-
+:::
