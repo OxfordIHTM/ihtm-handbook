@@ -90,7 +90,7 @@ In the ***Developer Settings*** page, find the ***Personal Access Token*** optio
 
 ![](images/github_pat5.png)
 
-### Step 5: Click on Generate new token
+### Step 5: Click on Generate new token {.unnumbered}
 
 ![](images/github_pat7.png)
 
@@ -135,6 +135,7 @@ After clicking you will now see a long string of characters and numbers which is
 
 Treat your GitHub PAT in the same way you would treat your password for online accounts. The best way to securely store the GitHub PAT is using a password manager ([1Password](https://1password.com/), [LastPass](https://www.lastpass.com/), [Bitwarden](https://bitwarden.com/)). If you have a macOS computer, you can save your GitHub PAT into your computer's keychain.
 
+::: {.callout-warning}
 Non-secure password/token storage practices that has been done by other students before are:
 
 * Email their password/token to themselves
@@ -146,3 +147,4 @@ If you are using free email services such as Gmail, then this is a highly non-se
 * Paste the token into a Word document and save in Dropbox or in Google Drive
 
 Please **AVOID** these methods.
+:::

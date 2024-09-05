@@ -80,9 +80,9 @@ xcode-select --install
 
 For the **Open and Reproducible Science in R** sub-module, you will need a GitHub account to be able to receive the code materials and assignments that will be provided. This is the mechanism by which these materials will be distributed. Hence you will need to register an account with GitHub (if you don't already have one). It's free!
 
-### Step 1. Head to [https://github.com](https://github.com) {.unnumbered}
+### Step 1. Sign-up to GitHub  {.unnumbered}
 
-### Step 2. Sign-up to GitHub  {.unnumbered}
+Go to [https://github.com](https://github.com).
 
 On the upper right hand corner of the page, click on ***Sign-up*** button
 
@@ -102,7 +102,7 @@ You will then be prompted for a password
 
 Then follow all other prompts after this including confirmation of your email and creating a GitHub username (see next step).
 
-### Step 3. Set a GitHub username {.unnumbered}
+### Step 2. Set a GitHub username {.unnumbered}
 
 With regard to creating/selecting a GitHub username, following are some best practice recommendations [@jenny_bryan_happy_nodate].
 
@@ -123,14 +123,18 @@ With regard to creating/selecting a GitHub username, following are some best pra
 * Avoid the use of upper vs. lower case to separate words. We highly recommend all lowercase. A better strategy for word separation is to use a hyphen (-).
 :::
 
-### Step 4. Setup two-factor authentication (2FA) {.unnumbered}
+### Step 3. Setup two-factor authentication (2FA) {.unnumbered}
 
 It is important to keep your GitHub account secure. Any breach in security of your online accounts, including GitHub, not only affects you but also those that you collaborate with. To increase the security of your GitHub account, please enable two-factor authentication (2FA) for your account. This can be done [here](https://github.com/settings/security). There are 4 options for 2FA in GitHub. We recommended enabling at least 2 of these options. If you are familiar with use of passkeys, we recommend using this authentication approach in addition to 2FA.
 
-### Step 5. Get added to the Oxford IHTM CodeHub {.unnumbered}
+### Step 4. Get added to the Oxford IHTM CodeHub {.unnumbered}
 
-The Oxford IHTM CodeHub is the organisational GitHub account for the MSc IHTM. To be included in the organisation, share your GitHub username to the sub-module lead who will then add you to the organisation. This is an important step as assignments and exercises for the sub-module are distributed through GitHub and GitHub Classroom via this organisational account.
+The [Oxford iHealth CodeHub](https://github.com/OxfordIHTM) is the organisational GitHub account for the MSc IHTM. To be included in the organisation, share your GitHub username to the sub-module lead who will then add you to the organisation. This is an important step as assignments and exercises for the sub-module are distributed through GitHub and GitHub Classroom via this organisational account.
 
 ::: {.callout-important}
-The Oxford IHTM CodeHub organisational GitHub account requires members to have 2FA activated. It is therefore imperative that you enable 2FA on your account to be included in the organisation.
+The Oxford iHealth CodeHub organisational GitHub account requires members to have 2FA activated. It is therefore imperative that you enable 2FA on your account to be included in the organisation.
+:::
+
+::: {.callout-note}
+You will soon receive a message at the email address you registered to GitHub with inviting you to join the Oxford iHealth CodeHub organisation. Accept the invitation.
 :::

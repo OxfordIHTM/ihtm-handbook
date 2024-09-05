@@ -6,12 +6,17 @@ output-file: clone-repository-rstudio.html
 
 This tutorial is a summary of the the instructions described [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-## Copy the repository URL of the repository you want to clone from GitHub
+## Get the GitHub repository URL
+
 ![](images/clone_step1.png)
 
-6.1.1 Go to the GitHub page of the repository you own and click on the green button that is labeled code
+### 1. Go to the repository's GitHub page {.unnumbered}
 
-6.1.2 Click on the copy to clipboard icon to copy the repository URL.
+Click on the green button that is labeled code.
+
+### 2. Copy the repository URL {.unnumbered}
+
+Click on the copy to clipboard icon to copy the repository URL.
 
 ## Go to RStudio and create new project
 ![](images/clone_step2.png)
@@ -27,13 +32,19 @@ This tutorial is a summary of the the instructions described [here](https://docs
 
 ![](images/clone_step5.png)
 
-6.5.1 Paste the repository URL you copied earlier.
+### 1. Paste the repository URL you copied earlier {.unnumbered}
 
-6.5.2 The Project directory name should be specified already after you paste the repository URL. Use the suggested directory name.
+### 2. Set the project directory name {.unnumbered}
+
+The project directory name should be specified already after you paste the repository URL. Use the suggested directory name.
     
-6.5.3 Browse for the directory on your local computer where you want to save the files for the specified project.
+### 3. Set local directory {.unnumbered}
 
-6.5.4 Click on the `Create Project` button/icon.
+Browse for the directory on your local computer where you want to save the files for the specified project.
+
+### 4. Create project {.unnumbered}
+
+Click on the `Create Project` button/icon.
 
 You will now have the GitHub repository in your local computer.
 
