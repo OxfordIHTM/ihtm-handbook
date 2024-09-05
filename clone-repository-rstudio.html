@@ -270,11 +270,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#copy-the-repository-url-of-the-repository-you-want-to-clone-from-github" id="toc-copy-the-repository-url-of-the-repository-you-want-to-clone-from-github" class="nav-link active" data-scroll-target="#copy-the-repository-url-of-the-repository-you-want-to-clone-from-github"><span class="header-section-number">6.1</span> Copy the repository URL of the repository you want to clone from GitHub</a></li>
+  <li><a href="#get-the-github-repository-url" id="toc-get-the-github-repository-url" class="nav-link active" data-scroll-target="#get-the-github-repository-url"><span class="header-section-number">6.1</span> Get the GitHub repository URL</a>
+  <ul class="collapse">
+  <li><a href="#go-to-the-repositorys-github-page" id="toc-go-to-the-repositorys-github-page" class="nav-link" data-scroll-target="#go-to-the-repositorys-github-page">1. Go to the repository’s GitHub page</a></li>
+  <li><a href="#copy-the-repository-url" id="toc-copy-the-repository-url" class="nav-link" data-scroll-target="#copy-the-repository-url">2. Copy the repository URL</a></li>
+  </ul></li>
   <li><a href="#go-to-rstudio-and-create-new-project" id="toc-go-to-rstudio-and-create-new-project" class="nav-link" data-scroll-target="#go-to-rstudio-and-create-new-project"><span class="header-section-number">6.2</span> Go to RStudio and create new project</a></li>
   <li><a href="#choose-version-control" id="toc-choose-version-control" class="nav-link" data-scroll-target="#choose-version-control"><span class="header-section-number">6.3</span> Choose Version Control</a></li>
   <li><a href="#select-git" id="toc-select-git" class="nav-link" data-scroll-target="#select-git"><span class="header-section-number">6.4</span> Select Git</a></li>
-  <li><a href="#setup-repository-settings" id="toc-setup-repository-settings" class="nav-link" data-scroll-target="#setup-repository-settings"><span class="header-section-number">6.5</span> Setup repository settings</a></li>
+  <li><a href="#setup-repository-settings" id="toc-setup-repository-settings" class="nav-link" data-scroll-target="#setup-repository-settings"><span class="header-section-number">6.5</span> Setup repository settings</a>
+  <ul class="collapse">
+  <li><a href="#paste-the-repository-url-you-copied-earlier" id="toc-paste-the-repository-url-you-copied-earlier" class="nav-link" data-scroll-target="#paste-the-repository-url-you-copied-earlier">1. Paste the repository URL you copied earlier</a></li>
+  <li><a href="#set-the-project-directory-name" id="toc-set-the-project-directory-name" class="nav-link" data-scroll-target="#set-the-project-directory-name">2. Set the project directory name</a></li>
+  <li><a href="#set-local-directory" id="toc-set-local-directory" class="nav-link" data-scroll-target="#set-local-directory">3. Set local directory</a></li>
+  <li><a href="#create-project" id="toc-create-project" class="nav-link" data-scroll-target="#create-project">4. Create project</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/06-clone-repository-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -301,11 +311,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This tutorial is a summary of the the instructions described <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">here</a>.</p>
-<section id="copy-the-repository-url-of-the-repository-you-want-to-clone-from-github" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="copy-the-repository-url-of-the-repository-you-want-to-clone-from-github"><span class="header-section-number">6.1</span> Copy the repository URL of the repository you want to clone from GitHub</h2>
+<section id="get-the-github-repository-url" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="get-the-github-repository-url"><span class="header-section-number">6.1</span> Get the GitHub repository URL</h2>
 <p><img src="images/clone_step1.png" class="img-fluid"></p>
-<p>6.1.1 Go to the GitHub page of the repository you own and click on the green button that is labeled code</p>
-<p>6.1.2 Click on the copy to clipboard icon to copy the repository URL.</p>
+<section id="go-to-the-repositorys-github-page" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="go-to-the-repositorys-github-page">1. Go to the repository’s GitHub page</h3>
+<p>Click on the green button that is labeled code.</p>
+</section>
+<section id="copy-the-repository-url" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="copy-the-repository-url">2. Copy the repository URL</h3>
+<p>Click on the copy to clipboard icon to copy the repository URL.</p>
+</section>
 </section>
 <section id="go-to-rstudio-and-create-new-project" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="go-to-rstudio-and-create-new-project"><span class="header-section-number">6.2</span> Go to RStudio and create new project</h2>
@@ -322,13 +338,24 @@ ul.task-list li input[type="checkbox"] {
 <section id="setup-repository-settings" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="setup-repository-settings"><span class="header-section-number">6.5</span> Setup repository settings</h2>
 <p><img src="images/clone_step5.png" class="img-fluid"></p>
-<p>6.5.1 Paste the repository URL you copied earlier.</p>
-<p>6.5.2 The Project directory name should be specified already after you paste the repository URL. Use the suggested directory name.</p>
-<p>6.5.3 Browse for the directory on your local computer where you want to save the files for the specified project.</p>
-<p>6.5.4 Click on the <code>Create Project</code> button/icon.</p>
+<section id="paste-the-repository-url-you-copied-earlier" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="paste-the-repository-url-you-copied-earlier">1. Paste the repository URL you copied earlier</h3>
+</section>
+<section id="set-the-project-directory-name" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="set-the-project-directory-name">2. Set the project directory name</h3>
+<p>The project directory name should be specified already after you paste the repository URL. Use the suggested directory name.</p>
+</section>
+<section id="set-local-directory" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="set-local-directory">3. Set local directory</h3>
+<p>Browse for the directory on your local computer where you want to save the files for the specified project.</p>
+</section>
+<section id="create-project" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="create-project">4. Create project</h3>
+<p>Click on the <code>Create Project</code> button/icon.</p>
 <p>You will now have the GitHub repository in your local computer.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
