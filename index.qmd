@@ -1,6 +1,6 @@
 # Preface {.unnumbered}
 
-The Open and Reproducible Science in R module of the [MSc in International Health and Tropical Medicine](https://www.tropicalmedicine.ox.ac.uk/study-with-us/msc-ihtm) is designed to equip students with the knowledge and skills necessary to conduct both **academic research** and more importantly **real-world data analysis** that is transparent, reproducible, and in line with the principles of open science.
+The Open and Reproducible Science in R sub-module of the [MSc in International Health and Tropical Medicine](https://www.tropicalmedicine.ox.ac.uk/study-with-us/msc-ihtm) is designed to equip students with the knowledge and skills necessary to conduct both **academic research** and more importantly **real-world data analysis** that is transparent, reproducible, and in line with the principles of open science.
 
 This tecnical handbook serves as the *go-to* guide for MSc IHTM students to the various tools, technologies, and processes that they will be learning and using within the module.
 

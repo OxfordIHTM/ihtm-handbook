@@ -2,9 +2,11 @@
 output-file: installing-software.html
 ---
 
-# Installing R, RStudio, and Git {#sec-install-r}
+# Installing and setting up tools {#sec-install-tools}
 
 Following are the steps to installing R, RStudio, and Git depending on your operationg system.
+
+## Installing R, RStudio, and git {#sec-install-r}
 
 ::: {.panel-tabset}
 
@@ -68,7 +70,7 @@ For the things that you will be taught in the **Open and Reproducibile Science**
 
 To install, go to the macOS terminal and type the following command:
 
-```Terminal
+```Bash
 xcode-select --install
 ```
 
@@ -78,25 +80,31 @@ xcode-select --install
 
 For the **Open and Reproducible Science in R** sub-module, you will need a GitHub account to be able to receive the code materials and assignments that will be provided. This is the mechanism by which these materials will be distributed. Hence you will need to register an account with GitHub (if you don't already have one). It's free!
 
-**Step 1.** Head to [https://github.com](https://github.com)
+### Step 1. Head to [https://github.com](https://github.com) {.unnumbered}
 
-**Step 2.** On the upper right hand corner of the page, click on ***Sign-up*** button
+### Step 2. Sign-up to GitHub  {.unnumbered}
+
+On the upper right hand corner of the page, click on ***Sign-up*** button
 
 ![](images/github_account1.png)
 
-**Step 3.** You will be then prompted to provide an email address to register your account with.
+You will be then prompted to provide an email address to register your account with.
 
 ![](images/github_account2.png)
 
-With regard to the email address to use for creating a GitHub account, a best practice recommendation is to use an email address that you will have access to all the time. Email addresses such as those for school (if you are a student) or for your current work may not always be the best email address to use as these email addresses tend to be time-limited (i.e., you lose the email address once you graduate or once you leave your current work).
+::: {.callout-note}
+With regard to the email address to use for creating a GitHub account, best practice is to use an email address that you will have access to all the time. Email addresses such as those for school (if you are a student) or for your current work may not always be the best email address to use as these email addresses tend to be time-limited (i.e., you lose the email address once you graduate or once you leave your current work).
+:::
 
-**Step 4.** You will then be prompted for a password.
+You will then be prompted for a password 
 
 ![](images/github_account2.png)
 
-**Step 5.** Then follow all other prompts after this including confirmation of your email and creating a GitHub username.
+Then follow all other prompts after this including confirmation of your email and creating a GitHub username (see next step).
 
-With regard to creating/selecting a GitHub username, following are some best practice recommendations (REF):
+### Step 3. Set a GitHub username {.unnumbered}
+
+With regard to creating/selecting a GitHub username, following are some best practice recommendations [@jenny_bryan_happy_nodate].
 
 ::: {.callout-tip}
 ## Tips for selecting GitHub username
@@ -115,4 +123,14 @@ With regard to creating/selecting a GitHub username, following are some best pra
 * Avoid the use of upper vs. lower case to separate words. We highly recommend all lowercase. A better strategy for word separation is to use a hyphen (-).
 :::
 
-**Step 6.** Once you have created a GitHub account, please share your username to the sub-module lead so he can add your username to the Oxford IHTM GitHub account and add you to the Oxford IHTM GitHub Classroom.
+### Step 4. Setup two-factor authentication (2FA) {.unnumbered}
+
+It is important to keep your GitHub account secure. Any breach in security of your online accounts, including GitHub, not only affects you but also those that you collaborate with. To increase the security of your GitHub account, please enable two-factor authentication (2FA) for your account. This can be done [here](https://github.com/settings/security). There are 4 options for 2FA in GitHub. We recommended enabling at least 2 of these options. If you are familiar with use of passkeys, we recommend using this authentication approach in addition to 2FA.
+
+### Step 5. Get added to the Oxford IHTM CodeHub {.unnumbered}
+
+The Oxford IHTM CodeHub is the organisational GitHub account for the MSc IHTM. To be included in the organisation, share your GitHub username to the sub-module lead who will then add you to the organisation. This is an important step as assignments and exercises for the sub-module are distributed through GitHub and GitHub Classroom via this organisational account.
+
+::: {.callout-important}
+The Oxford IHTM CodeHub organisational GitHub account requires members to have 2FA activated. It is therefore imperative that you enable 2FA on your account to be included in the organisation.
+:::

@@ -14,31 +14,31 @@ Following are the steps to take in committing your changes in RStudio and pushin
 
 ![](images/commit_push_pull2.png)
 
-8.2.1 Tick the box beside the file that has changed to stage the changes.
+7.2.1 Tick the box beside the file that has changed to stage the changes.
 
-8.2.2 Write a commit message in the `Commit message` dialog box. In the commit message, describe the changes that you made.
+7.2.2 Write a commit message in the `Commit message` dialog box. In the commit message, describe the changes that you made.
     
-8.2.3 Click on the `Commit` button.
+7.2.3 Click on the `Commit` button.
     
-8.2.4 Click on the `Push` button.
+7.2.4 Click on the `Push` button.
 
 ## Initiate a pull request
 
-8.3.1 Click on the **branches** link from your repository
+7.3.1 Click on the **branches** link from your repository
 
 ![](images/pull_request1.png)
 
-8.3.2 Click on the **Make pull request** link on the appropriate branch
+7.3.2 Click on the **Make pull request** link on the appropriate branch
 
 ![](images/pull_request2.png)
 
-8.3.3 Enter a title for your pull request
+7.3.3 Enter a title for your pull request
 
 ![](images/pull_request3.png)
 
 Make the titel as short but as informative as possible
 
-8.3.4 Add further description about the pull request (optional) and then click on **Create pull request** button
+7.3.4 Add further description about the pull request (optional) and then click on **Create pull request** button
 
 ![](images/pull_request4.png)
 
@@ -48,7 +48,7 @@ On the right hand side of the pull request page, you can set a specific reviewer
 
 Then finally click on the **Create pull request** button
 
-8.3.5 Wait for review
+7.3.5 Wait for review
 
 If the project has automated checks included, you will see that these checks will get initiated.
 

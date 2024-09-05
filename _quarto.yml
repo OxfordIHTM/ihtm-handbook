@@ -30,6 +30,7 @@ book:
         - 09-initiating-rstudio-project.qmd
         - 10-creating-portable-reproducible-workflows.qmd
         - 11-contributing-to-codehub-projects.qmd
+        - references.qmd
   cover-image: images/ihealth_base_pos_tn.png
   search: true
   repo-url: https://github.com/OxfordIHTM/ihtm-handbook/
