@@ -9,37 +9,10 @@ Following are the general steps to take when participating in an existing R/RStu
 The following diagram illustrates the steps in this process:
 
 ```{mermaid}
-%%| fig.caption: A flowchart of a git-based development workflow
-%%| fig.align: center
-
-flowchart TB
-  clone(clone)
-  branch(branch)
-  changes("Code/make\nchanges")
-  commit(commit)
-  push(push)
-  pr(pull\nreqest)
-  merge(merge)
-
-  review{ready\nfor\nreview?}
-  approve{changes\napproved?}
-  task{new\ntask?}
-
-
-  clone --> branch --> changes 
-  changes --> commit --> push 
-  push --> review 
-  pr --> approve
-  merge --> task
-
-  review -- YES --> pr
-  review -- NO --> changes
-
-  approve -- YES --> merge
-  approve -- NO--> changes
-
-  task -- YES --> branch
-  task -- NO --> changes
+%%| label: git-workflow
+%%| fig-cap: A flowchart of a git-based development workflow
+%%| fig-align: center
+%%| file: mermaid/git-workflow.mmd
 ```
 
 ## Clone the project to your local machine

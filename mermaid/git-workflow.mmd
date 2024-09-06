@@ -1,0 +1,28 @@
+flowchart TB
+  clone(clone)
+  branch(branch)
+  changes("Code/make\nchanges")
+  commit(commit)
+  push(push)
+  pr(pull\nreqest)
+  merge(merge)
+
+  review{ready\nfor\nreview?}
+  approve{changes\napproved?}
+  task{new\ntask?}
+
+
+  clone --> branch --> changes 
+  changes --> commit --> push 
+  push --> review 
+  pr --> approve
+  merge --> task
+
+  review -- YES --> pr
+  review -- NO --> changes
+
+  approve -- YES --> merge
+  approve -- NO--> changes
+
+  task -- YES --> branch
+  task -- NO --> changes
