@@ -2,7 +2,7 @@
 output-file: clone-repository-rstudio.html
 ---
 
-# Cloning a GitHub repository into your local computer using RStudio {#clone-repository}
+# Cloning a GitHub repository into your local computer using RStudio {#sec-clone-repository}
 
 This tutorial is a summary of the the instructions described [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
