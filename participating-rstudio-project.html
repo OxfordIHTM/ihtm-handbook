@@ -68,6 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -287,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./participating-rstudio-project.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participating in an existing R/RStudio project</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="participate-projects" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participating in an existing R/RStudio project</span></span></h1>
+<h1 class="title"><span id="sec-participate-projects" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participating in an existing R/RStudio project</span></span></h1>
 </div>
 
 
@@ -306,10 +309,48 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Following are the general steps to take when participating in an existing R/RStudio project that has been initiated and led by someone else.</p>
 <p>The following diagram illustrates the steps in this process:</p>
-<p><img src="images/git_process1.png" class="img-fluid"></p>
+<div class="cell" data-fig.caption="A flowchart of a git-based development workflow" data-fig.align="center" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  clone(clone)
+  branch(branch)
+  changes("Code/make\nchanges")
+  commit(commit)
+  push(push)
+  pr(pull\nreqest)
+  merge(merge)
+
+  review{ready\nfor\nreview?}
+  approve{changes\napproved?}
+  task{new\ntask?}
+
+
+  clone --&gt; branch --&gt; changes 
+  changes --&gt; commit --&gt; push 
+  push --&gt; review 
+  pr --&gt; approve
+  merge --&gt; task
+
+  review -- YES --&gt; pr
+  review -- NO --&gt; changes
+
+  approve -- YES --&gt; merge
+  approve -- NO--&gt; changes
+
+  task -- YES --&gt; branch
+  task -- NO --&gt; changes
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <section id="clone-the-project-to-your-local-machine" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="clone-the-project-to-your-local-machine"><span class="header-section-number">8.1</span> Clone the project to your local machine</h2>
-<p>Cloning a project to your local machine is described in Chapter @ref(clone-repository)</p>
+<p>Steps in cloning a project to your local machine is described in <a href="clone-repository-rstudio.html" class="quarto-xref"><span>Chapter 6</span></a>.</p>
 </section>
 <section id="create-a-new-branch-from-the-main-branch" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="create-a-new-branch-from-the-main-branch"><span class="header-section-number">8.2</span> Create a new branch from the main branch</h2>
@@ -333,12 +374,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="commit-and-push-your-changes-and-initiate-a-pull-request" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="commit-and-push-your-changes-and-initiate-a-pull-request"><span class="header-section-number">8.4</span> Commit and push your changes and initiate a pull request</h2>
-<p>After making changes, you should <strong>commit and push</strong> your changes. This process is described in Chapter @ref(commit-and-push). Your code and your changes do not have to be complete already for your to commit and push changes. It is good practice to commit and push frequently (at least once a day usually at the end of your coding session). See this as similar to saving your work at multiple stages.</p>
-<p>Once your code and the changes you want to make are complete (and ideally that they are working correctly on your local machine), and that you are ready to have your work reviewed, you can now make a <strong>pull request</strong>. This process is also described in Chapter @ref(commit-and-push).</p>
+<p>After making changes, you should <strong>commit and push</strong> your changes. This process is described in <a href="commit-and-push.html" class="quarto-xref"><span>Chapter 7</span></a>. Your code and your changes do not have to be complete already for your to commit and push changes. It is good practice to commit and push frequently (at least once a day usually at the end of your coding session). See this as similar to saving your work at multiple stages.</p>
+<p>Once your code and the changes you want to make are complete (and ideally that they are working correctly on your local machine), and that you are ready to have your work reviewed, you can now make a <strong>pull request</strong>. This process is also described in <a href="commit-and-push.html" class="quarto-xref"><span>Chapter 7</span></a>.</p>
 </section>
 <section id="merge-pull-request" class="level2" data-number="8.5">
 <h2 data-number="8.5" class="anchored" data-anchor-id="merge-pull-request"><span class="header-section-number">8.5</span> Merge pull request</h2>
-<p>Once your chosen reviewer has seen your work, they may ask you to make changes based on what they see with your code. If so, then start coding again on the same branch and address the reviewers comments, *commit** those changes and *push<strong> the changes to your remote repository. Your changes will push into the same existing open </strong>pull request** that is waiting approval. The reviewer can then view your changes and make the necessary feedback.</p>
+<p>Once your chosen reviewer has seen your work, they may ask you to make changes based on what they see with your code. If so, then start coding again on the same branch and address the reviewers comments, commit those changes and push the changes to your remote repository. Your changes will push into the same existing open pull request that is waiting approval. The reviewer can then view your changes and make the necessary feedback.</p>
 <p>Once reviewer approves your changes, they may either merge your pull request themselves or they may let you know in their feedback that they are happy with your changes and that you can now merge your pull request. If so, then click on the <strong>Merge pull request</strong> button.</p>
 <p>Your changes have now been integrated into the main branch of the project.</p>
 

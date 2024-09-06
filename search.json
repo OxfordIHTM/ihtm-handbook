@@ -296,7 +296,7 @@
     "href": "participating-rstudio-project.html",
     "title": "8  Participating in an existing R/RStudio project",
     "section": "",
-    "text": "8.1 Clone the project to your local machine\nCloning a project to your local machine is described in Chapter @ref(clone-repository)",
+    "text": "8.1 Clone the project to your local machine\nSteps in cloning a project to your local machine is described in Chapter 6.",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participating in an existing R/RStudio project</span>"
@@ -329,7 +329,7 @@
     "href": "participating-rstudio-project.html#commit-and-push-your-changes-and-initiate-a-pull-request",
     "title": "8  Participating in an existing R/RStudio project",
     "section": "8.4 Commit and push your changes and initiate a pull request",
-    "text": "8.4 Commit and push your changes and initiate a pull request\nAfter making changes, you should commit and push your changes. This process is described in Chapter @ref(commit-and-push). Your code and your changes do not have to be complete already for your to commit and push changes. It is good practice to commit and push frequently (at least once a day usually at the end of your coding session). See this as similar to saving your work at multiple stages.\nOnce your code and the changes you want to make are complete (and ideally that they are working correctly on your local machine), and that you are ready to have your work reviewed, you can now make a pull request. This process is also described in Chapter @ref(commit-and-push).",
+    "text": "8.4 Commit and push your changes and initiate a pull request\nAfter making changes, you should commit and push your changes. This process is described in Chapter 7. Your code and your changes do not have to be complete already for your to commit and push changes. It is good practice to commit and push frequently (at least once a day usually at the end of your coding session). See this as similar to saving your work at multiple stages.\nOnce your code and the changes you want to make are complete (and ideally that they are working correctly on your local machine), and that you are ready to have your work reviewed, you can now make a pull request. This process is also described in Chapter 7.",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participating in an existing R/RStudio project</span>"
@@ -340,7 +340,7 @@
     "href": "participating-rstudio-project.html#merge-pull-request",
     "title": "8  Participating in an existing R/RStudio project",
     "section": "8.5 Merge pull request",
-    "text": "8.5 Merge pull request\nOnce your chosen reviewer has seen your work, they may ask you to make changes based on what they see with your code. If so, then start coding again on the same branch and address the reviewers comments, *commit** those changes and *push the changes to your remote repository. Your changes will push into the same existing open pull request** that is waiting approval. The reviewer can then view your changes and make the necessary feedback.\nOnce reviewer approves your changes, they may either merge your pull request themselves or they may let you know in their feedback that they are happy with your changes and that you can now merge your pull request. If so, then click on the Merge pull request button.\nYour changes have now been integrated into the main branch of the project.",
+    "text": "8.5 Merge pull request\nOnce your chosen reviewer has seen your work, they may ask you to make changes based on what they see with your code. If so, then start coding again on the same branch and address the reviewers comments, commit those changes and push the changes to your remote repository. Your changes will push into the same existing open pull request that is waiting approval. The reviewer can then view your changes and make the necessary feedback.\nOnce reviewer approves your changes, they may either merge your pull request themselves or they may let you know in their feedback that they are happy with your changes and that you can now merge your pull request. If so, then click on the Merge pull request button.\nYour changes have now been integrated into the main branch of the project.",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participating in an existing R/RStudio project</span>"
