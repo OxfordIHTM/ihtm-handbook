@@ -309,12 +309,11 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Following are the general steps to take when participating in an existing R/RStudio project that has been initiated and led by someone else.</p>
 <p>The following diagram illustrates the steps in this process:</p>
-<div class="cell" data-fig.caption="A flowchart of a git-based development workflow" data-fig.align="center" data-layout-align="default">
+<div class="cell" data-file="mermaid/git-workflow.mmd" data-layout-align="center">
 <div class="cell-output-display">
+<div id="git-workflow">
 <div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
+<pre class="mermaid mermaid-js" data-label="git-workflow">flowchart TB
   clone(clone)
   branch(branch)
   changes("Code/make\nchanges")
@@ -341,10 +340,9 @@ ul.task-list li input[type="checkbox"] {
   approve -- NO--&gt; changes
 
   task -- YES --&gt; branch
-  task -- NO --&gt; changes
-</pre>
+  task -- NO --&gt; changes</pre>
 </div>
-<p></p></figure><p></p>
+<p>A flowchart of a git-based development workflow</p>
 </div>
 </div>
 </div>
