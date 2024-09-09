@@ -1,0 +1,44 @@
+flowchart TD
+  data_sources(Data\nsources)
+  raw_data(Raw\ndata)
+  clean_data(Clean,\nusable\ndata)
+  stats_outputs(Specialised\nstatistical\noutputs)
+  descriptive(Descriptive\nstatistics)
+  results(Results\ntables)
+  model_outputs(Model\noutputs)
+  graphics(Plots\nfigures\nmaps\ngraphs)
+  report(Report)
+  manuscript(Manuscript)
+  outputs(Website\napplications)
+
+  extract[/Extract/]
+  transform[/Transform/]
+  analyse[/Analyse/]
+  describe[/Describe/]
+  tabulate[/Tabulate/]
+  model[/Model/]
+  visualise[/Visualise/]
+  contribute[/Contribute/]
+
+  data_sources --- extract --> raw_data
+  raw_data --- transform --> clean_data
+  clean_data --- analyse --> stats_outputs
+  clean_data --- describe --> descriptive
+  clean_data --- tabulate --> results
+  clean_data --- model --> model_outputs
+  clean_data --- visualise --> graphics
+
+  stats_outputs <--> descriptive
+  descriptive <--> results
+  results <--> model_outputs
+  model_outputs <--> graphics
+
+  stats_outputs --- contribute
+  descriptive --- contribute
+  results --- contribute
+  model_outputs --- contribute
+  graphics --- contribute
+
+  contribute --> report
+  contribute --> manuscript
+  contribute --> outputs
