@@ -1,0 +1,20 @@
+flowchart LR
+  create(create\nnew\nRStudio\nproject)
+  organise(organise\nproject\nfile\nstructure)
+  code(code/\nmake\nchanges)
+  commit(commit)
+  github{use\nGitHub?}
+  push(push)
+  collaborate{collaborate?}
+  add_collaborators(add\ncollaborators)
+  self_review(self-review\nautomated\nchecks)
+  
+  create --> organise
+  organise --> code
+  code --> commit
+  commit --> github
+  github -- YES --> push
+  github -- NO --> code
+  push --> collaborate
+  collaborate -- YES --> add_collaborators
+  collaborate -- NO --> self_review
