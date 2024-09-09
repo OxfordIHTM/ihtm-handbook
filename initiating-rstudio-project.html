@@ -68,6 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -270,12 +273,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#create-a-new-project-in-rstudio" id="toc-create-a-new-project-in-rstudio" class="nav-link active" data-scroll-target="#create-a-new-project-in-rstudio"><span class="header-section-number">9.1</span> 1. Create a new project in RStudio</a>
+  <li><a href="#sec-create-project" id="toc-sec-create-project" class="nav-link active" data-scroll-target="#sec-create-project"><span class="header-section-number">9.1</span> Create a new project in RStudio</a>
   <ul class="collapse">
-  <li><a href="#click-on-new-project-button-on-rstudio" id="toc-click-on-new-project-button-on-rstudio" class="nav-link" data-scroll-target="#click-on-new-project-button-on-rstudio"><span class="header-section-number">9.1.1</span> 1.1 Click on <strong>New Project</strong> button on RStudio</a></li>
-  <li><a href="#create-a-new-directory" id="toc-create-a-new-directory" class="nav-link" data-scroll-target="#create-a-new-directory"><span class="header-section-number">9.1.2</span> 1.2 Create a <strong>New Directory</strong></a></li>
-  <li><a href="#select-new-project-as-project-type" id="toc-select-new-project-as-project-type" class="nav-link" data-scroll-target="#select-new-project-as-project-type"><span class="header-section-number">9.1.3</span> 1.3 Select <strong>New Project</strong> as project type</a></li>
-  <li><a href="#specify-details-for-new-project" id="toc-specify-details-for-new-project" class="nav-link" data-scroll-target="#specify-details-for-new-project"><span class="header-section-number">9.1.4</span> 1.4 Specify details for new project</a></li>
+  <li><a href="#click-on-new-project-button-on-rstudio" id="toc-click-on-new-project-button-on-rstudio" class="nav-link" data-scroll-target="#click-on-new-project-button-on-rstudio"><span class="header-section-number">9.1.1</span> Click on New Project button on RStudio</a></li>
+  <li><a href="#create-a-new-directory" id="toc-create-a-new-directory" class="nav-link" data-scroll-target="#create-a-new-directory"><span class="header-section-number">9.1.2</span> Create a New Directory</a></li>
+  <li><a href="#select-new-project-as-project-type" id="toc-select-new-project-as-project-type" class="nav-link" data-scroll-target="#select-new-project-as-project-type"><span class="header-section-number">9.1.3</span> Select New Project as project type</a></li>
+  <li><a href="#specify-details-for-new-project" id="toc-specify-details-for-new-project" class="nav-link" data-scroll-target="#specify-details-for-new-project"><span class="header-section-number">9.1.4</span> Specify details for new project</a></li>
   </ul></li>
   <li><a href="#structureorganise-your-new-project-appropriately" id="toc-structureorganise-your-new-project-appropriately" class="nav-link" data-scroll-target="#structureorganise-your-new-project-appropriately"><span class="header-section-number">9.2</span> 2. Structure/organise your new project appropriately</a></li>
   <li><a href="#start-coding" id="toc-start-coding" class="nav-link" data-scroll-target="#start-coding"><span class="header-section-number">9.3</span> 3. Start coding</a></li>
@@ -288,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./initiating-rstudio-project.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Initiating an R/RStudio project</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="initiate-projects" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Initiating an R/RStudio project</span></span></h1>
+<h1 class="title"><span id="sec-initiate-projects" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Initiating an R/RStudio project</span></span></h1>
 </div>
 
 
@@ -306,55 +309,119 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Following is a diagram of the steps in initiating your own R/RStudio project.</p>
-<p><img src="images/git_process2.png" class="img-fluid"></p>
-<section id="create-a-new-project-in-rstudio" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="create-a-new-project-in-rstudio"><span class="header-section-number">9.1</span> 1. Create a new project in RStudio</h2>
+<!--- ![](images/git_process2.png) -->
+<div class="cell" data-file="mermaid/create-new-project.mmd" data-layout-align="center">
+<div class="cell-output-display">
+<div id="initiate-project-workflow">
+<div>
+<pre class="mermaid mermaid-js" data-label="initiate-project-workflow">flowchart LR
+  create(create\nnew\nRStudio\nproject)
+  organise(organise\nproject\nfile\nstructure)
+  code(code/\nmake\nchanges)
+  commit(commit)
+  github{use\nGitHub?}
+  push(push)
+  collaborate{collaborate?}
+  add_collaborators(add\ncollaborators)
+  self_review(self-review\nautomated\nchecks)
+  
+  create --&gt; organise
+  organise --&gt; code
+  code --&gt; commit
+  commit --&gt; github
+  github -- YES --&gt; push
+  github -- NO --&gt; code
+  push --&gt; collaborate
+  collaborate -- YES --&gt; add_collaborators
+  collaborate -- NO --&gt; self_review</pre>
+</div>
+<p>A flowchart for initiating an R project</p>
+</div>
+</div>
+</div>
+<section id="sec-create-project" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="sec-create-project"><span class="header-section-number">9.1</span> Create a new project in RStudio</h2>
 <section id="click-on-new-project-button-on-rstudio" class="level3" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="click-on-new-project-button-on-rstudio"><span class="header-section-number">9.1.1</span> 1.1 Click on <strong>New Project</strong> button on RStudio</h3>
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="click-on-new-project-button-on-rstudio"><span class="header-section-number">9.1.1</span> Click on New Project button on RStudio</h3>
 <p><img src="images/new_project1.png" class="img-fluid"></p>
 <p><img src="images/new_project2.png" class="img-fluid"></p>
 </section>
 <section id="create-a-new-directory" class="level3" data-number="9.1.2">
-<h3 data-number="9.1.2" class="anchored" data-anchor-id="create-a-new-directory"><span class="header-section-number">9.1.2</span> 1.2 Create a <strong>New Directory</strong></h3>
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="create-a-new-directory"><span class="header-section-number">9.1.2</span> Create a New Directory</h3>
 <p><img src="images/new_project3.png" class="img-fluid"></p>
 </section>
 <section id="select-new-project-as-project-type" class="level3" data-number="9.1.3">
-<h3 data-number="9.1.3" class="anchored" data-anchor-id="select-new-project-as-project-type"><span class="header-section-number">9.1.3</span> 1.3 Select <strong>New Project</strong> as project type</h3>
+<h3 data-number="9.1.3" class="anchored" data-anchor-id="select-new-project-as-project-type"><span class="header-section-number">9.1.3</span> Select New Project as project type</h3>
 <p><img src="images/new_project4.png" class="img-fluid"></p>
 </section>
 <section id="specify-details-for-new-project" class="level3" data-number="9.1.4">
-<h3 data-number="9.1.4" class="anchored" data-anchor-id="specify-details-for-new-project"><span class="header-section-number">9.1.4</span> 1.4 Specify details for new project</h3>
+<h3 data-number="9.1.4" class="anchored" data-anchor-id="specify-details-for-new-project"><span class="header-section-number">9.1.4</span> Specify details for new project</h3>
 <p><img src="images/new_project5.png" class="img-fluid"></p>
-<p>1.4.1 Specify a project name. Best practices for naming a project are:</p>
+<section id="specify-a-project-name" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="specify-a-project-name">Specify a project name</h4>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Best practices for naming a project are:</p>
 <ul>
 <li>Make sure that name is succinct (as short as possible while at the same time descriptive of the project);</li>
-<li>Don’t use spaces for your project name. If you need to separate words, use a <strong>dash</strong> or an <strong>underscore</strong>;</li>
+<li>Don’t use spaces for your project name. If you need to separate words, use a <strong><em>hyphen</em></strong> or an <strong><em>underscore</em></strong>;</li>
 <li>Avoid using capital letters.</li>
 </ul>
-<p>1.4.2 Specify a directory/location in your local machine where to place the directory of your new project</p>
-<p>1.4.3 Decide whether to use git to version this project</p>
-<p>Here you can decide whether you want to use <code>git</code> to version your project. Remember that using <code>git</code> doesn’t mean you have to use GitHub. <code>git</code> is software installed in your local machine and it versions what you have on your local machine. You don’t need <code>GitHub</code> or any other similar service to version your code with <code>git</code> in your local machine.</p>
-<p>I would recommend that you tick this option for any new project you create so that you can version your work in your local machine even if you don’t want or decide not to use <code>GitHub</code> or any other remote <code>git</code> service.</p>
-<p>1.4.4 Do you want to open a new session</p>
+</div>
+</div>
+</section>
+<section id="specify-a-directorylocation" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="specify-a-directorylocation">Specify a directory/location</h4>
+<p>Select a directory in your local machine where to place the directory of your new project</p>
+</section>
+<section id="decide-whether-to-use-git-to-version-this-project" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="decide-whether-to-use-git-to-version-this-project">Decide whether to use git to version this project</h4>
+<p>Here you can decide whether you want to use git to version your project. Remember that using git doesn’t mean you have to use GitHub. git is software installed in your local machine and it versions what you have on your local machine. You don’t need GitHub or any other similar service to version your code with git in your local machine.</p>
+<p>I would recommend that you tick this option for any new project you create so that you can version your work in your local machine even if you don’t want or decide not to use GitHub or any other remote git service.</p>
+</section>
+<section id="do-you-want-to-open-a-new-session" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="do-you-want-to-open-a-new-session">Do you want to open a new session</h4>
 <p>This is by default unticked and will open the new project within the existing RStudio session (if any). This means that if you have an existing RStudio session with another project that you are working on, that project will be closed and the new project you are creating will open in the existing RStudio session.</p>
 <p>If you need your existing RStudio session and the project within it to remain open alongside the new project you are creating, tick this box/option.</p>
-<p>1.4.4 Click on <strong>Create New Project</strong></p>
-<p>Once you click on <strong>Create New Project</strong>, you will now see the new project open in RStudio.</p>
+</section>
+<section id="click-on-create-new-project" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="click-on-create-new-project">Click on Create New Project</h4>
+<p>Once you click on <strong><em>Create New Project</em></strong>, you will now see the new project open in RStudio.</p>
 <p>You will also see something like below witin the file explorer pane of RStudio.</p>
 <p><img src="images/new_project6.png" class="img-fluid"></p>
 </section>
 </section>
+</section>
 <section id="structureorganise-your-new-project-appropriately" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="structureorganise-your-new-project-appropriately"><span class="header-section-number">9.2</span> 2. Structure/organise your new project appropriately</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Project organisation is vital because:</p>
 <ul>
 <li>supports productivity because the different components of the project are placed in directories where they should be;</li>
 <li>enables clarity in communicating project structure;</li>
 <li>facilitates collaboration.</li>
 </ul>
+</div>
+</div>
 <p>Organising an R project can be user- and project-dependent but there are generally accepted project organising structure that is common to most well-organised projects. Below is an example:</p>
-<pre><code>.    
-|-- my-project    
+<pre><code>|-- my-project    
     |-- data    
     |-- output    
         |-- figures    
@@ -369,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="next-steps" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">9.4</span> Next steps</h2>
-<p>The next steps will depend on whether you will use <code>git</code> and <code>GitHub</code> for versioning your project and whether or not you will work on your project as a solo scientiest or work and collaborate with other scientists.</p>
+<p>The next steps will depend on whether you will use git and GitHub for versioning your project and whether or not you will work on your project as a solo scientiest or work and collaborate with other scientists.</p>
 
 
 </section>

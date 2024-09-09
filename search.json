@@ -351,18 +351,18 @@
     "href": "initiating-rstudio-project.html",
     "title": "9  Initiating an R/RStudio project",
     "section": "",
-    "text": "9.1 1. Create a new project in RStudio",
+    "text": "9.1 Create a new project in RStudio",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Initiating an R/RStudio project</span>"
     ]
   },
   {
-    "objectID": "initiating-rstudio-project.html#create-a-new-project-in-rstudio",
-    "href": "initiating-rstudio-project.html#create-a-new-project-in-rstudio",
+    "objectID": "initiating-rstudio-project.html#sec-create-project",
+    "href": "initiating-rstudio-project.html#sec-create-project",
     "title": "9  Initiating an R/RStudio project",
     "section": "",
-    "text": "9.1.1 1.1 Click on New Project button on RStudio\n\n\n\n\n9.1.2 1.2 Create a New Directory\n\n\n\n9.1.3 1.3 Select New Project as project type\n\n\n\n9.1.4 1.4 Specify details for new project\n\n1.4.1 Specify a project name. Best practices for naming a project are:\n\nMake sure that name is succinct (as short as possible while at the same time descriptive of the project);\nDon’t use spaces for your project name. If you need to separate words, use a dash or an underscore;\nAvoid using capital letters.\n\n1.4.2 Specify a directory/location in your local machine where to place the directory of your new project\n1.4.3 Decide whether to use git to version this project\nHere you can decide whether you want to use git to version your project. Remember that using git doesn’t mean you have to use GitHub. git is software installed in your local machine and it versions what you have on your local machine. You don’t need GitHub or any other similar service to version your code with git in your local machine.\nI would recommend that you tick this option for any new project you create so that you can version your work in your local machine even if you don’t want or decide not to use GitHub or any other remote git service.\n1.4.4 Do you want to open a new session\nThis is by default unticked and will open the new project within the existing RStudio session (if any). This means that if you have an existing RStudio session with another project that you are working on, that project will be closed and the new project you are creating will open in the existing RStudio session.\nIf you need your existing RStudio session and the project within it to remain open alongside the new project you are creating, tick this box/option.\n1.4.4 Click on Create New Project\nOnce you click on Create New Project, you will now see the new project open in RStudio.\nYou will also see something like below witin the file explorer pane of RStudio.",
+    "text": "9.1.1 Click on New Project button on RStudio\n\n\n\n\n9.1.2 Create a New Directory\n\n\n\n9.1.3 Select New Project as project type\n\n\n\n9.1.4 Specify details for new project\n\n\nSpecify a project name\n\n\n\n\n\n\nNote\n\n\n\nBest practices for naming a project are:\n\nMake sure that name is succinct (as short as possible while at the same time descriptive of the project);\nDon’t use spaces for your project name. If you need to separate words, use a hyphen or an underscore;\nAvoid using capital letters.\n\n\n\n\n\nSpecify a directory/location\nSelect a directory in your local machine where to place the directory of your new project\n\n\nDecide whether to use git to version this project\nHere you can decide whether you want to use git to version your project. Remember that using git doesn’t mean you have to use GitHub. git is software installed in your local machine and it versions what you have on your local machine. You don’t need GitHub or any other similar service to version your code with git in your local machine.\nI would recommend that you tick this option for any new project you create so that you can version your work in your local machine even if you don’t want or decide not to use GitHub or any other remote git service.\n\n\nDo you want to open a new session\nThis is by default unticked and will open the new project within the existing RStudio session (if any). This means that if you have an existing RStudio session with another project that you are working on, that project will be closed and the new project you are creating will open in the existing RStudio session.\nIf you need your existing RStudio session and the project within it to remain open alongside the new project you are creating, tick this box/option.\n\n\nClick on Create New Project\nOnce you click on Create New Project, you will now see the new project open in RStudio.\nYou will also see something like below witin the file explorer pane of RStudio.",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Initiating an R/RStudio project</span>"
@@ -373,7 +373,7 @@
     "href": "initiating-rstudio-project.html#structureorganise-your-new-project-appropriately",
     "title": "9  Initiating an R/RStudio project",
     "section": "9.2 2. Structure/organise your new project appropriately",
-    "text": "9.2 2. Structure/organise your new project appropriately\nProject organisation is vital because:\n\nsupports productivity because the different components of the project are placed in directories where they should be;\nenables clarity in communicating project structure;\nfacilitates collaboration.\n\nOrganising an R project can be user- and project-dependent but there are generally accepted project organising structure that is common to most well-organised projects. Below is an example:\n.    \n|-- my-project    \n    |-- data    \n    |-- output    \n        |-- figures    \n    |-- R    \n    |-- my-project.Rproj    \n    |-- analysis_workflow.R    \n    |-- README.md",
+    "text": "9.2 2. Structure/organise your new project appropriately\n\n\n\n\n\n\nNote\n\n\n\nProject organisation is vital because:\n\nsupports productivity because the different components of the project are placed in directories where they should be;\nenables clarity in communicating project structure;\nfacilitates collaboration.\n\n\n\nOrganising an R project can be user- and project-dependent but there are generally accepted project organising structure that is common to most well-organised projects. Below is an example:\n|-- my-project    \n    |-- data    \n    |-- output    \n        |-- figures    \n    |-- R    \n    |-- my-project.Rproj    \n    |-- analysis_workflow.R    \n    |-- README.md",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Initiating an R/RStudio project</span>"
@@ -406,62 +406,62 @@
     "href": "creating-portable-reproducible-workflows.html",
     "title": "10  Creating portable and reproducible scientific workflows",
     "section": "",
-    "text": "10.1 Step 1: Create a new RStudio project",
+    "text": "10.1 Create a new RStudio project\nThe steps here are a summary of what is found in Section 9.1.",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Creating portable and reproducible scientific workflows</span>"
     ]
   },
   {
-    "objectID": "creating-portable-reproducible-workflows.html#step-1-create-a-new-rstudio-project",
-    "href": "creating-portable-reproducible-workflows.html#step-1-create-a-new-rstudio-project",
+    "objectID": "creating-portable-reproducible-workflows.html#sec-rstudio-project",
+    "href": "creating-portable-reproducible-workflows.html#sec-rstudio-project",
     "title": "10  Creating portable and reproducible scientific workflows",
     "section": "",
-    "text": "Open RStudio\nClick on the File option in the RStudio menu. In the dropdown menu, select New Project\nIn the menu window, select New directory option.\nIn the next menu window, select New project option.\nIn the next menu window, enter the following details:\n\nName of the project - important to make the project name as short as possible but descriptive of the project you are creating; don’t use spaces, instead use dash (or underscore) and avoid using capital letters;\nSelect the directory in your computer in which you want to save the project in. Click on Browse to open your computers file manager and navigate to the directory you want to save your project in;\nTick the selection box to make this project a git repository (whilst this is not necessary, this is highly recommended especially if you are collaborating with others);\nTick the selection box to enable renv in this project (this is what mainly contribute to the portability of your project); and,\nClick on Create project",
+    "text": "Tip\n\n\n\n\nOpen RStudio\nClick on the File option in the RStudio menu. In the dropdown menu, select New Project\nIn the menu window, select New directory option.\nIn the next menu window, select New project option.\nIn the next menu window, enter the following details:\n\nName of the project - important to make the project name as short as possible but descriptive of the project you are creating; don’t use spaces, instead use dash (or underscore) and avoid using capital letters;\nSelect the directory in your computer in which you want to save the project in. Click on Browse to open your computers file manager and navigate to the directory you want to save your project in;\nTick the selection box to make this project a git repository (whilst this is not necessary, this is highly recommended especially if you are collaborating with others);\nTick the selection box to enable renv in this project (this is what mainly contribute to the portability of your project); and,\nClick on Create project",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Creating portable and reproducible scientific workflows</span>"
     ]
   },
   {
-    "objectID": "creating-portable-reproducible-workflows.html#step-2-create-an-r-file-called-packages.r",
-    "href": "creating-portable-reproducible-workflows.html#step-2-create-an-r-file-called-packages.r",
+    "objectID": "creating-portable-reproducible-workflows.html#sec-packages-dependencies",
+    "href": "creating-portable-reproducible-workflows.html#sec-packages-dependencies",
     "title": "10  Creating portable and reproducible scientific workflows",
-    "section": "10.2 Step 2: Create an R file called packages.R",
-    "text": "10.2 Step 2: Create an R file called packages.R\n\nClick on the File option in the RStudio menu. In the dropdown menu, select New File and then in the next dropdown menu, select R script.\nA new tab will open in your text editor pane of RStudio (upper left pane) with the name Untitled1. Save this file by clicking on the disk icon on the text editor menu or do a keyboard shortcut with CTRL + s. Give this empty R script the filename packages.R.\nYou should now see a file in the main directory/root directory of your project named packages.R\nAdd code in the packages.R file specifying the packages you will be using in this project. There will be standard packages that we will always use with this type of workflow. So a template/generic packages.R file will contain the following:\n\n################################################################################\n#\n#'\n#' General packages needed for a targets workflow\n#'\n#\n################################################################################\n\nlibrary(targets)\nlibrary(tarchetypes)\nlibrary(here)\nlibrary(rmarkdown)\nlibrary(knitr)\nlibrary(kableExtra)\nlibrary(dplyr)\nlibrary(openxlsx)\nlibrary(ggplot2)\n\n\n################################################################################\n#\n#'\n#' Add other packages that will be used in the project below\n#'\n#\n################################################################################",
+    "section": "10.2 Create an R file for package dependencies",
+    "text": "10.2 Create an R file for package dependencies\nIt is best practice to create a standalone R file specific for invoking/calling on R package dependencies. I recommend calling this file packages.R and this file should be saved in the root directory of the project you just created.\nThese are steps on how you can create this file.\n\n\n\n\n\n\nTip\n\n\n\nSteps for creating an R package dependencies file:\n\nClick on the File option in the RStudio menu. In the dropdown menu, select New File and then in the next dropdown menu, select R script.\nA new tab will open in your text editor pane of RStudio (upper left pane) with the name Untitled1. Save this file by clicking on the disk icon on the text editor menu or do a keyboard shortcut with CTRL + s. Give this empty R script the filename packages.R.\nYou should now see a file in the main directory/root directory of your project named packages.R\nAdd code in the packages.R file specifying the packages you will be using in this project. There will be standard packages that we will always use with this type of workflow. So a template/generic packages.R file will contain the following:\n\n################################################################################\n#\n#'\n#' General packages needed for a targets workflow\n#'\n#\n################################################################################\n\nlibrary(targets)\nlibrary(tarchetypes)\nlibrary(here)\nlibrary(rmarkdown)\nlibrary(knitr)\nlibrary(kableExtra)\nlibrary(dplyr)\nlibrary(openxlsx)\nlibrary(ggplot2)\n\n\n################################################################################\n#\n#'\n#' Add other packages that will be used in the project below\n#'\n#\n################################################################################",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Creating portable and reproducible scientific workflows</span>"
     ]
   },
   {
-    "objectID": "creating-portable-reproducible-workflows.html#step-3-create-placeholder-directories-for-different-components-of-workflow",
-    "href": "creating-portable-reproducible-workflows.html#step-3-create-placeholder-directories-for-different-components-of-workflow",
+    "objectID": "creating-portable-reproducible-workflows.html#sec-placeholder-directory",
+    "href": "creating-portable-reproducible-workflows.html#sec-placeholder-directory",
     "title": "10  Creating portable and reproducible scientific workflows",
-    "section": "10.3 Step 3: Create placeholder directories for different components of workflow",
-    "text": "10.3 Step 3: Create placeholder directories for different components of workflow\n\nIn the lower right pane of RStudio (the file manager pane), find the menu button labelled Folder.\nGive this new folder the label of R. This filder will hold all bespoke functions that we will create to use for this project workflow;\nRepeat these steps to create new folders with the following labels:\n\ndata - This folder will hold any data that we retrieve as part of this workflow.\noutputs - This folder will hold all our workflow outputs such as plots/figures, tables (in Excel or CSV files), HTML and/or Word and/or PDF outputs\nreports - This folder will hold all our RMarkdown report (.Rmd) files\ndocs - This folder will hold any of our deployed outputs such as HTML report, dashboard, etc.\n\n\nThese are placeholder directories which we will populate as we work through the workflow for this project.",
+    "section": "10.3 Create placeholder directories",
+    "text": "10.3 Create placeholder directories\nCreate placeholder directories for different components of the workflow.These placeholder directories will provide an organising structure to the project and remind you of where to save/store specific files and outputs.\n\n\n\n\n\n\nTip\n\n\n\nFollowing are steps on how to create placeholder directores:\n\nIn the lower right pane of RStudio (the file manager pane), find the menu button labelled Folder.\nGive this new folder the label of R. This filder will hold all bespoke functions that we will create to use for this project workflow;\nRepeat these steps to create new folders with the following labels:\n\ndata - This folder will hold any data that we retrieve as part of this workflow.\noutputs - This folder will hold all our workflow outputs such as plots/figures, tables (in Excel or CSV files), HTML and/or Word and/or PDF outputs\nreports - This folder will hold all our RMarkdown report (.Rmd) files\ndocs - This folder will hold any of our deployed outputs such as HTML report, dashboard, etc.\n\n\nThese are placeholder directories which we will populate as we work through the workflow for this project.",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Creating portable and reproducible scientific workflows</span>"
     ]
   },
   {
-    "objectID": "creating-portable-reproducible-workflows.html#step-4-create-the-target-script-file-_targets.r",
-    "href": "creating-portable-reproducible-workflows.html#step-4-create-the-target-script-file-_targets.r",
+    "objectID": "creating-portable-reproducible-workflows.html#sec-target-script",
+    "href": "creating-portable-reproducible-workflows.html#sec-target-script",
     "title": "10  Creating portable and reproducible scientific workflows",
-    "section": "10.4 Step 4: Create the target script file (_targets.R)",
-    "text": "10.4 Step 4: Create the target script file (_targets.R)\nThe next task is to create a {targets} script file (_targets.R) which is the file that will define the workflow that we will be creating.\nCreate the file by:\n\nClicking on File –&gt; New File –&gt; R Script in RStudio.\nA new tab will show in your Source window on the top left quadrant of your RStudio screen. This tab will usually be called Untitled1.\nSave this file first and change its name to _targets.R. Make sure to save it in the current project directory.\nYou know that you were successful in doing this once you see a file called _targets.R in the File system window in the lower right quadrant of your RStudio screen.",
+    "section": "10.4 Create the target script file",
+    "text": "10.4 Create the target script file\nThe next task is to create a {targets} script file (_targets.R) which is the file that will define the workflow that we will be creating.\n\n\n\n\n\n\nTip\n\n\n\nThe _targets.R script file can be created through these steps:\n\nClicking on File –&gt; New File –&gt; R Script in RStudio.\nA new tab will show in your Source window on the top left quadrant of your RStudio screen. This tab will usually be called Untitled1.\nSave this file first and change its name to _targets.R. Make sure to save it in the current project directory.\nYou know that you were successful in doing this once you see a file called _targets.R in the file system window in the lower right quadrant of your RStudio screen.",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Creating portable and reproducible scientific workflows</span>"
     ]
   },
   {
-    "objectID": "creating-portable-reproducible-workflows.html#step-5-edit-the-_targets.r-script-file",
-    "href": "creating-portable-reproducible-workflows.html#step-5-edit-the-_targets.r-script-file",
+    "objectID": "creating-portable-reproducible-workflows.html#sec-edit-targets-file",
+    "href": "creating-portable-reproducible-workflows.html#sec-edit-targets-file",
     "title": "10  Creating portable and reproducible scientific workflows",
-    "section": "10.5 Step 5: Edit the _targets.R script file",
-    "text": "10.5 Step 5: Edit the _targets.R script file\nNow, the next step is to edit your script file by adding sets of R code that does the following:\n\nLoads the packages required\nLoads custom functions (if any)\nDefines individual targets using tar_targets function\nEnds with a list of targets objects\n\nA basic {targets} workflow will look like this:\n## Load libraries --------------------------------------------------------------\nlibrary(targets)\n\n\n\n## Load custom functions -------------------------------------------------------\nfor (f in list.files(\"R\", full.names = TRUE)) source (f)\nfor (f in list.files(here::here(\"R\"), full.names = TRUE)) source (f)\n\n\n## Create targets and list targets objects -------------------------------------",
+    "section": "10.5 Edit the targets script file",
+    "text": "10.5 Edit the targets script file\nNow, the next step is to edit your script file by adding sets of R code that does the following:\n\nLoads the packages required\nLoads custom functions (if any)\nDefines individual targets using tar_targets function\nEnds with a list of targets objects\n\nA basic {targets} workflow will look like this:\n## Load libraries --------------------------------------------------------------\nlibrary(targets)\n\n\n\n## Load custom functions -------------------------------------------------------\nfor (f in list.files(\"R\", full.names = TRUE)) source (f)\nfor (f in list.files(here::here(\"R\"), full.names = TRUE)) source (f)\n\n\n## Create targets and list targets objects -------------------------------------",
     "crumbs": [
       "Processes",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Creating portable and reproducible scientific workflows</span>"
