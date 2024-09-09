@@ -2,7 +2,7 @@
 output-file: initiating-rstudio-project.html
 ---
 
-# Initiating an R/RStudio project {#initiate-projects}
+# Initiating an R/RStudio project {#sec-initiate-projects}
 
 Following is a diagram of the steps in initiating your own R/RStudio project.
 
@@ -15,7 +15,7 @@ Following is a diagram of the steps in initiating your own R/RStudio project.
 %%| file: mermaid/create-new-project.mmd
 ```
 
-## Create a new project in RStudio
+## Create a new project in RStudio {#sec-create-project}
 
 ### Click on New Project button on RStudio
 
@@ -82,8 +82,7 @@ Project organisation is vital because:
 Organising an R project can be user- and project-dependent but there are generally accepted project organising structure that is common to most well-organised projects. Below is an example:
 
 
-```
-.    
+```   
 |-- my-project    
     |-- data    
     |-- output    

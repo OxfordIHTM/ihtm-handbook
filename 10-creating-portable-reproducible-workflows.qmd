@@ -2,9 +2,9 @@
 output-file: creating-portable-reproducible-workflows.html
 ---
 
-# Creating portable and reproducible scientific workflows {#portable-reproducible}
+# Creating portable and reproducible scientific workflows {#sec-portable-reproducible}
 
-At this point, you would have written your own R code and R scripts and saved these within an R file (`.R`).
+At this point, you would have written your own R code and R scripts and saved these within an R file (`.R` file extension).
 
 By now, you would have also appreciated how extensible R is through built-in packages and/or through functions that you have created yourself.
 
@@ -14,8 +14,11 @@ R's scripting capability and R's extensibility are its main characteristics that
 
 A typical scientific workflow would have the following steps:
 
-```{r, echo = FALSE, fig.align = "center"}
-knitr::include_graphics("images/scientific-workflow.png")
+```{mermaid}
+%%| label: scientific-workflow
+%%| fig-cap: A flowchart for an example scientific workflow
+%%| fig-align: center
+%%| file: mermaid/scientific-workflow.mmd
 ```
 
 In general, an R script should reflect the different steps outlined above. Hence, an R script of a scientific workflow would tend to look like this:
@@ -53,33 +56,44 @@ In general, an R script should reflect the different steps outlined above. Hence
 
 ```
 
-In this chapter, we will go through a step-by-step walkthrough of how to build a robust scientific workflow in R. A robust worklow is one that is **portable** i.e., not dependent on hardware and software and instead can be run on almost any machine with very minimal, if any, additional setup or configuration required, and one that is **reproducible** i.e., can be run over and over again without issues, providing the expected results with the same data or providing updated results with new and/or updated data.
+In this chapter, we will go through a step-by-step walkthrough of how to build a robust scientific workflow in R. A robust worklow is one that is ***portable*** i.e., not dependent on hardware and software and instead can be run on almost any machine with very minimal, if any, additional setup or configuration required, and one that is ***reproducible*** i.e., can be run over and over again without issues, providing the expected results with the same data or providing updated results with new and/or updated data.
 
-## Step 1: Create a new RStudio project
+## Create a new RStudio project {#sec-rstudio-project}
 
+The steps here are a summary of what is found in @sec-create-project.
+
+::: {.callout-tip}
 * Open RStudio
 
-* Click on the `File` option in the RStudio menu. In the dropdown menu, select `New Project`
+* Click on the ***File*** option in the RStudio menu. In the dropdown menu, select ***New Project***
 
-* In the menu window, select `New directory` option.
+* In the menu window, select ***New directory*** option.
 
-* In the next menu window, select `New project` option.
+* In the next menu window, select ***New project*** option.
 
 * In the next menu window, enter the following details:
 
     * Name of the project - important to make the project name as short as possible but descriptive of the project you are creating; don't use spaces, instead use dash (or underscore) and avoid using capital letters;
     
-    * Select the directory in your computer in which you want to save the project in. Click on `Browse` to open your computers file manager and navigate to the directory you want to save your project in;
+    * Select the directory in your computer in which you want to save the project in. Click on ***Browse*** to open your computers file manager and navigate to the directory you want to save your project in;
     
     * Tick the selection box to make this project a git repository (whilst this is not necessary, this is highly recommended especially if you are collaborating with others);
     
-    * Tick the selection box to enable `renv` in this project (this is what mainly contribute to the portability of your project); and,
+    * Tick the selection box to enable ***renv*** in this project (this is what mainly contribute to the portability of your project); and,
     
-    * Click on `Create project`
+    * Click on ***Create project***
+:::
     
-## Step 2: Create an R file called `packages.R`
+## Create an R file for package dependencies {#sec-packages-dependencies}
 
-* Click on the `File` option in the RStudio menu. In the dropdown menu, select `New File` and then in the next dropdown menu, select `R script`. 
+It is best practice to create a standalone R file specific for invoking/calling on R package dependencies. I recommend calling this file `packages.R` and this file should be saved in the root directory of the project you just created.
+
+These are steps on how you can create this file.
+
+::: {.callout-tip}
+Steps for creating an R package dependencies file:
+
+* Click on the ***File*** option in the RStudio menu. In the dropdown menu, select ***New File*** and then in the next dropdown menu, select ***R script***. 
 
 * A new tab will open in your text editor pane of RStudio (upper left pane) with the name *Untitled1*. Save this file by clicking on the disk icon on the text editor menu or do a keyboard shortcut with `CTRL + s`. Give this empty R script the filename `packages.R`.
 
@@ -119,40 +133,49 @@ library(ggplot2)
 
 
 ```
+:::
 
-## Step 3: Create placeholder directories for different components of workflow
+## Create placeholder directories {#sec-placeholder-directory}
 
-* In the lower right pane of RStudio (the file manager pane), find the menu button labelled `Folder`.
+Create placeholder directories for different components of the workflow.These placeholder directories will provide an organising structure to the project and remind you of where to save/store specific files and outputs.
 
-* Give this new folder the label of `R`. This filder will hold all bespoke functions that we will create to use for this project workflow; 
+::: {.callout-tip}
+Following are steps on how to create placeholder directores:
+
+* In the lower right pane of RStudio (the file manager pane), find the menu button labelled ***Folder***.
+
+* Give this new folder the label of ***R***. This filder will hold all bespoke functions that we will create to use for this project workflow; 
 
 * Repeat these steps to create new folders with the following labels:
 
-    * `data` - This folder will hold any data that we retrieve as part of this workflow.
+    * ***data*** - This folder will hold any data that we retrieve as part of this workflow.
     
-    * `outputs` - This folder will hold all our workflow outputs such as plots/figures, tables (in Excel or CSV files), HTML and/or Word and/or PDF outputs
+    * ***outputs*** - This folder will hold all our workflow outputs such as plots/figures, tables (in Excel or CSV files), HTML and/or Word and/or PDF outputs
     
-    * `reports` - This folder will hold all our RMarkdown report (`.Rmd`) files
+    * ***reports*** - This folder will hold all our RMarkdown report (`.Rmd`) files
     
-    * `docs` - This folder will hold any of our deployed outputs such as HTML report, dashboard, etc.
+    * ***docs*** - This folder will hold any of our deployed outputs such as HTML report, dashboard, etc.
 
 These are placeholder directories which we will populate as we work through the workflow for this project.
+:::
 
-## Step 4: Create the target script file (`_targets.R`)
+## Create the target script file {#sec-target-script}
 
-The next task is to create a {targets} script file (`_targets.R`) which is the file that will define the workflow that we will be creating.
+The next task is to create a [`{targets}`](https://books.ropensci.org/targets/) script file (`_targets.R`) which is the file that will define the workflow that we will be creating.
 
-Create the file by: 
+::: {.callout-tip}
+The `_targets.R` script file can be created through these steps: 
 
-* Clicking on File –> New File –> R Script in RStudio. 
+* Clicking on ***File –> New File –> R Script*** in RStudio. 
 
 * A new tab will show in your Source window on the top left quadrant of your RStudio screen. This tab will usually be called `Untitled1`. 
 
 * Save this file first and change its name to `_targets.R`. Make sure to save it in the current project directory. 
 
-* You know that you were successful in doing this once you see a file called `_targets.R` in the File system window in the lower right quadrant of your RStudio screen.
+* You know that you were successful in doing this once you see a file called `_targets.R` in the file system window in the lower right quadrant of your RStudio screen.
+:::
 
-## Step 5: Edit the `_targets.R` script file
+## Edit the targets script file {#sec-edit-targets-file}
 
 Now, the next step is to edit your script file by adding sets of R code that does the following:
 
