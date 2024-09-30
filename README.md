@@ -2,8 +2,8 @@
 # Open and Reproducible Science in R Technical Handbook <img src="images/ihealth_base_pos.png" align="right" height="200px" />
 
 <!-- badges: start -->
-![License for code](https://img.shields.io/badge/license_for_code)-GPL3.0-blue)
-![License for text](https://img.shields.io/badge/license_for_writing)-CC_BY_4.0-blue)
+![License for code](https://img.shields.io/badge/license_for_code-GPL3.0-blue)
+![License for text](https://img.shields.io/badge/license_for_writing-CC_BY_4.0-blue)
 [![Quarto Publish](https://github.com/OxfordIHTM/ihtm-handbook/actions/workflows/publish.yml/badge.svg)](https://github.com/OxfordIHTM/ihtm-handbook/actions/workflows/publish.yml)
 [![DOI](https://zenodo.org/badge/476961453.svg)](https://doi.org/10.5281/zenodo.13643259)
 <!-- badges: end -->
