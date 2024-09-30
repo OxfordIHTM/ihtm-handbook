@@ -2,7 +2,7 @@
 
 All of the written material is made available under the Creative
 Commons - Attribution - NonCommercial 4.0 International license (CC-BY-NC-4.0),
-while any code is made available under the GPL-3.0 license.
+while any code is made available under the GNU General Public License Version 3.0 license (GPL-3.0).
 
 ## Writing
 
