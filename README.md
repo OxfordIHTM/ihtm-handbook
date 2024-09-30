@@ -3,13 +3,13 @@
 
 <!-- badges: start -->
 [![License for code](https://img.shields.io/badge/license (for code)-GPL3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0.html)
-[![License for text](https://img.shields.io/badge/license (for text)-CC0-blue)](https://creativecommons.org/public-domain/cc0/)
+[![License for text](https://img.shields.io/badge/license (for text)-CC BY 4.0-blue)](https://creativecommons.org/licenses/by/4.0/)
 [![Quarto Publish](https://github.com/OxfordIHTM/ihtm-handbook/actions/workflows/publish.yml/badge.svg)](https://github.com/OxfordIHTM/ihtm-handbook/actions/workflows/publish.yml)
 [![DOI](https://zenodo.org/badge/476961453.svg)](https://doi.org/10.5281/zenodo.13643259)
 <!-- badges: end -->
 
 
-# Preface {.unnumbered}
+# Preface
 
 The Open and Reproducible Science in R sub-module of the [MSc in International Health and Tropical Medicine](https://www.tropicalmedicine.ox.ac.uk/study-with-us/msc-ihtm) is designed to equip students with the knowledge and skills necessary to conduct both **academic research** and more importantly **real-world data analysis** that is transparent, reproducible, and in line with the principles of open science.
 
@@ -38,4 +38,4 @@ Even though all efforts have been made to order the chapters in a way that is co
 ## License
 All code used to produce this handbook is released under a [GPL-3.0](https://opensource.org/licenses/gpl-3.0.html) license. 
 
-All text in this handbook is released under a [CC0](https://creativecommons.org/public-domain/cc0/) license.
+All text in this handbook is released under a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
