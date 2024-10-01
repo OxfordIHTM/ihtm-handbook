@@ -36,6 +36,4 @@ This section covers topics on scientific/data analysis workflows with a focus on
 Even though all efforts have been made to order the chapters in a way that is coherent and logical, this handbook is designed such that chapters are standalone topics in of themselves and uses cross-referencing between chapters to make links to the various learning topics/concepts. As such, the best use of this handbook is to use each chapter as a reference for more in-depth discussion of a topic discussed in class rather than a book to read from start to finish.
 
 ## License
-All code used to produce this handbook is released under a [GPL-3.0](https://opensource.org/licenses/gpl-3.0.html) license. 
-
-All text in this handbook is released under a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+All code used to produce this handbook is released under a [GPL-3.0](https://opensource.org/licenses/gpl-3.0.html) license. All text in this handbook is released under a [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
