@@ -65,7 +65,7 @@ If you need your existing RStudio session and the project within it to remain op
 
 Once you click on ***Create New Project***, you will now see the new project open in RStudio.
 
-You will also see something like below witin the file explorer pane of RStudio.
+You will also see something like below within the file explorer pane of RStudio.
 
 ![](images/new_project6.png)
 
@@ -101,4 +101,4 @@ This will include creating bespoke R functions (as required) and creating an Rsc
 
 ## Next steps
 
-The next steps will depend on whether you will use git and GitHub for versioning your project and whether or not you will work on your project as a solo scientiest or work and collaborate with other scientists.
+The next steps will depend on whether you will use git and GitHub for versioning your project and whether or not you will work on your project as a solo scientist or work and collaborate with other scientists.

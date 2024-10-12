@@ -4,7 +4,7 @@ output-file: installing-software.html
 
 # Installing and setting up tools {#sec-install-tools}
 
-Following are the steps to installing R, RStudio, and Git depending on your operationg system.
+Following are the steps to installing R, RStudio, and Git depending on your operating system.
 
 ## Installing R, RStudio, and git {#sec-install-r}
 
@@ -32,7 +32,7 @@ Once downloaded, double-click on `.exe` file downloaded to your **Downloads** fo
 
 ### Step 3: Download and install `Rtools` {#sec-install-rtools .unnumbered}
 
-For the things that you will be taught in the **Open and Reproducibile Science** sub-module, you we will need to expand the installation of R by installing the `Rtools` software.
+For the things that you will be taught in the **Open and Reproducible Science** sub-module, you we will need to expand the installation of R by installing the `Rtools` software.
 
 Go to [https://cran.r-project.org/bin/windows/Rtools/](https://cran.r-project.org/bin/windows/Rtools/) and choose to download the latest version of the installer (which is the Rtools version compatible with the R version you have installed in Step 1).
 
@@ -40,7 +40,7 @@ Once you have downloaded the `.exe` file, double-click on the `.exe` file and fo
 
 ### Step 4: Download and install Git for Windows {#sec-install-git-windows .unnumbered}
 
-For the things that you will be taught in the **Open and Reproducibile Science** sub-module, you we will need to install **Git for Windows**.
+For the things that you will be taught in the **Open and Reproducible Science** sub-module, you we will need to install **Git for Windows**.
 
 Go to this link - [https://github.com/git-for-windows/git/releases/latest](https://github.com/git-for-windows/git/releases/latest) - to download the latest version of git. Make sure to select the version compatible with your Windows machine (64-bit or 32-bit).
 
@@ -66,7 +66,7 @@ Once downloaded, double-click on `.dmg` file downloaded to your `Downloads` fold
 
 ### Install git for macOS {#sec-install-git-macos}
 
-For the things that you will be taught in the **Open and Reproducibile Science** sub-module, you we will need to install **git for macOS**. Apple machines are already pre-installed with `git` but it is usually an Apple specific version of git and tends to be older and not configured in the way we need it. So we need to install another version of it that comes with Apple's `Xcode command line tools`.
+For the things that you will be taught in the **Open and Reproducible Science** sub-module, you we will need to install **git for macOS**. Apple machines are already pre-installed with `git` but it is usually an Apple specific version of git and tends to be older and not configured in the way we need it. So we need to install another version of it that comes with Apple's `Xcode command line tools`.
 
 To install, go to the macOS terminal and type the following command:
 

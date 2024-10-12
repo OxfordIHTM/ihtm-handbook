@@ -137,7 +137,7 @@ calculate_bmi <- function(weight, height) {
 }
 ```
 
-We now have a function for calculating and outputing BMI values.
+We now have a function for calculating and producing BMI values.
 
 Let us now test it with our 3 sets of data:
 
