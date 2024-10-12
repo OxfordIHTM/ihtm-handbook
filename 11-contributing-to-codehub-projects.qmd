@@ -60,7 +60,7 @@ This communication is important as this will trigger the developer/maintainer to
 
 Once you have been added to the project repository as a collaborator, you can now `clone` the repository to your local machine and then start making your contribution.
 
-If for some reason you haven't been added to the project repository as a collaborator yet but you are itching to contribute, you can still start contributing but instead of cloning, you will need to `fork` the repository. This is similar to cloning but your `fork` is identified as being from someone outside the organisation. This means you will need to make your own GitHub repository under your own username of the project as a fork of the original, write your code contribution and commit to your repository and then make a pull requeset to the original repository. 
+If for some reason you haven't been added to the project repository as a collaborator yet but you are itching to contribute, you can still start contributing but instead of cloning, you will need to `fork` the repository. This is similar to cloning but your `fork` is identified as being from someone outside the organisation. This means you will need to make your own GitHub repository under your own username of the project as a fork of the original, write your code contribution and commit to your repository and then make a pull request to the original repository. 
 
 These forking steps are described in all the CONTRIBUTING notes/guidance in each project as we open contributions from anyone (not just CodeHub members) but not all are eligible to be internal collaborators.
 

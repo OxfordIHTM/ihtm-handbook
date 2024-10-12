@@ -56,7 +56,7 @@ In general, an R script should reflect the different steps outlined above. Hence
 
 ```
 
-In this chapter, we will go through a step-by-step walkthrough of how to build a robust scientific workflow in R. A robust worklow is one that is ***portable*** i.e., not dependent on hardware and software and instead can be run on almost any machine with very minimal, if any, additional setup or configuration required, and one that is ***reproducible*** i.e., can be run over and over again without issues, providing the expected results with the same data or providing updated results with new and/or updated data.
+In this chapter, we will go through a step-by-step walkthrough of how to build a robust scientific workflow in R. A robust workflow is one that is ***portable*** i.e., not dependent on hardware and software and instead can be run on almost any machine with very minimal, if any, additional setup or configuration required, and one that is ***reproducible*** i.e., can be run over and over again without issues, providing the expected results with the same data or providing updated results with new and/or updated data.
 
 ## Create a new RStudio project {#sec-rstudio-project}
 
@@ -140,11 +140,11 @@ library(ggplot2)
 Create placeholder directories for different components of the workflow.These placeholder directories will provide an organising structure to the project and remind you of where to save/store specific files and outputs.
 
 ::: {.callout-tip}
-Following are steps on how to create placeholder directores:
+Following are steps on how to create placeholder directories:
 
 * In the lower right pane of RStudio (the file manager pane), find the menu button labelled ***Folder***.
 
-* Give this new folder the label of ***R***. This filder will hold all bespoke functions that we will create to use for this project workflow; 
+* Give this new folder the label of ***R***. This folder will hold all bespoke functions that we will create to use for this project workflow; 
 
 * Repeat these steps to create new folders with the following labels:
 

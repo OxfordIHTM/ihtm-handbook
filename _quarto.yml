@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 book:
-  title: Open and Reprodubile Science in R
+  title: Open and Reproducible Science in R
   subtitle: Technical Handbook
   author:
     - Ernest Guevarra
@@ -37,6 +37,9 @@ book:
   repo-actions: [edit]
   downloads: [pdf, epub]
   sharing: [twitter, facebook]
+  google-analytics: 
+    tracking-id: "G-06FXWQBZHC"
+    anonymize-ip: true
 
 bibliography: references.bib
 
