@@ -39,6 +39,9 @@ jobs:
         run: |
           renv::restore()
         shell: Rscript {0}
+
+      - name: Install chromium
+        run: quarto tools install chromium
         
       - name: Render document
         run: quarto render
@@ -57,3 +60,4 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          
