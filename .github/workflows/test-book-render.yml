@@ -23,6 +23,11 @@ jobs:
           apt-get update && apt-get install -y --no-install-recommends \
           libxt6 libglpk-dev gh curl jq
 
+      - name: Install Google Chrome
+        run: |
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
@@ -40,9 +45,6 @@ jobs:
           renv::restore()
         shell: Rscript {0}
 
-      - name: Install chromium
-        run: quarto tools install chromium
-        
       - name: Render document
         run: quarto render
 
