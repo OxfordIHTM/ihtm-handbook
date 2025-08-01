@@ -127,14 +127,14 @@ With regard to creating/selecting a GitHub username, following are some best pra
 
 It is important to keep your GitHub account secure. Any breach in security of your online accounts, including GitHub, not only affects you but also those that you collaborate with. To increase the security of your GitHub account, please enable two-factor authentication (2FA) for your account. This can be done [here](https://github.com/settings/security). There are 4 options for 2FA in GitHub. We recommended enabling at least 2 of these options. If you are familiar with use of passkeys, we recommend using this authentication approach in addition to 2FA.
 
-### Step 4. Get added to the Oxford IHTM CodeHub {.unnumbered}
+### Step 4. Get added to the Oxford IHTM GitHub organisation {.unnumbered}
 
-The [Oxford iHealth CodeHub](https://github.com/OxfordIHTM) is the organisational GitHub account for the MSc IHTM. To be included in the organisation, share your GitHub username to the sub-module lead who will then add you to the organisation. This is an important step as assignments and exercises for the sub-module are distributed through GitHub and GitHub Classroom via this organisational account.
+The [Oxford iHealth GitHub organisation](https://github.com/OxfordIHTM) is the organisational GitHub account for the MSc IHTM. To be included in the organisation, share your GitHub username to the sub-module lead who will then add you to the organisation. This is an important step as assignments and exercises for the sub-module are distributed through GitHub and GitHub Classroom via this organisational account.
 
 ::: {.callout-important}
-The Oxford iHealth CodeHub organisational GitHub account requires members to have 2FA activated. It is therefore imperative that you enable 2FA on your account to be included in the organisation.
+The Oxford iHealth organisational GitHub account requires members to have 2FA activated. It is therefore imperative that you enable 2FA on your account to be included in the organisation.
 :::
 
 ::: {.callout-note}
-You will soon receive a message at the email address you registered to GitHub with inviting you to join the Oxford iHealth CodeHub organisation. Accept the invitation.
+You will soon receive a message at the email address you registered to GitHub with inviting you to join the Oxford iHealth organisation. Accept the invitation.
 :::
