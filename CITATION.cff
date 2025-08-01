@@ -1,0 +1,28 @@
+authors:
+  - family-names: Ariana
+    given-names: Proochista
+    orcid: https://orcid.org/0000-0002-0154-2237
+  - family-names: Guevarra
+    given-names: Ernest
+    orcid: https://orcid.org/0000-0002-4887-4415
+  - name: "Oxford iHealth"
+cff-version: 1.2.0
+message: "If you use the software in this repository, please cite both the handbook from preferred-citation and the software itself."
+preferred-citation:
+  type: book
+  authors:
+    - family-names: Ariana
+      given-names: Proochista
+      orcid: https://orcid.org/0000-0002-0154-2237
+    - family-names: Guevarra
+      given-names: Ernest
+      orcid: https://orcid.org/0000-0002-4887-4415
+    - name: "Oxford iHealth"
+  title: "Open and Reproducible Science in R Technical Handbook"
+  year: 2025
+  doi: 10.5281/zenodo.13643259
+title: "Open and Reproducible Science in R Technical Handbook"
+repository-code: https://github.com/OxfordIHTM/ihtm-handbook
+license: CC-BY-4.0
+date-released: 2025-08-01
+version: 0.0.1.2025
