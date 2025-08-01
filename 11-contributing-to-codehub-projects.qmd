@@ -1,8 +1,8 @@
 ---
-output-file: contributing-to-codehub-projects.html
+output-file: contributing-to-ihealth-projects.html
 ---
 
-# Contributing to Oxford IHTM CodeHub projects {#sec-contributing-codehub}
+# Contributing to Oxford iHealth projects {#sec-contributing-ihealth}
 
 This section would be relevant to you if:
 
@@ -10,19 +10,19 @@ This section would be relevant to you if:
 
 2. If you are an MSc for International Health and Tropical Medicine alumni and have experience and knowledge using R.
 
-The Oxford IHTM CodeHub actively runs projects focused on either research software development (based in R) or R-based scientific research workflows. Our list of previous and current projects can be found [here](https://oxford-ihtm.io/projects/).
+The Oxford iHealth actively runs projects focused on either research software development (based in R) or R-based scientific research workflows. Our list of previous and current projects can be found [here](https://oxford-ihtm.io/projects/).
 
 ## Research software development {#sec-research-software}
 
-Oxford IHTM CodeHub develops research software using the R package system. Our collection of research software tools are found [here](https://oxfordihtm.r-universe.dev) and the underlying code is available from our [organisational GitHub](https://github.com/OxfordIHTM).
+Oxford iHealth develops research software using the R package system. Our collection of research software tools are found [here](https://oxfordihtm.r-universe.dev) and the underlying code is available from our [organisational GitHub](https://github.com/OxfordIHTM).
 
-If you would like to contribute to Oxford IHTM CodeHub's software development, following is a list of steps on how to.
+If you would like to contribute to Oxford iHealth's software development, following is a list of steps on how to.
 
 ### Get familiar with R's package writing process
 
 We build our research software tools using R. Hence, we use the R package writing process. This is described in the official [R manual for writing extensions](https://cran.r-project.org/). This manual is the official reference for what is considered acceptable R software development by the R Core Team and are the guides that will ensure that your R package can pass submission and entry into the Comprehensive R Archive Network (CRAN). So, from an academic perspective, you can see this as the official guide of a publisher/publication on what your manuscript should look like so you can submit to their journal for publication. It is not a guarantee of publication, but that you are meeting their publication standards.
 
-However, the R manual for writing extensions is not as easy to navigate and not as easy to read. For beginners, we would recommend starting off with Hadley Wickham's online book called [R Packages](https://r-pkgs.org/). The book is free to use online and has clearly delineated chapters and sections for specific R package writing tasks required. We would expect anyone wanting to contribute to the CodeHub's software development projects to have been able to go through this book.
+However, the R manual for writing extensions is not as easy to navigate and not as easy to read. For beginners, we would recommend starting off with Hadley Wickham's online book called [R Packages](https://r-pkgs.org/). The book is free to use online and has clearly delineated chapters and sections for specific R package writing tasks required. We would expect anyone wanting to contribute to the Oxford iHealth's software development projects to have been able to go through this book.
 
 ### Get familiar and reach intermediate level git and GitHub skills
 
@@ -42,7 +42,7 @@ If you want to brush up on your git and GitHub, please go through Jenny Bryan's 
 
 ### Review our portfolio of research software
 
-Visit the project page of the Oxford IHTM CodeHub website - [https://oxford-ihtm.io/projects/](https://oxford-ihtm.io/projects/) to see our current line-up of CodeHub software projects.
+Visit the packages page of the Oxford iHealth website - [https://oxford-ihtm.io/packages/](https://oxford-ihtm.io/packages/) to see our current line-up of Oxford iHealth software projects.
 
 Have a look at our R Universe of research software - [https://oxfordihtm.r-unviverse.dev](https://oxfordihtm.r-unviverse.dev) - for the build status of each project.
 
@@ -54,7 +54,7 @@ Each project is in continuous development. We recommend looking at the repositor
 
 Once you have found a project and an issue that you want to work on, make a comment on that issue making sure to tag the developer/maintainer stating that you are going to have a go at this issue and then will make a pull request of your contribution.
 
-This communication is important as this will trigger the developer/maintainer to confirm that you are an eligible member of the CodeHub (the pre-requisites above) and then will add you as a collaborator on the project. This step is important because your status in the project as a collaborator will determine your next step on contributing. We prefer that CodeHub members are internal collaborators as this simplifies their participation (see next section).
+This communication is important as this will trigger the developer/maintainer to confirm that you are an eligible member of the Oxford iHealth (the pre-requisites above) and then will add you as a collaborator on the project. This step is important because your status in the project as a collaborator will determine your next step on contributing. We prefer that Oxford iHealth members are internal collaborators as this simplifies their participation (see next section).
 
 ### Clone or fork the project repository
 
@@ -62,7 +62,7 @@ Once you have been added to the project repository as a collaborator, you can no
 
 If for some reason you haven't been added to the project repository as a collaborator yet but you are itching to contribute, you can still start contributing but instead of cloning, you will need to `fork` the repository. This is similar to cloning but your `fork` is identified as being from someone outside the organisation. This means you will need to make your own GitHub repository under your own username of the project as a fork of the original, write your code contribution and commit to your repository and then make a pull request to the original repository. 
 
-These forking steps are described in all the CONTRIBUTING notes/guidance in each project as we open contributions from anyone (not just CodeHub members) but not all are eligible to be internal collaborators.
+These forking steps are described in all the CONTRIBUTING notes/guidance in each project as we open contributions from anyone (not just Oxford iHealth members) but not all are eligible to be internal collaborators.
 
-We would like to avoid this for eligible members of CodeHub so will endeavour to keep up with collaborator requests. So, if you are impatient and would really like to contribute already, consider forking but be warned that this has a lot more complicated steps than simple cloning. Either follow-up your request to be made a collaborator.
+We would like to avoid this for eligible members of Oxford iHealth so will endeavour to keep up with collaborator requests. So, if you are impatient and would really like to contribute already, consider forking but be warned that this has a lot more complicated steps than simple cloning. Either follow-up your request to be made a collaborator.
 
