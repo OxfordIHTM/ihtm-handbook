@@ -8,7 +8,7 @@ on:
 jobs:
   test-book-render:
     runs-on: ubuntu-latest
-    container: rocker/tidyverse:4.4.1
+    container: rocker/tidyverse:4.5.1
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     permissions:
@@ -38,7 +38,7 @@ jobs:
         if: ${{ !env.ACT }}  
         uses: r-lib/actions/setup-renv@v2
         with:
-          cache-version: 2
+          cache-version: 1
 
       - name: Install packages from renv.lock (local, no cache)
         if: ${{ env.ACT }}  
