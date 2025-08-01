@@ -23,12 +23,6 @@ jobs:
           apt-get update && apt-get install -y --no-install-recommends \
           libxt6 libglpk-dev gh curl jq
 
-      - name: Install Google Chrome
-        run: |
-          curl -LO https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          apt-get install -y ./google-chrome-stable_current_amd64.deb
-          rm google-chrome-stable_current_amd64.deb
-
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:

@@ -14,12 +14,14 @@ R's scripting capability and R's extensibility are its main characteristics that
 
 A typical scientific workflow would have the following steps:
 
-```{mermaid}
+<!-- ```{mermaid}
 %%| label: scientific-workflow
 %%| fig-cap: A flowchart for an example scientific workflow
 %%| fig-align: center
 %%| file: mermaid/scientific-workflow.mmd
-```
+``` -->
+
+![A flowchart for an example scientific workflow](images/scientific-workflow.png){fig-align="center"}
 
 In general, an R script should reflect the different steps outlined above. Hence, an R script of a scientific workflow would tend to look like this:
 
