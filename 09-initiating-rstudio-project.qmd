@@ -6,14 +6,14 @@ output-file: initiating-rstudio-project.html
 
 Following is a diagram of the steps in initiating your own R/RStudio project.
 
-<!--- ![](images/git_process2.png) -->
+![A flowchart for initiating an R project](images/git_process2.png){fig-align="center"}
 
-```{mermaid}
+<!-- ```{mermaid}
 %%| label: initiate-project-workflow
 %%| fig-cap: A flowchart for initiating an R project
 %%| fig-align: center
 %%| file: mermaid/create-new-project.mmd
-```
+``` -->
 
 ## Create a new project in RStudio {#sec-create-project}
 
