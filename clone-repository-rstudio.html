@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Cloning a GitHub repository into your local computer using RStudio – Open and Reproducible Science in R</title>
+<title>7&nbsp; Cloning a GitHub repository into your local computer using RStudio – Open and Reproducible Science in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,14 +34,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="./writing-functions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-f4db45487a441faad5dd7eaa04a2f633.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-98597cea2d0351c6feaf4159bb7ae989.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ba158c292a69b8c1c9d63cd16fbf5544.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4a4d11ab5cf1263de9c9dc8df401dd87.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -91,7 +92,7 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -211,8 +212,14 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./getting-acquainted.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Getting acquainted with R</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./writing-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Writing functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Writing functions</span></span></a>
   </div>
 </li>
       </ul>
@@ -229,37 +236,37 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./clone-repository-rstudio.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./commit-and-push.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Committing your changes and pushing them to GitHub</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Committing your changes and pushing them to GitHub</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./participating-rstudio-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participating in an existing R/RStudio project</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Participating in an existing R/RStudio project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./initiating-rstudio-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Initiating an R/RStudio project</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Initiating an R/RStudio project</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./creating-portable-reproducible-workflows.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Creating portable and reproducible scientific workflows</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Creating portable and reproducible scientific workflows</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./contributing-to-ihealth-projects.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Contributing to Oxford iHealth projects</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Contributing to Oxford iHealth projects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -280,15 +287,15 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#get-the-github-repository-url" id="toc-get-the-github-repository-url" class="nav-link active" data-scroll-target="#get-the-github-repository-url"><span class="header-section-number">6.1</span> Get the GitHub repository URL</a>
+  <li><a href="#get-the-github-repository-url" id="toc-get-the-github-repository-url" class="nav-link active" data-scroll-target="#get-the-github-repository-url"><span class="header-section-number">7.1</span> Get the GitHub repository URL</a>
   <ul class="collapse">
   <li><a href="#go-to-the-repositorys-github-page" id="toc-go-to-the-repositorys-github-page" class="nav-link" data-scroll-target="#go-to-the-repositorys-github-page">1. Go to the repository’s GitHub page</a></li>
   <li><a href="#copy-the-repository-url" id="toc-copy-the-repository-url" class="nav-link" data-scroll-target="#copy-the-repository-url">2. Copy the repository URL</a></li>
   </ul></li>
-  <li><a href="#go-to-rstudio-and-create-new-project" id="toc-go-to-rstudio-and-create-new-project" class="nav-link" data-scroll-target="#go-to-rstudio-and-create-new-project"><span class="header-section-number">6.2</span> Go to RStudio and create new project</a></li>
-  <li><a href="#choose-version-control" id="toc-choose-version-control" class="nav-link" data-scroll-target="#choose-version-control"><span class="header-section-number">6.3</span> Choose Version Control</a></li>
-  <li><a href="#select-git" id="toc-select-git" class="nav-link" data-scroll-target="#select-git"><span class="header-section-number">6.4</span> Select Git</a></li>
-  <li><a href="#setup-repository-settings" id="toc-setup-repository-settings" class="nav-link" data-scroll-target="#setup-repository-settings"><span class="header-section-number">6.5</span> Setup repository settings</a>
+  <li><a href="#go-to-rstudio-and-create-new-project" id="toc-go-to-rstudio-and-create-new-project" class="nav-link" data-scroll-target="#go-to-rstudio-and-create-new-project"><span class="header-section-number">7.2</span> Go to RStudio and create new project</a></li>
+  <li><a href="#choose-version-control" id="toc-choose-version-control" class="nav-link" data-scroll-target="#choose-version-control"><span class="header-section-number">7.3</span> Choose Version Control</a></li>
+  <li><a href="#select-git" id="toc-select-git" class="nav-link" data-scroll-target="#select-git"><span class="header-section-number">7.4</span> Select Git</a></li>
+  <li><a href="#setup-repository-settings" id="toc-setup-repository-settings" class="nav-link" data-scroll-target="#setup-repository-settings"><span class="header-section-number">7.5</span> Setup repository settings</a>
   <ul class="collapse">
   <li><a href="#paste-the-repository-url-you-copied-earlier" id="toc-paste-the-repository-url-you-copied-earlier" class="nav-link" data-scroll-target="#paste-the-repository-url-you-copied-earlier">1. Paste the repository URL you copied earlier</a></li>
   <li><a href="#set-the-project-directory-name" id="toc-set-the-project-directory-name" class="nav-link" data-scroll-target="#set-the-project-directory-name">2. Set the project directory name</a></li>
@@ -296,14 +303,14 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
   <li><a href="#create-project" id="toc-create-project" class="nav-link" data-scroll-target="#create-project">4. Create project</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/06-clone-repository-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/07-clone-repository-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html">Processes</a></li><li class="breadcrumb-item"><a href="./clone-repository-rstudio.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-clone-repository" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></span></h1>
+<h1 class="title"><span id="sec-clone-repository" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cloning a GitHub repository into your local computer using RStudio</span></span></h1>
 </div>
 
 
@@ -321,8 +328,8 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
 
 
 <p>This tutorial is a summary of the the instructions described <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">here</a>.</p>
-<section id="get-the-github-repository-url" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="get-the-github-repository-url"><span class="header-section-number">6.1</span> Get the GitHub repository URL</h2>
+<section id="get-the-github-repository-url" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="get-the-github-repository-url"><span class="header-section-number">7.1</span> Get the GitHub repository URL</h2>
 <p><img src="images/clone_step1.png" class="img-fluid"></p>
 <section id="go-to-the-repositorys-github-page" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="go-to-the-repositorys-github-page">1. Go to the repository’s GitHub page</h3>
@@ -333,20 +340,20 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
 <p>Click on the copy to clipboard icon to copy the repository URL.</p>
 </section>
 </section>
-<section id="go-to-rstudio-and-create-new-project" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="go-to-rstudio-and-create-new-project"><span class="header-section-number">6.2</span> Go to RStudio and create new project</h2>
+<section id="go-to-rstudio-and-create-new-project" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="go-to-rstudio-and-create-new-project"><span class="header-section-number">7.2</span> Go to RStudio and create new project</h2>
 <p><img src="images/clone_step2.png" class="img-fluid"></p>
 </section>
-<section id="choose-version-control" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="choose-version-control"><span class="header-section-number">6.3</span> Choose Version Control</h2>
+<section id="choose-version-control" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="choose-version-control"><span class="header-section-number">7.3</span> Choose Version Control</h2>
 <p><img src="images/clone_step3.png" class="img-fluid"></p>
 </section>
-<section id="select-git" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="select-git"><span class="header-section-number">6.4</span> Select Git</h2>
+<section id="select-git" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="select-git"><span class="header-section-number">7.4</span> Select Git</h2>
 <p><img src="images/clone_step4.png" class="img-fluid"></p>
 </section>
-<section id="setup-repository-settings" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="setup-repository-settings"><span class="header-section-number">6.5</span> Setup repository settings</h2>
+<section id="setup-repository-settings" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="setup-repository-settings"><span class="header-section-number">7.5</span> Setup repository settings</h2>
 <p><img src="images/clone_step5.png" class="img-fluid"></p>
 <section id="paste-the-repository-url-you-copied-earlier" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="paste-the-repository-url-you-copied-earlier">1. Paste the repository URL you copied earlier</h3>
@@ -420,13 +427,14 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -771,12 +779,12 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./writing-functions.html" class="pagination-link" aria-label="Writing functions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Writing functions</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Writing functions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./commit-and-push.html" class="pagination-link" aria-label="Committing your changes and pushing them to GitHub">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Committing your changes and pushing them to GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Committing your changes and pushing them to GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -785,4 +793,4 @@ gtag('config', 'G-06FXWQBZHC', { 'anonymize_ip': true});
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/06-clone-repository-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/OxfordIHTM/ihtm-handbook/edit/main/07-clone-repository-rstudio.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
