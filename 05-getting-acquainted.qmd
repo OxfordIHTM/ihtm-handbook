@@ -1,0 +1,849 @@
+---
+output-file: getting-acquainted.html
+---
+
+# Getting acquainted with R {#sec-getting-acquainted}
+
+
+In this chapter we will use `R` to read a dataset and produce some descriptive statistics, produce some charts, and perform some simple statistical inference. The aim of the exercise is for you to become familiar with `R` and some basic `R` functions and objects.
+
+The first thing we will do, after starting `R`, is issue a command to retrieve an example dataset: 
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem <- read.table("fem.dat", header = TRUE)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+fem <- read.table(
+  "https://raw.githubusercontent.com/OxfordIHTM/teaching_datasets/refs/heads/main/fem.dat",
+  header = TRUE
+)
+```
+
+&nbsp;
+
+This command illustrates some key things about the way `R` works.
+
+We are instructing `R` to assign (using the `<-` operator) the output of the `read.table()` function to an object
+called `fem`.
+
+The `fem` object will contain the data held in the file `fem.dat` as an `R` data.frame object:
+
+&nbsp;
+
+```{r, eval = FALSE}
+class(fem)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+class(fem)
+```
+
+\newpage
+
+You can inspect the contents of the `fem` data.frame (or any other `R` object) just by typing its name: 
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem
+```
+
+```{r, echo = FALSE, eval = TRUE}
+head(fem)
+```
+
+&nbsp;
+
+Note that the `fem` object is built from other objects. These are the named vectors (columns) in the dataset: 
+
+&nbsp;
+
+```{r, eval = FALSE}
+names(fem)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+names(fem)
+```
+
+&nbsp;
+
+The `[1]` displayed before the column names refers to the numbered position of the first name in the output. These positions are known as indexes and can be used to refer to individual items. For example:
+
+&nbsp;
+
+```{r, eval = FALSE}
+names(fem)[1]
+```
+
+```{r, echo = FALSE, eval = TRUE}
+names(fem)[1]
+```
+
+&nbsp;
+
+```{r, eval = FALSE}
+names(fem)[8]
+```
+
+```{r, echo = FALSE, eval = TRUE}
+names(fem)[8]
+```
+
+&nbsp;
+
+```{r, eval = FALSE}
+names(fem)[2:4]
+```
+
+```{r, echo = FALSE, eval = TRUE}
+names(fem)[2:4]
+```
+
+\newpage
+
+The data consist of 118 records:
+
+&nbsp;
+
+```{r, eval = FALSE}
+nrow(fem)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+nrow(fem)
+```
+
+&nbsp;
+
+each with nine variables:
+
+&nbsp;
+
+```{r, eval = FALSE}
+ncol(fem)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+ncol(fem)
+```
+
+&nbsp;
+
+for female psychiatric patients.
+
+&nbsp;
+
+The columns in the dataset are:
+
+&nbsp;
+
++----------+----------------------------------------------------+
+| **ID**   | Patient ID                                         |
++==========+====================================================+
+| **AGE**  | Age in years                                       |
++----------+----------------------------------------------------+
+| **IQ**   | IQ score                                           |
++----------+----------------------------------------------------+
+| **ANX**  | Anxiety (1=none, 2=mild, 3=moderate, 4=severe)     |
++----------+----------------------------------------------------+
+| **DEP**  | Depression (1=none, 2=mild, 3=moderate or severe)  |
++----------+----------------------------------------------------+
+| **SLP**  | Sleeping normally (1=yes, 2=no)                    |
++----------+----------------------------------------------------+
+| **SEX**  | Lost interest in sex (1=yes, 2=no)                 |
++----------+----------------------------------------------------+
+| **LIFE** | Considered suicide (1=yes, 2=no)                   |
++----------+----------------------------------------------------+
+| **WT**   | Weight change (kg) in previous 6 months            |
++----------+----------------------------------------------------+
+
+\newpage
+
+The first ten records of the `fem` data.frame are:
+
+&nbsp;
+
+```{r, echo = FALSE, eval = TRUE}
+fem[1:10, ]
+```
+
+&nbsp;
+
+You may check this by asking `R` to display all columns of the first ten records in the `fem` data.frame:
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem[1:10, ]
+```
+
+```{r, echo = FALSE, eval = TRUE}
+fem[1:10, ]
+```
+
+\newpage
+
+The space after the comma is optional. You can think of it as a *placeholder* for where you would specify the indexes for columns you wanted to display. For example:
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem[1:10,2:4]
+```
+
+&nbsp;
+
+displays the first ten rows and the second, third and fourth columns of the `fem` data.frame:
+
+&nbsp;
+
+```{r echo = FALSE, eval = TRUE}
+fem[1:10,2:4 ]
+```
+
+&nbsp;
+
+`NA` is a special value meaning *not available* or *missing*.
+
+You can access the contents of a single column by name:
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem$IQ
+```
+
+```{r, echo = FALSE, eval = TRUE}
+fem$IQ
+```
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem$IQ[1:10]
+```
+
+```{r, echo = FALSE, eval = TRUE}
+fem$IQ[1:10]
+```
+
+\newpage
+
+The `$` sign is used to separate the name of the data.frame and the name of the column of interest. Note that `R` is case-sensitive so that `IQ` and `iq` are **_not_** the same.
+
+You can also access rows, columns, and individual cells by specifying row and column positions. For example, the `IQ` column is the third column in the `fem` data.frame:
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem[ ,3]
+```
+
+```{r, echo = FALSE, eval = TRUE}
+fem[ ,3]
+```
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem[9, ]
+```
+
+```{r, echo = FALSE, eval = TRUE}
+fem[9, ]
+```
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem[9,3]
+```
+
+```{r, echo = FALSE, eval = TRUE}
+fem[9,3]
+```
+
+&nbsp;
+
+There are missing values in the `IQ` column which are all coded as **-99**. Before proceeding we must set these to
+the special `NA` value:
+
+&nbsp;
+
+```{r, eval = TRUE}
+fem$IQ[fem$IQ == -99] <- NA
+```
+
+&nbsp;
+
+The term inside the square brackets is also an index. This type of index is used to refer to subsets of data held in an object that meet a particular condition. In this case we are instructing `R` to set the contents of the `IQ` variable to `NA` if the contents of the `IQ` variable is **-99**.
+
+\newpage
+
+Check that this has worked:
+
+&nbsp;
+
+```{r, eval = FALSE}
+fem$IQ
+```
+
+```{r, echo = FALSE, eval = TRUE}
+fem$IQ
+```
+
+&nbsp;
+
+We can now compare the groups who have and have not considered suicide. For example:
+
+&nbsp;
+
+```{r, eval = FALSE}
+by(fem$IQ, fem$LIFE, summary)
+```
+
+&nbsp;
+
+Look at the help for the `by()` function:
+
+&nbsp;
+
+```{r, eval = FALSE}
+help(by)
+```
+
+&nbsp;
+
+Note that you may use `?by` as a shortcut for `help(by)`.
+
+The `by()` function applies another function (in this case the `summary()` function) to a column in a
+data.frame (in this case `fem$IQ`) split by the value of another variable (in this case `fem$LIFE`).
+
+It can be tedious to always have to specify a data.frame each time we want to use a particular variable. We can
+fix this problem by ‘attaching’ the data.frame:
+
+&nbsp;
+
+```{r, eval = FALSE}
+attach(fem)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+attach(fem)
+```
+
+&nbsp;
+
+We can now refer to the columns in the `fem` data.frame without having to specify the name of the data.frame. This time we will produce summary statistics for `WT` by `LIFE`:
+
+&nbsp;
+
+```{r, eval = FALSE}
+by(WT, LIFE, summary)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+by(WT, LIFE, summary)
+```
+
+&nbsp;
+
+We can view the same data as a box and whisker plot:
+
+&nbsp;
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+boxplot(WT ~ LIFE)
+```
+
+\newpage
+
+We can add axis labels and a title to the graph:
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+boxplot(
+  WT ~ LIFE,
+  xlab = "Life",
+  ylab = "Weight",
+  main = "Weight BY Life"
+)
+```
+
+&nbsp;
+
+A more descriptive title might be "Weight Change BY Considered Suicide".
+
+The groups do not seem to differ much in their medians and the distributions appear to be reasonably symmetrical about their medians with a similar spread of values.
+
+\newpage
+
+We can look at the distribution as histograms:
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+hist(WT[LIFE == 1])
+```
+
+&nbsp;
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+hist(WT[LIFE == 2])
+```
+
+\newpage
+
+and check the assumption of normality using quantile-quantile plots:
+  
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+qqnorm(WT[LIFE == 1])
+qqline(WT[LIFE == 1])
+```
+
+&nbsp;
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+qqnorm(WT[LIFE == 2])
+qqline(WT[LIFE == 2])
+```
+
+\newpage
+
+or by using a formal test:
+
+```{r, eval = TRUE}
+shapiro.test(WT[LIFE == 1])
+```
+
+&nbsp;
+
+```{r, eval = TRUE}
+shapiro.test(WT[LIFE == 2])
+```
+
+&nbsp;
+
+Remember that we can use the `by()` function to apply a function to a data.frame, including statistical functions such as `shapiro.test()`:
+
+&nbsp;
+
+```{r, eval - TRUE}
+by(WT, LIFE, shapiro.test)
+```
+
+\newpage
+
+We can also test whether the variances differ significantly using *Bartlett’s test* for the homogeneity of variances: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+bartlett.test(WT, LIFE)
+```
+
+&nbsp;
+
+There is no significant difference between the two variances.
+
+Many functions in `R` have a *formula interface* that may be used to specify multiple variables and the relations between multiple variables. We could have used the formula interface with the `bartlett.test()` function: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+bartlett.test(WT ~ LIFE)
+```
+
+&nbsp;
+
+Having checked the normality and homogeneity of variance assumptions we can proceed to carry out a `t-test`: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+t.test(WT ~ LIFE, var.equal = TRUE)
+```
+
+&nbsp;
+
+There is no evidence that the two groups differ in weight change in the previous six months.
+
+We could still have performed a `t-test` if the variances were not homogenous by setting the **var.equal** parameter of the `t.test()` function to **FALSE**: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+t.test(WT ~ LIFE, var.equal = FALSE)
+```
+
+&nbsp;
+
+or performed a non-parametric test:
+
+&nbsp;
+
+```{r, eval = TRUE}
+wilcox.test(WT ~ LIFE)
+```
+
+\newpage
+
+An alternative, and more general, non-parametric test is:
+
+&nbsp;
+
+```{r, eval = TRUE}
+kruskal.test(WT ~ LIFE)
+```
+
+&nbsp;
+
+We can use the `table()` function to examine the differences in depression between the two groups:
+
+&nbsp;
+
+```{r, eval = TRUE}
+table(DEP, LIFE)
+```
+
+&nbsp;
+
+The two distributions look very different from each other. We can test this using a chi-square test on the table:
+
+&nbsp;
+   
+```{r, eval = TRUE}
+chisq.test(table(DEP, LIFE))
+```
+
+\newpage
+
+Note that we passed the output of the `table()` function directly to the `chisq.test()` function. We could have saved the table as an object first and then passed the object to the `chisq.test()` function:
+
+&nbsp;
+
+```{r, eval = TRUE}
+tab <- table(DEP, LIFE)
+chisq.test(tab)
+```
+
+&nbsp;
+
+The `tab` object contains the output of the `table()` function: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+class(tab)
+tab
+```
+
+&nbsp;
+
+We can pass this table object to another function. For example:
+
+&nbsp;
+
+```{r, eval = TRUE}
+fisher.test(tab)
+```
+
+&nbsp;
+
+When we are finished with the tab object we can delete it using the `rm()` function: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+rm(tab)
+```
+
+&nbsp;
+
+You can see a list of available objects using the `ls()` function: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+ls()
+```
+
+&nbsp;
+
+This should just show the `fem` object.
+
+We can examine the association between loss of interest in sex and considering suicide in the same way:
+
+&nbsp;
+
+```{r, eval = TRUE}
+tab <- table(SEX, LIFE)
+tab
+fisher.test(tab)
+```
+
+\newpage
+
+Note that with a two-by-two table the `fisher.test()` function produces an estimate of, and confidence intervals for, the odds ratio. Again, we will delete the `tab` object:
+
+&nbsp;
+
+```{r, eval = TRUE}
+rm(tab)
+```
+
+&nbsp;
+
+We could have performed the Fisher exact test without creating the tab object by passing the output of the `table()` function directly to the `fisher.test()` function:
+
+&nbsp;
+
+```{r, eval = TRUE}
+fisher.test(table(SEX, LIFE))
+```
+
+&nbsp;
+
+Choose whichever method you find easiest but remember that it is easy to save the results of any function for later use.
+
+We can explore the correlation between two variables using the `cor()` function:
+
+&nbsp;
+
+```{r, eval = TRUE}
+cor(IQ, WT, use = "pairwise.complete.obs")
+```
+
+\newpage
+
+or by using a scatter plot:
+
+&nbsp;
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+plot(IQ, WT)
+```
+
+&nbsp;
+
+and by a formal test:
+
+&nbsp;
+
+```{r, eval = TRUE}
+cor.test(IQ, WT)
+```
+
+\newpage
+
+With some functions you can pass an entire data.frame rather than a list of variables:
+
+&nbsp;
+
+```{r, eval = FALSE}
+cor(fem, use = "pairwise.complete.obs")
+pairs(fem)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+cor(fem, use = "pairwise.complete.obs")
+```
+
+\newpage
+
+```{r, echo = FALSE, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+pairs(fem)
+```
+
+The output can be a little confusing particularly if it includes categorical or record identifying variables. To avoid this we can create a new object that contains only the columns we are interested in using the column binding `cbind()` function:
+
+&nbsp;
+
+```{r, eval = FALSE}
+newfem <- cbind(AGE, IQ, WT)
+cor(newfem, use = "pairwise.complete.obs")
+pairs(newfem)
+```
+
+```{r, echo = FALSE, eval = TRUE}
+newfem <- cbind(AGE, IQ, WT)
+cor(newfem, use = "pairwise.complete.obs")
+```
+
+\newpage
+
+```{r, echo = FALSE, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+pairs(newfem)
+```
+
+&nbsp;
+
+When we have finished with the `newfem` object we can delete it: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+rm(newfem)
+```
+
+&nbsp;
+
+There was no real need to create the `newfem` object as we could have fed the output of the `cbind()` function directly to the `cor()` or `pairs()` function:
+
+&nbsp;
+
+```{r, eval = FALSE}
+cor(cbind(AGE, IQ, WT), use = "pairwise.complete.obs")
+pairs(cbind(AGE, IQ, WT))
+```
+
+```{r, echo = FALSE, eval = TRUE}
+cor(cbind(AGE, IQ, WT), use = "pairwise.complete.obs")
+```
+
+\newpage
+
+```{r, echo = FALSE, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+pairs(cbind(AGE, IQ, WT))
+```
+
+&nbsp;
+
+It is, however, easier to work with the `newfem` object rather than having to retype the `cbind()` function. This is particularly true if you wanted to continue with an analysis of just the three variables.
+
+The relationship between `AGE` and `WT` can be plotted using the `plot()` function: 
+
+&nbsp;
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+plot(AGE, WT)
+```
+
+\newpage
+
+And tested using the `cor()` and `cor.test()` functions: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+cor(AGE, WT, use = "pairwise.complete.obs")
+cor.test(AGE, WT)
+```
+
+\newpage
+
+Or by using the linear modelling `lm()` function: 
+
+&nbsp;
+
+```{r, eval = TRUE}
+summary(lm(WT ~ AGE))
+```
+
+&nbsp;
+
+We use the `summary()` function here to extract summary information from the output of the `lm()` function.
+
+It is often more useful to use `lm()` to create an object:
+
+&nbsp;
+
+```{r, eval = TRUE}
+fem.lm <- lm(WT ~ AGE)
+```
+
+\newpage
+
+And use the output in other functions:
+
+&nbsp;
+
+```{r, eval = TRUE}
+summary(fem.lm)
+```
+
+\newpage
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+plot(AGE, WT)
+abline(fem.lm)
+```
+
+&nbsp;
+
+In this case we are passing the intercept and slope information held in the `fem.lm` object to the `abline()` function which draws a regression line. The `abline()` function adds to an existing plot. This means that you need to keep the scatter plot of `AGE` and `WT` open before issuing the `abline()` function call.
+
+\newpage
+
+A useful function to apply to the `fem.lm` object is `plot()` which produces diagnostic plots of the linear model:
+
+&nbsp;
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+plot(fem.lm)
+```
+
+\newpage
+
+Objects created by the `lm()` function (or any of the modelling functions) can use up a lot of memory so we should remove them when we no longer need them:
+
+&nbsp;
+
+```{r, eval = TRUE}
+rm(fem.lm)
+```
+
+&nbsp;
+
+It might be interesting to see whether a similar relationship exists between `AGE` and `WT` for those who have and have not considered suicide. This can be done using the `coplot()` function:
+
+&nbsp;
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+coplot(WT ~ AGE | as.factor(LIFE))
+```
+
+\newpage
+
+The two plots looks similar. We could also use `coplot()` to investigate the relationship between `AGE` and `WT` for categories of both `LIFE` and `SEX`:
+
+&nbsp;
+
+```{r, eval = TRUE, fig.align = "center", fig.pos = "H", fig.retina = 1}
+coplot(WT ~ AGE | as.factor(LIFE) * as.factor(SEX))
+```
+
+&nbsp;
+
+although the numbers are too small for this to be useful here.
+
+We used the `as.factor()` function with the `coplot()` function to ensure that `R` was aware that the `LIFE`
+and `SEX` columns hold categorical data.
+
+We can check the way variables are stored using the `data.class()` function:
+
+&nbsp;
+
+```{r, eval = TRUE}
+data.class(fem$SEX)
+```
+
+\newpage
+
+The parameters of most `R` functions have default values. These are usually the most used and most useful parameter values for each function. The `cor.test()` function, for example, calculates *Pearson's product moment correlation coefficient* by default. This is an appropriate measure for data from a bivariate normal distribution. The `DEP` and `ANX` variables contain ordered data. An appropriate measure of correlation between `DEP` and `ANX` is *Kendall's tau*. This can be obtained using:
+
+&nbsp;
+
+```{r, eval = TRUE}
+cor.test(DEP, ANX, method = "kendall")
+```
+
+&nbsp;
+
+## Summary
+
+* `R` is a functional system. Everything is done by calling functions.
+* `R` provides a large set of functions for descriptive statistics, charting, and statistical inference.
+* Functions can be chained together so that the output of one function is the input of another function.
+* `R` is an object oriented system. We can use functions to create objects that can then be manipulated or passed to other functions for subsequent analysis.

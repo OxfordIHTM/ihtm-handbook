@@ -21,15 +21,16 @@ book:
         - 04-connecting-git-with-rstudio.qmd
     - part: Practices
       chapters:
-        - 05-writing-functions.qmd
+        - 05-getting-acquainted.qmd
+        - 06-writing-functions.qmd
     - part: Processes
       chapters:
-        - 06-clone-repository-rstudio.qmd
-        - 07-commit-and-push.qmd
-        - 08-participating-rstudio-project.qmd
-        - 09-initiating-rstudio-project.qmd
-        - 10-creating-portable-reproducible-workflows.qmd
-        - 11-contributing-to-ihealth-projects.qmd
+        - 07-clone-repository-rstudio.qmd
+        - 08-commit-and-push.qmd
+        - 09-participating-rstudio-project.qmd
+        - 10-initiating-rstudio-project.qmd
+        - 11-creating-portable-reproducible-workflows.qmd
+        - 12-contributing-to-ihealth-projects.qmd
         - references.qmd
   cover-image: images/ihealth_base_pos_tn.png
   search: true
